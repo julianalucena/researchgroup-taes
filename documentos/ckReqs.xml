@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configurationModel xmlns="ck.v20090401">
+	<configuration xmlns="">
+		<expression>cadastrarMembro</expression>
+		<transformation>
+			<name>selectScenarios</name>
+			<args>SC01</args>
+		</transformation>
+	</configuration>
+	<configuration xmlns="">
+		<expression>buscarMembro</expression>
+		<transformation>
+			<name>selectScenarios</name>
+			<args>SC02</args>
+		</transformation>
+	</configuration>
+	<configuration xmlns="">
+		<expression>editarMembro</expression>
+		<transformation>
+			<name>selectScenarios</name>
+			<args>SC03</args>
+		</transformation>
+	</configuration>
+	<configuration xmlns="">
+		<expression>deletarMembro</expression>
+		<transformation>
+			<name>selectScenarios</name>
+			<args>SC04</args>
+		</transformation>
+	</configuration>
+	<configuration xmlns="">
+		<expression>cadastrarPublicacao</expression>
+		<transformation>
+			<name>selectScenarios</name>
+			<args>SC05</args>
+		</transformation>
+	</configuration>
+	<configuration xmlns="">
+		<expression>associarProjeto</expression>
+		<transformation>
+			<name>evaluateAspects</name>
+			<args>ADV051</args>
+		</transformation>
+	</configuration>
+	<configuration xmlns="">
+		<expression>buscarPublicacao</expression>
+		<transformation>
+			<name>selectScenarios</name>
+			<args>SC06</args>
+		</transformation>
+	</configuration>
+	<configuration xmlns="">
+		<expression>informarModificacao</expression>
+		<transformation>
+			<name>selectScenarios</name>
+			<args>SC07</args>
+		</transformation>
+	</configuration>
+	<configuration xmlns="">
+		<expression>atualizarFeedsRss</expression>
+		<transformation>
+			<name>evaluateAspects</name>
+			<args>ADV011</args>
+		</transformation>
+	</configuration>
+	<configuration xmlns="">
+		<expression>atualizarTwitter</expression>
+		<transformation>
+			<name>evaluateAspects</name>
+			<args>ADV021</args>
+		</transformation>
+	</configuration>
+	<configuration xmlns="">
+		<expression>gerarListaPublicacoes</expression>
+		<transformation>
+			<name>selectScenarios</name>
+			<args>SC08</args>
+		</transformation>
+	</configuration>
+	<configuration xmlns="">
+		<expression>comBibTeX</expression>
+		<transformation>
+			<name>evaluateAspects</name>
+			<args>ADV031</args>
+		</transformation>
+	</configuration>
+	<configuration xmlns="">
+		<expression>comPDF</expression>
+		<transformation>
+			<name>evaluateAspects</name>
+			<args>ADV041</args>
+		</transformation>
+	</configuration>
+	<configuration xmlns="">
+		<expression>cadastrarProjetoPesquisa</expression>
+		<transformation>
+			<name>selectScenarios</name>
+			<args>SC09</args>
+		</transformation>
+	</configuration>
+	<configuration xmlns="">
+		<expression>cadastrarLinhaPesquisa</expression>
+		<transformation>
+			<name>selectScenarios</name>
+			<args>SC10</args>
+		</transformation>
+	</configuration>
+	<configuration xmlns="">
+		<expression>buscarLinhaPesquisa</expression>
+		<transformation>
+			<name>selectScenarios</name>
+			<args>SC11</args>
+		</transformation>
+	</configuration>
+	<configuration xmlns="">
+		<expression>editarLinhaPesquisa</expression>
+		<transformation>
+			<name>selectScenarios</name>
+			<args>SC12</args>
+		</transformation>
+	</configuration>
+	<configuration xmlns="">
+		<expression>deletarLinhaPesquisa</expression>
+		<transformation>
+			<name>selectScenarios</name>
+			<args>SC13</args>
+		</transformation>
+	</configuration>
+	<configuration xmlns="">
+		<expression>editarPublicacao</expression>
+		<transformation>
+			<name>selectScenarios</name>
+			<args>SC14</args>
+		</transformation>
+	</configuration>
+	<configuration xmlns="">
+		<expression>deletarPublicacao</expression>
+		<transformation>
+			<name>selectScenarios</name>
+			<args>SC15</args>
+		</transformation>
+	</configuration>
+	<configuration xmlns="">
+		<expression>downloadPublicacaoPDF</expression>
+		<transformation>
+			<name>selectScenarios</name>
+			<args>SC16</args>
+		</transformation>
+	</configuration>
+	<configuration xmlns="">
+		<expression>paginaMembro</expression>
+		<transformation>
+			<name>selectScenarios</name>
+			<args>SC17</args>
+		</transformation>
+	</configuration>
+	<configuration xmlns="">
+		<expression>downloadPublicacaoBibTeX</expression>
+		<transformation>
+			<name>selectScenarios</name>
+			<args>SC18</args>
+		</transformation>
+	</configuration>
+	<configuration xmlns="">
+		<expression>paginaGrupo</expression>
+		<transformation>
+			<name>selectScenarios</name>
+			<args>SC19</args>
+		</transformation>
+	</configuration>
+	<configuration xmlns="">
+		<expression>listarLinhaPesquisa</expression>
+		<transformation>
+			<name>selectScenarios</name>
+			<args>SC20</args>
+		</transformation>
+	</configuration>
+</configurationModel>

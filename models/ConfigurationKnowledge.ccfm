@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cm:consulmodel xmlns:cm="http://www.pure-systems.com/consul/model" cm:id="ikiuji5-dJX5ETu8o" cm:version="1.5" cm:type="ps:ccfm">
+  <cm:head>
+    <cm:properties>
+      <cm:property cm:id="i54bjwJsZrol-BhJh" cm:type="ps:string" cm:invisible="true" cm:name="ps:name">
+        <cm:constant cm:id="ib1p_5paGwi3Hox7A" cm:type="ps:string">TesteFamily</cm:constant>
+      </cm:property>
+      <cm:property cm:id="izDQYvUuUeQLZKVaW" cm:type="ps:string" cm:invisible="true" cm:name="ps:author">
+        <cm:constant cm:id="iwXfoh0A6lWxCbSD6" cm:type="ps:string">fhcl</cm:constant>
+      </cm:property>
+      <cm:property cm:id="i1SQBJbxfaRg3CdtE" cm:type="ps:string" cm:invisible="true" cm:name="ps:version">
+        <cm:constant cm:id="iknhNosUG3ToBjtOI" cm:type="ps:string">1.0</cm:constant>
+      </cm:property>
+      <cm:property cm:id="iLEOCsmwY964sbMK4" cm:type="ps:datetime" cm:invisible="true" cm:name="ps:created">
+        <cm:constant cm:id="iMOXMi_1RIyR8LYce" cm:type="ps:datetime">2007-09-03T12:48:04.728Z</cm:constant>
+      </cm:property>
+    </cm:properties>
+  </cm:head>
+  <cm:restrictions>
+    <cm:restset cm:id="iDwUzQyVaCJSZD8-P">
+      <cm:restriction cm:id="iNNj9wSAVJf2-AcdU" cm:name="a">
+        <cm:script cm:id="iIIhhi3hvb4s2iDv-" cm:language="ps:pvscl" cm:type="ps:boolean">GerarPDFPublicacao</cm:script>
+      </cm:restriction>
+    </cm:restset>
+    <cm:restset cm:id="irsvh9y728jUwW_S_">
+      <cm:restriction cm:id="iXgjEYD0uRJvzTUvf" cm:name="a">
+        <cm:script cm:id="ipdYqH90rMoknoojb" cm:language="ps:pvscl" cm:type="ps:boolean">DeletarPublicacao</cm:script>
+      </cm:restriction>
+    </cm:restset>
+  </cm:restrictions>
+  <cm:elements cm:rootid="ibvmedfzzIrgT54pv">
+    <cm:element cm:id="ibvmedfzzIrgT54pv" cm:name="ConfigurationKnowledge" cm:type="ps:family" cm:class="ps:family" cm:default="on">
+      <cm:relations cm:id="iUekoUlQI9PV94Ygg" cm:class="ps:children">
+        <cm:relation cm:id="iJSw3OpWvb4ps7KAd" cm:type="ps:family">
+          <cm:target cm:id="ienGODcaCHJL1rrwo">./ixZ1LRWKwkEjcdGy2</cm:target>
+        </cm:relation>
+      </cm:relations>
+      <cm:properties>
+        <cm:property cm:id="ihAoTIM5T8gFJ-myp" cm:type="ps:string" cm:fixed="true" cm:readonly="true" cm:name="ps:Source">
+          <cm:constant cm:id="iOVYy6CfOy-rCqch_" cm:type="ps:string">fhcl</cm:constant>
+        </cm:property>
+        <cm:property cm:id="il7JdmH709u_ZbXuy" cm:type="ps:datetime" cm:fixed="true" cm:readonly="true" cm:name="ps:Created">
+          <cm:constant cm:id="iQH8baMzUW__HwtV8" cm:type="ps:datetime">2007-09-03T12:48:04.728Z</cm:constant>
+        </cm:property>
+        <cm:property cm:id="ijwIfhJciEth_INYR" cm:type="ps:string" cm:fixed="true" cm:readonly="true" cm:name="ps:ChangedBy">
+          <cm:constant cm:id="iQgHcelKQHPBHh5tq" cm:type="ps:string">fhcl</cm:constant>
+        </cm:property>
+        <cm:property cm:id="ijH4uDEg_LCqyuGrb" cm:type="ps:datetime" cm:fixed="true" cm:readonly="true" cm:name="ps:Changed">
+          <cm:constant cm:id="iRhD1hGYaJI3GzaOW" cm:type="ps:datetime">2007-09-03T13:37:58.598Z</cm:constant>
+        </cm:property>
+      </cm:properties>
+      <cm:vname>
+        <cm:mimedesc cm:id="if05uyOEtygb9hRqz" cm:mimetype="text/plain" cm:encoding="utf-8">ConfigurationKnowledge</cm:mimedesc>
+      </cm:vname>
+    </cm:element>
+    <cm:element cm:id="ixZ1LRWKwkEjcdGy2" cm:name="VariationsRepository" cm:type="ps:component" cm:class="ps:component" cm:default="on">
+      <cm:relations cm:id="i6KwpCS5-4kyVTnYn" cm:class="ps:parents">
+        <cm:relation cm:id="iG06N6t5-PzzNxyiu" cm:type="ps:parent">
+          <cm:target cm:id="iCIaIKYQi1PoI6fjv">./ibvmedfzzIrgT54pv</cm:target>
+        </cm:relation>
+      </cm:relations>
+      <cm:relations cm:id="iGFSOq3sEHrNKFnDF" cm:class="ps:children">
+        <cm:relation cm:id="iNkF28uQTnqmwAYjM" cm:type="ps:family">
+          <cm:target cm:id="ior-cgmw-FSUz1kyG">./iSI9O6WyTgyKsIiZr</cm:target>
+          <cm:target cm:id="inDKOO5xD8UPKgg_Z">./i9fVynFj1HglxUdZR</cm:target>
+          <cm:target cm:id="iMEEyAWQmnFEjaB68">./i8j2tp5h8pfvsN1in</cm:target>
+        </cm:relation>
+      </cm:relations>
+      <cm:properties>
+        <cm:property cm:id="iXfaDYMQ98h5lRJ_z" cm:type="ps:string" cm:fixed="true" cm:readonly="true" cm:name="ps:Source">
+          <cm:constant cm:id="iKi_s40DWidBuTeRi" cm:type="ps:string">Rodrigo</cm:constant>
+        </cm:property>
+        <cm:property cm:id="i0Nq3rHaazCIJr9jA" cm:type="ps:datetime" cm:fixed="true" cm:readonly="true" cm:name="ps:Created">
+          <cm:constant cm:id="iCO8cildtpdDDicot" cm:type="ps:datetime">2010-05-31T21:44:48.018Z</cm:constant>
+        </cm:property>
+        <cm:property cm:id="idTjHoksCEvsGrYj6" cm:type="ps:string" cm:fixed="true" cm:readonly="true" cm:name="ps:ChangedBy">
+          <cm:constant cm:id="icShAsPSdm9LJbMVL" cm:type="ps:string">Rodrigo</cm:constant>
+        </cm:property>
+        <cm:property cm:id="iS9ECr5dFYjb-8kPU" cm:type="ps:datetime" cm:fixed="true" cm:readonly="true" cm:name="ps:Changed">
+          <cm:constant cm:id="idE45h1uwtmfMkPuk" cm:type="ps:datetime">2010-05-31T21:44:48.018Z</cm:constant>
+        </cm:property>
+      </cm:properties>
+    </cm:element>
+    <cm:element cm:id="iSI9O6WyTgyKsIiZr" cm:name="VariationsList" cm:type="ps:object" cm:class="ps:part" cm:default="on">
+      <cm:relations cm:id="iVYcMiQuQmbeqc2j-" cm:class="ps:parents">
+        <cm:relation cm:id="ibWasxwBV3B2GZ9Tw" cm:type="ps:parent">
+          <cm:target cm:id="iGAeY2dWd73NaboHB">./ixZ1LRWKwkEjcdGy2</cm:target>
+        </cm:relation>
+      </cm:relations>
+      <cm:relations cm:id="icXZeTdDItccJ8AsZ" cm:class="ps:children">
+        <cm:relation cm:id="iD0iDo1nIa30_IYdG" cm:type="ps:family">
+          <cm:target cm:id="i-qUsTZmFKD3QQwOr">./ieQtpzM-fUctOyxDm</cm:target>
+          <cm:target cm:id="iosWDTDDxHToM7T3L">./iYi69mP9Ct2L6EDpI</cm:target>
+        </cm:relation>
+      </cm:relations>
+      <cm:properties>
+        <cm:property cm:id="iUTHxOd2g_ISsykmw" cm:type="ps:string" cm:fixed="true" cm:readonly="true" cm:name="ps:Source">
+          <cm:constant cm:id="iP4CUVDl4GHqB9Tf_" cm:type="ps:string">Rodrigo</cm:constant>
+        </cm:property>
+        <cm:property cm:id="ib-gDGlwYc5yqG2t9" cm:type="ps:datetime" cm:fixed="true" cm:readonly="true" cm:name="ps:Created">
+          <cm:constant cm:id="iobSnQjmdK_9yAK9M" cm:type="ps:datetime">2010-05-31T21:44:48.019Z</cm:constant>
+        </cm:property>
+        <cm:property cm:id="iyg-r__KDuywBPJVZ" cm:type="ps:string" cm:fixed="true" cm:readonly="true" cm:name="ps:ChangedBy">
+          <cm:constant cm:id="iUvCdbK7xdDCQg82u" cm:type="ps:string">Rodrigo</cm:constant>
+        </cm:property>
+        <cm:property cm:id="im7-7kGECYWStGlkv" cm:type="ps:datetime" cm:fixed="true" cm:readonly="true" cm:name="ps:Changed">
+          <cm:constant cm:id="iedc505K6FYjikHoy" cm:type="ps:datetime">2010-05-31T21:44:48.019Z</cm:constant>
+        </cm:property>
+      </cm:properties>
+    </cm:element>
+    <cm:element cm:id="i9fVynFj1HglxUdZR" cm:name="MBSProperties" cm:type="ps:object" cm:class="ps:part" cm:default="on">
+      <cm:relations cm:id="ivDKz0tsobIqW8Lh-" cm:class="ps:parents">
+        <cm:relation cm:id="iLVqdlvhkuerRTbbq" cm:type="ps:parent">
+          <cm:target cm:id="iRiOaYEpPU7Q2oaIb">./ixZ1LRWKwkEjcdGy2</cm:target>
+        </cm:relation>
+      </cm:relations>
+      <cm:relations cm:id="iy76wa1Zz62pFgRCL" cm:class="ps:children">
+        <cm:relation cm:id="i5cMkB6OmCqcdvmTM" cm:type="ps:family">
+          <cm:target cm:id="i1vkWohOcq2FlK_Sx">./ikX2DoHcO0Md7qQ2K</cm:target>
+        </cm:relation>
+      </cm:relations>
+      <cm:properties>
+        <cm:property cm:id="iF0Gqovk8_XQ50saW" cm:type="ps:string" cm:fixed="true" cm:readonly="true" cm:name="ps:Source">
+          <cm:constant cm:id="iNlksGyEilKqx9zos" cm:type="ps:string">Rodrigo</cm:constant>
+        </cm:property>
+        <cm:property cm:id="iVmwpytMO4ggl_L_D" cm:type="ps:datetime" cm:fixed="true" cm:readonly="true" cm:name="ps:Created">
+          <cm:constant cm:id="iqcTwFCDlq2JYSGJf" cm:type="ps:datetime">2010-05-31T21:44:48.019Z</cm:constant>
+        </cm:property>
+        <cm:property cm:id="iAbXsshWNSDuEIOh2" cm:type="ps:string" cm:fixed="true" cm:readonly="true" cm:name="ps:ChangedBy">
+          <cm:constant cm:id="iFJsEqcatmMreQQ4G" cm:type="ps:string">Rodrigo</cm:constant>
+        </cm:property>
+        <cm:property cm:id="isekYkp9b-gp3gkE5" cm:type="ps:datetime" cm:fixed="true" cm:readonly="true" cm:name="ps:Changed">
+          <cm:constant cm:id="iGnZ5Lhkh6nZFGWm-" cm:type="ps:datetime">2010-05-31T21:44:48.019Z</cm:constant>
+        </cm:property>
+      </cm:properties>
+    </cm:element>
+    <cm:element cm:id="ikX2DoHcO0Md7qQ2K" cm:name="ModelBuildSpecification" cm:type="ps:fragment" cm:class="ps:source" cm:default="on">
+      <cm:relations cm:id="ig9nbZjyTUpttI-zU" cm:class="ps:parents">
+        <cm:relation cm:id="iHGJGFxeCN21xefrg" cm:type="ps:parent">
+          <cm:target cm:id="iSLYPoJJtwOBE-BXw">./i9fVynFj1HglxUdZR</cm:target>
+        </cm:relation>
+      </cm:relations>
+      <cm:properties>
+        <cm:property cm:id="iHL68vcE7xgY1n4Zj" cm:type="ps:path" cm:fixed="true" cm:name="file">
+          <cm:calculate cm:id="iWKGDTlr9uFYVUVkJ" cm:type="ps:path">
+            <cm:script cm:id="iLbCYg0irs1iW9uUo" cm:language="ps:prolog" cm:type="ps:path">getVariantId(VID), getAttribute(VID,'name',VName), sformat(Value,'~w.properties',[VName])</cm:script>
+          </cm:calculate>
+        </cm:property>
+        <cm:property cm:id="ihTBUZXEObI1VtXSl" cm:type="ps:path" cm:fixed="true" cm:name="srcfile">
+          <cm:calculate cm:id="iy8NhYKMwnLp_zUn6" cm:type="ps:path">
+            <cm:script cm:id="icZ9mvk02d5TdApDs" cm:language="ps:prolog" cm:type="ps:path">getVariantId(VID), getAttribute(VID,'name',VName), sformat(Value,'~w.ajlist',[VName])</cm:script>
+          </cm:calculate>
+        </cm:property>
+        <cm:property cm:id="iGCUFVVM2oc0XSBPN" cm:type="ps:string" cm:fixed="true" cm:readonly="true" cm:name="ps:Source">
+          <cm:constant cm:id="ivYyFjaMUP8teY0_f" cm:type="ps:string">Rodrigo</cm:constant>
+        </cm:property>
+        <cm:property cm:id="iJYb5FnZx03ugfoqH" cm:type="ps:datetime" cm:fixed="true" cm:readonly="true" cm:name="ps:Created">
+          <cm:constant cm:id="ieb7iOgz8yWAjT5Ge" cm:type="ps:datetime">2010-05-31T21:44:48.020Z</cm:constant>
+        </cm:property>
+        <cm:property cm:id="iLiEGmQGrLqm4eF1T" cm:type="ps:string" cm:fixed="true" cm:readonly="true" cm:name="ps:ChangedBy">
+          <cm:constant cm:id="iICMz7NNy7Af5dQno" cm:type="ps:string">Rodrigo</cm:constant>
+        </cm:property>
+        <cm:property cm:id="iXsckJmGjdEBYi5di" cm:type="ps:datetime" cm:fixed="true" cm:readonly="true" cm:name="ps:Changed">
+          <cm:constant cm:id="iCp-axNqifpyWnNmE" cm:type="ps:datetime">2010-05-31T21:44:48.020Z</cm:constant>
+        </cm:property>
+      </cm:properties>
+    </cm:element>
+    <cm:element cm:id="i8j2tp5h8pfvsN1in" cm:name="AJProperties" cm:type="ps:object" cm:class="ps:part" cm:default="on">
+      <cm:relations cm:id="ivPJWykpoPqET6qX4" cm:class="ps:parents">
+        <cm:relation cm:id="iDA61e-SivFsNOV4r" cm:type="ps:parent">
+          <cm:target cm:id="i72O0Wm1OEg4sMzsc">./ixZ1LRWKwkEjcdGy2</cm:target>
+        </cm:relation>
+      </cm:relations>
+      <cm:relations cm:id="iOTWdtBzieYSsr6Kx" cm:class="ps:children">
+        <cm:relation cm:id="iueA6fpe7ySEG-tR8" cm:type="ps:family">
+          <cm:target cm:id="iDBaBY-EDGdVPG_pp">./idTJQ4nGvMbNibDTy</cm:target>
+          <cm:target cm:id="iaR-YRch2KA3ledrv">./iIZD1lspE41LhOz_j</cm:target>
+        </cm:relation>
+      </cm:relations>
+      <cm:properties>
+        <cm:property cm:id="iUx4QxSeoflbhz5-O" cm:type="ps:string" cm:fixed="true" cm:readonly="true" cm:name="ps:Source">
+          <cm:constant cm:id="il6HJxOQvhEwmxMbW" cm:type="ps:string">Rodrigo</cm:constant>
+        </cm:property>
+        <cm:property cm:id="isdh3P8jbj9dxTZ1-" cm:type="ps:datetime" cm:fixed="true" cm:readonly="true" cm:name="ps:Created">
+          <cm:constant cm:id="idgaFNRgGSxXvuPxw" cm:type="ps:datetime">2010-05-31T21:44:48.021Z</cm:constant>
+        </cm:property>
+        <cm:property cm:id="ikoIk4RDSrQaXP4vC" cm:type="ps:string" cm:fixed="true" cm:readonly="true" cm:name="ps:ChangedBy">
+          <cm:constant cm:id="i9nlYkR00E76xBBWt" cm:type="ps:string">Rodrigo</cm:constant>
+        </cm:property>
+        <cm:property cm:id="iPr6wKONu0zbrU3Jo" cm:type="ps:datetime" cm:fixed="true" cm:readonly="true" cm:name="ps:Changed">
+          <cm:constant cm:id="iJxMRw_SPaqLnwfDJ" cm:type="ps:datetime">2010-05-31T21:44:48.021Z</cm:constant>
+        </cm:property>
+      </cm:properties>
+    </cm:element>
+    <cm:element cm:id="idTJQ4nGvMbNibDTy" cm:name="ActiveBuildSpecification" cm:type="ps:fragment" cm:class="ps:source" cm:default="on">
+      <cm:relations cm:id="iQx8BSrBYyAUBo-Mz" cm:class="ps:parents">
+        <cm:relation cm:id="i2C6CwNn70deYZFzQ" cm:type="ps:parent">
+          <cm:target cm:id="iOhFOxBD9lHzEsvJL">./i8j2tp5h8pfvsN1in</cm:target>
+        </cm:relation>
+      </cm:relations>
+      <cm:properties>
+        <cm:property cm:id="iHjptIHCK6rTajzOr" cm:type="ps:string" cm:fixed="true" cm:name="content">
+          <cm:constant cm:id="i_g-8tclmuM07X_z_" cm:type="ps:string">src.includes = src/
+src.inclusionpatterns = src/*.java,\</cm:constant>
+        </cm:property>
+        <cm:property cm:id="iU6eHkVCM8V-gZ1Iw" cm:type="ps:path" cm:fixed="true" cm:name="file">
+          <cm:calculate cm:id="iOWFfvDd99MBrFFg2" cm:type="ps:path">
+            <cm:script cm:id="icRFFoDU_i7xP4QUp" cm:language="ps:prolog" cm:type="ps:path">getVariantId(VID), getAttribute(VID,'name',VName), sformat(Value,'~w.ajproperties',[VName])</cm:script>
+          </cm:calculate>
+        </cm:property>
+        <cm:property cm:id="ivzN89EWZl5ryJfk1" cm:type="ps:string" cm:fixed="true" cm:readonly="true" cm:name="ps:Source">
+          <cm:constant cm:id="iavs61LQAS7l2VQ1t" cm:type="ps:string">Rodrigo</cm:constant>
+        </cm:property>
+        <cm:property cm:id="idTYXWchL7KoU8L83" cm:type="ps:datetime" cm:fixed="true" cm:readonly="true" cm:name="ps:Created">
+          <cm:constant cm:id="iahDkCxSMDXbRMEoL" cm:type="ps:datetime">2010-05-31T21:44:48.021Z</cm:constant>
+        </cm:property>
+        <cm:property cm:id="i-_VQqAkM5OxNFN_9" cm:type="ps:string" cm:fixed="true" cm:readonly="true" cm:name="ps:ChangedBy">
+          <cm:constant cm:id="iWpT1HoKzn47fUs3J" cm:type="ps:string">Rodrigo</cm:constant>
+        </cm:property>
+        <cm:property cm:id="iddSinCzMCTWGgmmI" cm:type="ps:datetime" cm:fixed="true" cm:readonly="true" cm:name="ps:Changed">
+          <cm:constant cm:id="iIoFyrwL26aidmNm4" cm:type="ps:datetime">2010-05-31T21:44:48.021Z</cm:constant>
+        </cm:property>
+      </cm:properties>
+    </cm:element>
+    <cm:element cm:id="iIZD1lspE41LhOz_j" cm:name="ActiveBuildSpecificationAspects" cm:type="ps:fragment" cm:class="ps:source" cm:default="on">
+      <cm:relations cm:id="iif_p4qabCGJKkEk_" cm:class="ps:parents">
+        <cm:relation cm:id="ipKp1gfT3FEP3seD2" cm:type="ps:parent">
+          <cm:target cm:id="iqFmll-eapV4b06bQ">./i8j2tp5h8pfvsN1in</cm:target>
+        </cm:relation>
+      </cm:relations>
+      <cm:properties>
+        <cm:property cm:id="iKqdswhBp3sW20hdT" cm:type="ps:path" cm:fixed="true" cm:name="file">
+          <cm:calculate cm:id="i4-VQMq83iqoj1fjN" cm:type="ps:path">
+            <cm:script cm:id="iUo91hA6iOODjvRhp" cm:language="ps:prolog" cm:type="ps:path">getVariantId(VID), getAttribute(VID,'name',VName), sformat(Value,'~w.ajproperties',[VName])</cm:script>
+          </cm:calculate>
+        </cm:property>
+        <cm:property cm:id="i8Emba9YNtJwtvNC7" cm:type="ps:path" cm:fixed="true" cm:name="srcfile">
+          <cm:calculate cm:id="innr5HdK8b4BZUxTb" cm:type="ps:path">
+            <cm:script cm:id="ijidNUzgjp8IkMjX9" cm:language="ps:prolog" cm:type="ps:path">getVariantId(VID), getAttribute(VID,'name',VName), sformat(Value,'~w.ajlist',[VName])</cm:script>
+          </cm:calculate>
+        </cm:property>
+        <cm:property cm:id="i5m77oOd6xDr303cA" cm:type="ps:string" cm:fixed="true" cm:readonly="true" cm:name="ps:Source">
+          <cm:constant cm:id="iahEo_hl9XTRsf40M" cm:type="ps:string">Rodrigo</cm:constant>
+        </cm:property>
+        <cm:property cm:id="iyuESkvU-cPeN-3J7" cm:type="ps:datetime" cm:fixed="true" cm:readonly="true" cm:name="ps:Created">
+          <cm:constant cm:id="ilh3pykBcICK4Xakg" cm:type="ps:datetime">2010-05-31T21:44:48.022Z</cm:constant>
+        </cm:property>
+        <cm:property cm:id="il7RyZU8unLtQnt2V" cm:type="ps:string" cm:fixed="true" cm:readonly="true" cm:name="ps:ChangedBy">
+          <cm:constant cm:id="iIwAYYCfp24btJk4_" cm:type="ps:string">Rodrigo</cm:constant>
+        </cm:property>
+        <cm:property cm:id="i6WUDtsu2LLtTPXRS" cm:type="ps:datetime" cm:fixed="true" cm:readonly="true" cm:name="ps:Changed">
+          <cm:constant cm:id="iqHazUS_euvtrBx_M" cm:type="ps:datetime">2010-05-31T21:44:48.022Z</cm:constant>
+        </cm:property>
+      </cm:properties>
+    </cm:element>
+    <cm:element cm:id="ieQtpzM-fUctOyxDm" cm:restriction="iDwUzQyVaCJSZD8-P" cm:name="br_ufpe_cin_in980_pdf_AspectPDF" cm:type="ps:fragment" cm:class="ps:source" cm:default="on">
+      <cm:relations cm:id="inq69daca1n2m3GTs" cm:class="ps:parents">
+        <cm:relation cm:id="iy3GIIkjDkANl-GTW" cm:type="ps:parent">
+          <cm:target cm:id="i-s7yxhROrhNqFNfN">./iSI9O6WyTgyKsIiZr</cm:target>
+        </cm:relation>
+      </cm:relations>
+      <cm:properties>
+        <cm:property cm:id="iaHSZ9xdHWLehpZc0" cm:type="ps:path" cm:fixed="true" cm:name="file">
+          <cm:calculate cm:id="iVpjMjmDTC0CDOMqn" cm:type="ps:path">
+            <cm:script cm:id="iokwG6zXX0L7Falmu" cm:language="ps:prolog" cm:type="ps:path">getVariantId(VID), getAttribute(VID,'name',VName), sformat(Value,'~w.ajlist',[VName])</cm:script>
+          </cm:calculate>
+        </cm:property>
+        <cm:property cm:id="i5TEVH5q8TZ7XvFfF" cm:type="ps:string" cm:fixed="true" cm:name="content">
+          <cm:constant cm:id="iDoN-pCp8RXezdmZq" cm:type="ps:string">src/br/ufpe/cin/in980/pdf/AspectPDF.aj \
+</cm:constant>
+        </cm:property>
+        <cm:property cm:id="irOXtgAbpigeau0gR" cm:type="ps:string" cm:fixed="true" cm:name="variationType">
+          <cm:constant cm:id="iTZaPaXiI1or5Max6" cm:type="ps:string">AspectJ</cm:constant>
+        </cm:property>
+        <cm:property cm:id="iQzqTP4d3ZRnDl1ZY" cm:type="ps:string" cm:fixed="true" cm:readonly="true" cm:name="ps:Source">
+          <cm:constant cm:id="iyPgGsIo8mndsjyZy" cm:type="ps:string">Rodrigo</cm:constant>
+        </cm:property>
+        <cm:property cm:id="iow5Hck0ufUMFCk_N" cm:type="ps:datetime" cm:fixed="true" cm:readonly="true" cm:name="ps:Created">
+          <cm:constant cm:id="iCSauRB4G7lV51q5f" cm:type="ps:datetime">2010-05-31T21:44:48.046Z</cm:constant>
+        </cm:property>
+        <cm:property cm:id="iGqqunJXAmW4VBNcI" cm:type="ps:string" cm:fixed="true" cm:readonly="true" cm:name="ps:ChangedBy">
+          <cm:constant cm:id="iPHWtPzOG9dhoPY32" cm:type="ps:string">Rodrigo</cm:constant>
+        </cm:property>
+        <cm:property cm:id="ihXCBae-GbinsH4eT" cm:type="ps:datetime" cm:fixed="true" cm:readonly="true" cm:name="ps:Changed">
+          <cm:constant cm:id="i8izakC90kjV77Lb1" cm:type="ps:datetime">2010-05-31T21:44:48.067Z</cm:constant>
+        </cm:property>
+      </cm:properties>
+    </cm:element>
+    <cm:element cm:id="iYi69mP9Ct2L6EDpI" cm:restriction="irsvh9y728jUwW_S_" cm:name="br_ufpe_cin_in980_publicacao_AspectPublicacao" cm:type="ps:fragment" cm:class="ps:source" cm:default="on">
+      <cm:relations cm:id="iSwEymz2dY1MeONUx" cm:class="ps:parents">
+        <cm:relation cm:id="i1M5F_HNckgjaYZ-2" cm:type="ps:parent">
+          <cm:target cm:id="i_l5ZdE-njq7ZPURi">./iSI9O6WyTgyKsIiZr</cm:target>
+        </cm:relation>
+      </cm:relations>
+      <cm:properties>
+        <cm:property cm:id="iPXSK4ILuZ_dn05Ss" cm:type="ps:path" cm:fixed="true" cm:name="file">
+          <cm:calculate cm:id="i-yemOrzKMeFk4W1C" cm:type="ps:path">
+            <cm:script cm:id="iF9xNjje2O65NQEwp" cm:language="ps:prolog" cm:type="ps:path">getVariantId(VID), getAttribute(VID,'name',VName), sformat(Value,'~w.ajlist',[VName])</cm:script>
+          </cm:calculate>
+        </cm:property>
+        <cm:property cm:id="iEV5rZV3BsHI4Wm67" cm:type="ps:string" cm:fixed="true" cm:name="content">
+          <cm:constant cm:id="i9yTVrIGiJRLul0qa" cm:type="ps:string">src/br/ufpe/cin/in980/publicacao/AspectPublicacao.aj \
+</cm:constant>
+        </cm:property>
+        <cm:property cm:id="iMfxP7OAMuiAfWzG5" cm:type="ps:string" cm:fixed="true" cm:name="variationType">
+          <cm:constant cm:id="iaHZ9l0nIN8R-tW6T" cm:type="ps:string">AspectJ</cm:constant>
+        </cm:property>
+        <cm:property cm:id="ibY29M_xM0UE9qKzN" cm:type="ps:string" cm:fixed="true" cm:readonly="true" cm:name="ps:Source">
+          <cm:constant cm:id="iv1qyJ0RbdeQF3rgH" cm:type="ps:string">Rodrigo</cm:constant>
+        </cm:property>
+        <cm:property cm:id="iX3pT1cLw0V-L7Zyu" cm:type="ps:datetime" cm:fixed="true" cm:readonly="true" cm:name="ps:Created">
+          <cm:constant cm:id="i4mzKmL_V3DDjRO3u" cm:type="ps:datetime">2010-06-01T20:29:43.711Z</cm:constant>
+        </cm:property>
+        <cm:property cm:id="i3tn0XuWP80IH-hzY" cm:type="ps:string" cm:fixed="true" cm:readonly="true" cm:name="ps:ChangedBy">
+          <cm:constant cm:id="igAvw3dY2aKifs5HA" cm:type="ps:string">Rodrigo</cm:constant>
+        </cm:property>
+        <cm:property cm:id="ilbW4Ks9ePCMjcr6n" cm:type="ps:datetime" cm:fixed="true" cm:readonly="true" cm:name="ps:Changed">
+          <cm:constant cm:id="ighHGmJlxY25_zRdw" cm:type="ps:datetime">2010-06-01T20:29:43.745Z</cm:constant>
+        </cm:property>
+      </cm:properties>
+    </cm:element>
+  </cm:elements>
+</cm:consulmodel>

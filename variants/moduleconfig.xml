@@ -1,0 +1,1 @@
+<?xml version="1.0" encoding="UTF-8"?><moduleconfig><module name="Convert to transformer action list" tname="standard transformation" tversion="1.0" exclude="" include="/variant"/><module name="Execute transformer action list" tname="actionlist" tversion="1.0" exclude="" include="/variant"/></moduleconfig>

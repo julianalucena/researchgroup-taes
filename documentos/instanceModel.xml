@@ -1,0 +1,48 @@
+<feature  name="rgms" type="NONE" id="rgms">
+  <feature  name="CadastrarMembro" type="NONE" id="cadastrarMembro">
+  </feature>
+  <feature  name="BuscarMembro" type="NONE" id="buscarMembro">
+  </feature>
+  <feature  name="EditarMembro" type="NONE" id="editarMembro">
+  </feature>
+  <feature  name="DeletarMembro" type="NONE" id="deletarMembro">
+  </feature>
+  <feature  name="CadastrarPublicacao" type="NONE" id="cadastrarPublicacao">
+    <feature  name="AssociarProjeto" type="NONE" id="associarProjeto">
+    </feature>
+  </feature>
+  <feature  name="BuscarPublicacao" type="NONE" id="buscarPublicacao">
+  </feature>
+  <feature  name="InformarModificacao" type="NONE" id="informarModificacao">
+      <feature  name="AtualizarFeedsRss" type="NONE" id="atualizarFeedsRss">
+      </feature>
+  </feature>
+  <feature  name="GerarListaPublicacoes" type="NONE" id="gerarListaPublicacoes">
+      <feature  name="ComBibTeX" type="NONE" id="comBibTeX">
+      </feature>
+  </feature>
+  <feature  name="CadastrarProjetoPesquisa" type="NONE" id="cadastrarProjetoPesquisa">
+  </feature>
+  <feature  name="CadastrarLinhaPesquisa" type="NONE" id="cadastrarLinhaPesquisa">
+  </feature>
+   <feature  name="BuscarLinhaPesquisa" type="NONE" id="buscarLinhaPesquisa">
+  </feature>
+  <feature  name="EditarLinhaPesquisa" type="NONE" id="editarLinhaPesquisa">
+  </feature>
+  <feature  name="DeletarLinhaPesquisa" type="NONE" id="deletarLinhaPesquisa">
+  </feature>
+  <feature  name="EditarPublicacao" type="NONE" id="editarPublicacao">
+  </feature>
+  <feature  name="DeletarPublicacao" type="NONE" id="deletarPublicacao">
+  </feature>
+  <feature  name="DownloadPublicacaoPDF" type="NONE" id="downloadPublicacaoPDF">
+  </feature>
+  <feature  name="PaginaMembro" type="NONE" id="paginaMembro">
+  </feature>
+  <feature  name="DownloadPublicacaoBibTeX" type="NONE" id="downloadPublicacaoBibTeX">
+  </feature>
+  <feature  name="PaginaGrupo" type="NONE" id="paginaGrupo">
+  </feature>
+  <feature  name="ListarLinhaPesquisa" type="NONE" id="listarLinhaPesquisa">
+  </feature>
+</feature>

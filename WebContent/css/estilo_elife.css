@@ -1,0 +1,415 @@
+*{
+margin:0;
+padding:0;}
+
+a{
+color:#9A2300;
+font-weight:bold;
+}
+
+TABLE {
+	BACKGROUND:#e8e8ce;
+	FONT-SIZE: 1.0em;
+	PADDING-RIGHT: 0px;
+	PADDING-LEFT: 0px;
+	PADDING-BOTTOM: 0px;
+	MARGIN: 10px;
+	PADDING-TOP: 0px;
+}
+
+body{
+font-family:Trebuchet MS;
+font-size:13px;
+color: #000;
+background:#CFC681;
+background-repeat:repeat-x;
+background-position:center top;}
+
+h1{
+font-size:18px;
+color:#000;
+font-weight:bold;
+float:left;
+margin-left:20px;
+margin-top:7px;}
+
+h2{
+font-size:14px;
+color:#9A2300;
+text-transform:uppercase;	
+font-weight:bold;
+margin-bottom:20px;}
+
+h3{
+font-size:22px;
+color:#000;
+font-weight:normal;
+margin-bottom:20px;}
+
+h4{
+font-size:25px;
+color:#000;
+font-weight:bold;
+font-stretch:extra-condensed;
+font-family:Trebuchet MS;
+padding-left:35px;
+margin-bottom:5px;}
+
+a{
+color:#000066;
+text-decoration:none;}
+
+#area-busca{
+display:block;
+margin:10px 20px;
+width:auto;
+clear:both;
+height:20px;}
+
+#translate{
+width:400px;
+font-size:10px;
+text-transform:uppercase;
+text-align:right;
+float:right;
+line-height:20px;
+margin-right:10px;}
+
+#translate a{
+color:#FFFFFF;}
+
+#busca{
+float:right;
+width:320px;}
+
+#busca form{
+width:140px;
+height:20px;
+border: 1px solid #ccc;
+background:#fff;}
+
+#busca button{
+line-height:10px;
+text-transform:lowercase;
+width:50px;
+height:20px;
+border:1px solid #fff;
+background: #FF6600;
+color:#FFFFFF;
+margin-left:5px;
+font-size:9px;}
+
+#main{
+width:auto;
+height:auto;
+overflow:hidden;
+margin:0px 20px 0px 20px;
+background:#FFFFFF;
+background-image:url(../img/bg_interna.gif);
+background-repeat:no-repeat;
+background-position:100px 0px;}
+
+#interna{
+height:100%;
+display:block;
+margin:0px 20px 0px 20px;}
+
+
+#topo{
+height:95px;
+border-bottom:1px solid #9A2300;
+margin-bottom:60px;}
+
+
+#menu ul{
+float:right;
+width:1200px;
+height:85px;
+font-size:10px;
+list-style:none;
+line-height:95px;}
+
+#menu li{
+float:left;
+margin-left:10px;}
+
+#menu li a{
+display:block;
+text-decoration:none;
+color:#000;
+padding:0 6px;}
+
+#menu li a:hover,
+#menu .menu-selecionado a{
+color:#ccc;
+border-bottom:3px solid #9A2300;}
+
+#conteudo-home{
+background:red;
+width:auto;
+height:200px;}
+
+#colunaA{
+display:block;
+float:left;
+width:33%;
+margin:0px 30px 0px 30px;}
+
+#colunaB{
+float:right;
+width:50%;
+margin:0px 30px 0px 30px;}
+
+#colunaA-interna{
+float:left;
+width:65%;
+margin:0px 30px 0px 30px;
+display: block;
+overflow:hidden;}
+
+#linkstl{
+overflow:hidden;
+float:right;
+width:30%;
+margin:0px 30px 0px 30px;}
+
+
+#colunaB-interna{
+overflow:hidden;
+float:right;
+width:20%;
+margin:0px 30px 0px 30px;}
+
+#rodape{
+width:auto;
+margin:0px 20px 20px 20px;}
+
+#rodape ul{
+float:left;
+width:700px;
+padding-right:10px;
+height:50px;
+font-size:12px;
+list-style:none;
+line-height:50px;}
+
+#rodape li{
+float:left;
+margin-left:10px;}
+
+#rodape li a{
+color:#fff;
+display:block;
+text-decoration:none;
+padding:0 6px;}
+
+#rodape li a:hover,{
+color:#CC3300;}
+
+.copyright{
+float:right;
+line-height:50px;
+font-size:10px;
+color: #000;
+padding-right:20px;}
+
+.assinatura{
+font-weight:bold;
+text-transform:lowercase;}
+
+.ponto{
+color:#9A2300;}
+
+
+/*   CHAMADAS DA HOME */
+
+
+.chamada-principal{
+width:auto;
+clear:both;
+background-image:url(../img/line_chamada_topo.gif);
+background-repeat:no-repeat;
+background-position:top left;
+padding-top:20px;
+overflow:hidden;}
+
+.chamada-principal span{
+font-weight:bold;}
+
+.chamada{
+width:auto;
+clear:both;
+background-image:url(../img/line_chamada_topo.gif);
+background-repeat:no-repeat;
+background-position:top left;
+margin-bottom:20px;
+padding-top:20px;
+overflow:hidden;}
+
+#email-home,
+#telefone-home{
+ /*float:left;*/
+font-size:17px;
+/*width:45%;*/
+margin-top:10px;
+margin-right:10px;}
+
+#servicos-home{
+width:100%;
+display:block;
+margin-bottom:20px;}
+
+
+#servicos-home ul{
+width:45%;
+list-style:none;
+font-size:12px;
+float:left;
+margin-right:15px;
+padding-top:10px;}
+
+
+.chamada-secundaria{
+float:left;
+width:45%;
+background-image:url(../img/line_chamada_topo.gif);
+background-repeat:no-repeat;
+background-position:top left;
+margin-right:20px;
+font-size:16px;
+padding-top:20px;
+margin-bottom:20px;}
+
+.chamada-portfolio{
+width:auto;
+clear:both;
+display:block;
+margin-bottom:20px;
+padding-top:20px;
+overflow:hidden;}
+
+.chamada-portfolio img{
+border:1px solid #9A2300;
+margin:0px 15px 10px 0px;
+float:left;}
+
+.chamada-portfolio span{
+font-weight:bold;}
+
+
+.link,
+.link a{
+float:right;
+font-size:12px;
+text-align:right;
+color:#9A2300;}
+
+
+
+/* p�gina interna*/
+
+.conteudo-pagina{
+width:auto;
+clear:both;
+background-image:url(../img/line_chamada_topo.gif);
+background-repeat:no-repeat;
+background-position:top left;
+padding-top:20px;
+overflow:hidden;}
+
+.conteudo-pagina h2{
+margin-bottom:20px;
+margin-left:0px;}
+
+.conteudo-pagina p{
+margin-bottom:20px;
+margin-left:0px;}
+
+.conteudo-pagina span{
+font-weight:bold;}
+
+.conteudo-pagina a{
+font-size:12px;
+font-weight:bold;
+color: #FF6600;}
+
+.conteudo-pagina li{
+margin-bottom:10px;
+margin-left:70px;
+list-style:none;}
+
+.titulo-paper{
+font-weight:bold;
+font-size:16px;
+display:block;
+margin-bottom:20px;
+margin-left:0px;}
+
+.data-post{
+float:left;
+font-weight:bold;
+text-transform: lowercase;
+color:#D5D5D5;
+padding:5px;
+border:1px dashed #CCCCCC;
+background:#FAFAFA;
+width:60px;
+text-align:center;}
+
+
+.post{
+margin-bottom:20px;
+margin-left:0px;}
+
+.post h2{
+margin-bottom:20px;
+margin-left:80px;}
+
+.post p{
+margin-bottom:20px;
+margin-left:80px;}
+
+.coment-post{
+display:block;
+clear:both;
+border-top:#E4E4E4;
+padding-top:5px;
+text-transform:uppercase;
+font-size:9px;
+margin-bottom:20px;
+margin-left:80px;}
+
+.pessoa{
+margin-bottom:20px;
+margin-left:0px;}
+
+.pessoa h2{
+margin-bottom:20px;
+margin-left:80px;}
+
+.pessoa p{
+margin-bottom:20px;
+margin-left:80px;}
+
+.linkedin{
+display:block;
+clear:both;
+border-top:#E4E4E4;
+padding-top:5px;
+text-transform:uppercase;
+font-size:9px;
+margin-left:80px;}
+
+.coment-post a{
+border-top:#E4E4E4;
+text-transform:uppercase;
+font-size:9px;}
+
+#voltar-topo{
+display:block;
+font-size:9px;
+padding-left:80px;}
+
+#voltar-topo a{
+text-decoration:none;
+color:#9A2300;}

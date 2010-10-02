@@ -1,0 +1,9 @@
+<requirementModel>
+  <requirement>
+    <id>FR_TARGET_0001</id>
+    <name>Renaming Artifacts</name>
+    <description>
+     The user shall be able to rename the artifact’s files from the tool’s interface. 
+    </description>
+  </requirement>
+</requirementModel>

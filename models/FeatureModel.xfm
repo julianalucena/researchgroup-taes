@@ -1,0 +1,826 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cm:consulmodel xmlns:cm="http://www.pure-systems.com/consul/model" cm:id="il3UttUMKiLdjA-tC" cm:version="1.5" cm:type="ps:fm">
+  <cm:head>
+    <cm:properties>
+      <cm:property cm:id="i53d8S8RmB70NktlH" cm:type="ps:string" cm:invisible="true" cm:name="ps:name">
+        <cm:constant cm:id="ikSOK0ZHCfT8SZan5" cm:type="ps:string">TesteFeatures</cm:constant>
+      </cm:property>
+      <cm:property cm:id="iYTeLLPnGbFjX4LL7" cm:type="ps:string" cm:invisible="true" cm:name="ps:author">
+        <cm:constant cm:id="ibOQdwkJgEUY1mzRB" cm:type="ps:string">fhcl</cm:constant>
+      </cm:property>
+      <cm:property cm:id="iM7SH0b05pmb-YYoU" cm:type="ps:string" cm:invisible="true" cm:name="ps:version">
+        <cm:constant cm:id="idzAUb-nhS9LaCZOp" cm:type="ps:string">1.0</cm:constant>
+      </cm:property>
+      <cm:property cm:id="iHEAGX1rdKj_t62iN" cm:type="ps:datetime" cm:invisible="true" cm:name="ps:created">
+        <cm:constant cm:id="iSC1le1pe0Xqqm4rU" cm:type="ps:datetime">2007-09-03T12:48:04.666Z</cm:constant>
+      </cm:property>
+    </cm:properties>
+  </cm:head>
+  <cm:elements cm:rootid="ibU5RfrULEyRXT2rV">
+    <cm:element cm:id="ibU5RfrULEyRXT2rV" cm:name="RGMS" cm:type="ps:feature" cm:class="ps:feature" cm:default="on">
+      <cm:relations cm:id="i86zYqXLFO0TRO2nx" cm:class="ps:children">
+        <cm:relation cm:id="ig1hGkXHxkbh9lyO_" cm:type="ps:mandatory">
+          <cm:target cm:id="ixy3yyF7yNBVxn4gp">./iN2JOE2ZET4ExHqPH</cm:target>
+          <cm:target cm:id="il8-xbpc6eZNA8dy6">./iOf0cYVzfbhpucMHb</cm:target>
+          <cm:target cm:id="i4IbW0q1_Qo7pX9ED">./iVBhP0PqVi_R-0DMv</cm:target>
+          <cm:target cm:id="ir_JiJEorw9GsXFqJ">./ierzr-QLCb4rENR39</cm:target>
+        </cm:relation>
+        <cm:relation cm:id="i1k_WwpM8Vtdq7n10" cm:type="ps:optional">
+          <cm:target cm:id="iIDuDDzAmRqrC6YKe">./iKRi9zMIeLcdyzUqk</cm:target>
+          <cm:target cm:id="iSYBl2p0hSdX8qEBx">./imcV3H_uEEZwlbWFL</cm:target>
+        </cm:relation>
+      </cm:relations>
+      <cm:properties>
+        <cm:property cm:id="ilANTptARuBKITtJr" cm:type="ps:string" cm:fixed="true" cm:readonly="true" cm:name="ps:Source">
+          <cm:constant cm:id="i3tEkMl9id8HxVAPS" cm:type="ps:string">fhcl</cm:constant>
+        </cm:property>
+        <cm:property cm:id="iO35Yy1OFuLCxqqqC" cm:type="ps:datetime" cm:fixed="true" cm:readonly="true" cm:name="ps:Created">
+          <cm:constant cm:id="iwb4H0DKjYmdpiHOx" cm:type="ps:datetime">2007-09-03T12:48:04.666Z</cm:constant>
+        </cm:property>
+        <cm:property cm:id="iYr_cAjs86Q0kVDg7" cm:type="ps:string" cm:fixed="true" cm:readonly="true" cm:name="ps:ChangedBy">
+          <cm:constant cm:id="iI0rCJvX4oNXf3Fp7" cm:type="ps:string">Rodrigo</cm:constant>
+        </cm:property>
+        <cm:property cm:id="iHtWuPTBV8u147hiZ" cm:type="ps:datetime" cm:fixed="true" cm:readonly="true" cm:name="ps:Changed">
+          <cm:constant cm:id="iF0aWEheKrRgQpEUw" cm:type="ps:datetime">2010-06-09T16:10:35.732Z</cm:constant>
+        </cm:property>
+      </cm:properties>
+      <cm:vname>
+        <cm:mimedesc cm:id="iozKVsfheULJIJ2hv" cm:mimetype="text/plain" cm:encoding="utf-8">RGMS</cm:mimedesc>
+      </cm:vname>
+    </cm:element>
+    <cm:element cm:id="iN2JOE2ZET4ExHqPH" cm:name="Membro" cm:type="ps:feature" cm:class="ps:feature" cm:default="on">
+      <cm:relations cm:id="ifH-ODGK9zj6tno5v" cm:class="ps:parents">
+        <cm:relation cm:id="ishUoIQcjCAM7UDTv" cm:type="ps:parent">
+          <cm:target cm:id="ixXQqdvR-bSum-JY-">./ibU5RfrULEyRXT2rV</cm:target>
+        </cm:relation>
+      </cm:relations>
+      <cm:relations cm:id="ilqQbm50LTKmNGh57" cm:class="ps:children">
+        <cm:relation cm:id="iK_IRCFyn8RGKJEI5" cm:type="ps:mandatory">
+          <cm:target cm:id="iZ2HxdZykH_qA9yVO">./iMxnHjwpUzKoe2kyq</cm:target>
+          <cm:target cm:id="i04Dj8H7GTE8APJIj">./ixx2QhE_reR2gNnad</cm:target>
+          <cm:target cm:id="iKTxlqqAgaLUOqZzY">./iDZPPnt1p4TUmUgGU</cm:target>
+          <cm:target cm:id="i-Joknz612zKxlLIr">./ieDuogh3QeUvfK6E4</cm:target>
+          <cm:target cm:id="izIZFul1N0VLlOaAg">./iZTkanK0WhvmLqFsd</cm:target>
+        </cm:relation>
+      </cm:relations>
+      <cm:properties>
+        <cm:property cm:id="i6cMdXgz7w3uPH1q4" cm:type="ps:string" cm:fixed="true" cm:readonly="true" cm:name="ps:Source">
+          <cm:constant cm:id="iHyYEkuGlYlEbqO2w" cm:type="ps:string">Rodrigo</cm:constant>
+        </cm:property>
+        <cm:property cm:id="i-ricoY_t4cAkPyLb" cm:type="ps:datetime" cm:fixed="true" cm:readonly="true" cm:name="ps:Created">
+          <cm:constant cm:id="isYKWUUBAhvx2DD8w" cm:type="ps:datetime">2010-06-09T15:48:42.006Z</cm:constant>
+        </cm:property>
+        <cm:property cm:id="if-zQqsHKMner3wZu" cm:type="ps:string" cm:fixed="true" cm:readonly="true" cm:name="ps:ChangedBy">
+          <cm:constant cm:id="iB5E1P8Awt_yH4LGd" cm:type="ps:string">Rodrigo</cm:constant>
+        </cm:property>
+        <cm:property cm:id="itJ381xdm7DMIhPIS" cm:type="ps:datetime" cm:fixed="true" cm:readonly="true" cm:name="ps:Changed">
+          <cm:constant cm:id="ihW1ZwZNloLOJul3W" cm:type="ps:datetime">2010-06-09T16:05:15.634Z</cm:constant>
+        </cm:property>
+      </cm:properties>
+      <cm:vname>
+        <cm:mimedesc cm:id="i4vpFrmBWevOhHb7O" cm:mimetype="text/plain" cm:encoding="utf-8">Membro</cm:mimedesc>
+      </cm:vname>
+    </cm:element>
+    <cm:element cm:id="iMxnHjwpUzKoe2kyq" cm:name="CadastrarMembro" cm:type="ps:feature" cm:class="ps:feature" cm:default="on">
+      <cm:relations cm:id="i--NqZwmGykfjWOup" cm:class="ps:parents">
+        <cm:relation cm:id="i0636MusIP9xQYpCm" cm:type="ps:parent">
+          <cm:target cm:id="iZnasMC4nj99-n-yr">./iN2JOE2ZET4ExHqPH</cm:target>
+        </cm:relation>
+      </cm:relations>
+      <cm:properties>
+        <cm:property cm:id="iemifjdyppgn_ktEx" cm:type="ps:string" cm:fixed="true" cm:readonly="true" cm:name="ps:Source">
+          <cm:constant cm:id="iOfAvsc_zGmfdBbUQ" cm:type="ps:string">Rodrigo</cm:constant>
+        </cm:property>
+        <cm:property cm:id="ifh_GL-D9jPJ7tyTN" cm:type="ps:datetime" cm:fixed="true" cm:readonly="true" cm:name="ps:Created">
+          <cm:constant cm:id="iff1r9UGQFjApW1fi" cm:type="ps:datetime">2010-06-09T15:49:10.705Z</cm:constant>
+        </cm:property>
+        <cm:property cm:id="iEGg0TxDg2QoPsf6u" cm:type="ps:string" cm:fixed="true" cm:readonly="true" cm:name="ps:ChangedBy">
+          <cm:constant cm:id="irSkJ2LoZZYN2Y7Zx" cm:type="ps:string">Rodrigo</cm:constant>
+        </cm:property>
+        <cm:property cm:id="iXfJjn7MQVyNNTWLH" cm:type="ps:datetime" cm:fixed="true" cm:readonly="true" cm:name="ps:Changed">
+          <cm:constant cm:id="iCqUZIkV5mg6jpEZt" cm:type="ps:datetime">2010-06-09T15:49:10.705Z</cm:constant>
+        </cm:property>
+      </cm:properties>
+      <cm:vname>
+        <cm:mimedesc cm:id="iQ8sXygWv70Qf8kJr" cm:mimetype="text/plain" cm:encoding="utf-8">CadastrarMembro</cm:mimedesc>
+      </cm:vname>
+    </cm:element>
+    <cm:element cm:id="ixx2QhE_reR2gNnad" cm:name="EditarMembro" cm:type="ps:feature" cm:class="ps:feature" cm:default="on">
+      <cm:relations cm:id="i746Bu8CwQQ1IbpTe" cm:class="ps:parents">
+        <cm:relation cm:id="ilMXjBWpRCCKTdFuT" cm:type="ps:parent">
+          <cm:target cm:id="iMK5d9M5kFveWpX8l">./iN2JOE2ZET4ExHqPH</cm:target>
+        </cm:relation>
+      </cm:relations>
+      <cm:properties>
+        <cm:property cm:id="iBgpFA5UituKMtSsp" cm:type="ps:string" cm:fixed="true" cm:readonly="true" cm:name="ps:Source">
+          <cm:constant cm:id="it2GI9-6tKMIfHmnU" cm:type="ps:string">Rodrigo</cm:constant>
+        </cm:property>
+        <cm:property cm:id="iWTflRbRwNgfyhagI" cm:type="ps:datetime" cm:fixed="true" cm:readonly="true" cm:name="ps:Created">
+          <cm:constant cm:id="iyXUj3gbm0OVbT0AF" cm:type="ps:datetime">2010-06-09T15:49:24.506Z</cm:constant>
+        </cm:property>
+        <cm:property cm:id="ivxyOXiDIdfBK-CuT" cm:type="ps:string" cm:fixed="true" cm:readonly="true" cm:name="ps:ChangedBy">
+          <cm:constant cm:id="iVUuJZm44bqLpd2kA" cm:type="ps:string">Rodrigo</cm:constant>
+        </cm:property>
+        <cm:property cm:id="iRzmazjH--4K7Z-qV" cm:type="ps:datetime" cm:fixed="true" cm:readonly="true" cm:name="ps:Changed">
+          <cm:constant cm:id="iGIOMOEgjA3_8ZajP" cm:type="ps:datetime">2010-06-09T15:49:24.506Z</cm:constant>
+        </cm:property>
+      </cm:properties>
+      <cm:vname>
+        <cm:mimedesc cm:id="ixM6rA8UCALlsLNT2" cm:mimetype="text/plain" cm:encoding="utf-8">EditarMembro</cm:mimedesc>
+      </cm:vname>
+    </cm:element>
+    <cm:element cm:id="iDZPPnt1p4TUmUgGU" cm:name="BuscarMembro" cm:type="ps:feature" cm:class="ps:feature" cm:default="on">
+      <cm:relations cm:id="ixFyfFC2twYNix_K3" cm:class="ps:parents">
+        <cm:relation cm:id="ia0NNE1qNgsTkrtNm" cm:type="ps:parent">
+          <cm:target cm:id="iLK5O6zQH7xOSfO4R">./iN2JOE2ZET4ExHqPH</cm:target>
+        </cm:relation>
+      </cm:relations>
+      <cm:properties>
+        <cm:property cm:id="iYFVVA09YglqbWpfA" cm:type="ps:string" cm:fixed="true" cm:readonly="true" cm:name="ps:Source">
+          <cm:constant cm:id="iTdQqdvmkQ5kVEc3j" cm:type="ps:string">Rodrigo</cm:constant>
+        </cm:property>
+        <cm:property cm:id="iQOsnacSC5cQFryKj" cm:type="ps:datetime" cm:fixed="true" cm:readonly="true" cm:name="ps:Created">
+          <cm:constant cm:id="i42xEwp1Fs0ttgo0x" cm:type="ps:datetime">2010-06-09T15:49:49.023Z</cm:constant>
+        </cm:property>
+        <cm:property cm:id="i7bQhn-BNzWCScyRA" cm:type="ps:string" cm:fixed="true" cm:readonly="true" cm:name="ps:ChangedBy">
+          <cm:constant cm:id="igGhdx0pE9gwEiAPo" cm:type="ps:string">Rodrigo</cm:constant>
+        </cm:property>
+        <cm:property cm:id="ixIkbkTy4tc-Fian5" cm:type="ps:datetime" cm:fixed="true" cm:readonly="true" cm:name="ps:Changed">
+          <cm:constant cm:id="it8kbZ7qg57jyFwCH" cm:type="ps:datetime">2010-06-09T15:49:49.023Z</cm:constant>
+        </cm:property>
+      </cm:properties>
+      <cm:vname>
+        <cm:mimedesc cm:id="iBmu7CCJRjPpn8NBK" cm:mimetype="text/plain" cm:encoding="utf-8">BuscarMembro</cm:mimedesc>
+      </cm:vname>
+    </cm:element>
+    <cm:element cm:id="ieDuogh3QeUvfK6E4" cm:name="RemoverMembro" cm:type="ps:feature" cm:class="ps:feature" cm:default="on">
+      <cm:relations cm:id="iTYBqbqCKMeTbTp-5" cm:class="ps:parents">
+        <cm:relation cm:id="ie5KOqCVnBMDHVyJJ" cm:type="ps:parent">
+          <cm:target cm:id="ixUbXHfDK9WzVUZg7">./iN2JOE2ZET4ExHqPH</cm:target>
+        </cm:relation>
+      </cm:relations>
+      <cm:properties>
+        <cm:property cm:id="iwIMlhU4Jt23B3zR5" cm:type="ps:string" cm:fixed="true" cm:readonly="true" cm:name="ps:Source">
+          <cm:constant cm:id="idBKcErTzSGSMRo9F" cm:type="ps:string">Rodrigo</cm:constant>
+        </cm:property>
+        <cm:property cm:id="ix8X8QTbbL0IgAlu-" cm:type="ps:datetime" cm:fixed="true" cm:readonly="true" cm:name="ps:Created">
+          <cm:constant cm:id="iSE8jZTTg8dU3_ERh" cm:type="ps:datetime">2010-06-09T15:50:03.972Z</cm:constant>
+        </cm:property>
+        <cm:property cm:id="iNSLEADVqNAMLv6dv" cm:type="ps:string" cm:fixed="true" cm:readonly="true" cm:name="ps:ChangedBy">
+          <cm:constant cm:id="ieYSqPtAVtQJnZsis" cm:type="ps:string">Rodrigo</cm:constant>
+        </cm:property>
+        <cm:property cm:id="i6rGFk62G7tpg30ZP" cm:type="ps:datetime" cm:fixed="true" cm:readonly="true" cm:name="ps:Changed">
+          <cm:constant cm:id="irZ3fz-Wg1inTOVUW" cm:type="ps:datetime">2010-06-09T15:50:03.972Z</cm:constant>
+        </cm:property>
+      </cm:properties>
+      <cm:vname>
+        <cm:mimedesc cm:id="itxpQQ6llI3IG_cjO" cm:mimetype="text/plain" cm:encoding="utf-8">RemoverMembro</cm:mimedesc>
+      </cm:vname>
+    </cm:element>
+    <cm:element cm:id="iOf0cYVzfbhpucMHb" cm:name="Publicacao" cm:type="ps:feature" cm:class="ps:feature" cm:default="on">
+      <cm:relations cm:id="i1Dh71jC8nZwLcAQW" cm:class="ps:parents">
+        <cm:relation cm:id="iJ3erVxBHfC4kKZs9" cm:type="ps:parent">
+          <cm:target cm:id="i0iRP5jCIdwmoBUS7">./ibU5RfrULEyRXT2rV</cm:target>
+        </cm:relation>
+      </cm:relations>
+      <cm:relations cm:id="ig1k-fTCsX53yBzLJ" cm:class="ps:children">
+        <cm:relation cm:id="i7l44fUQCTCRgvMul" cm:type="ps:mandatory">
+          <cm:target cm:id="iOpVX2McxC7v6fFbo">./iMMUJGt_rD3TaLrDX</cm:target>
+          <cm:target cm:id="iM4Y72pcJ6P5pG_2M">./iCVEckzqoEXSUdBTJ</cm:target>
+          <cm:target cm:id="iCkT-0mpOjL8AjhSH">./i61Jt-GoBmM_dzlCK</cm:target>
+          <cm:target cm:id="iZ4ajGsrJGKJOVpNE">./iBO0JTocHCC2_lsWG</cm:target>
+          <cm:target cm:id="i1fU2_U1RyDZ8YARN">./i-QxQjc5UziVuJs0Z</cm:target>
+        </cm:relation>
+        <cm:relation cm:id="ix5DqR1EGy5VQRMga" cm:type="ps:optional">
+          <cm:target cm:id="isbhQ4kiVrqaApy1L">./iBGKJL6e3sZu7dGES</cm:target>
+          <cm:target cm:id="i8Ehssq2lLMSRjnKC">./iNjmviuiKwfHYXIC6</cm:target>
+          <cm:target cm:id="i0O7YzAravtK0O2lL">./iiG0QLUeDUX6AreGl</cm:target>
+        </cm:relation>
+      </cm:relations>
+      <cm:properties>
+        <cm:property cm:id="iFOqXQwIkFlevfSta" cm:type="ps:string" cm:fixed="true" cm:readonly="true" cm:name="ps:Source">
+          <cm:constant cm:id="iR3t1B_Aus3lzwKJx" cm:type="ps:string">Rodrigo</cm:constant>
+        </cm:property>
+        <cm:property cm:id="i3na2GKvKWgSeedIw" cm:type="ps:datetime" cm:fixed="true" cm:readonly="true" cm:name="ps:Created">
+          <cm:constant cm:id="i1Bq5uUlidsDdX5IG" cm:type="ps:datetime">2010-06-09T15:50:22.374Z</cm:constant>
+        </cm:property>
+        <cm:property cm:id="iqfSMgufOE6o5s-vh" cm:type="ps:string" cm:fixed="true" cm:readonly="true" cm:name="ps:ChangedBy">
+          <cm:constant cm:id="iyZmkFr9BoNViNv0Q" cm:type="ps:string">Rodrigo</cm:constant>
+        </cm:property>
+        <cm:property cm:id="iVCFpL_q-7YcGyOTv" cm:type="ps:datetime" cm:fixed="true" cm:readonly="true" cm:name="ps:Changed">
+          <cm:constant cm:id="i5AyIBP_tH2EiOktv" cm:type="ps:datetime">2010-06-09T16:10:56.166Z</cm:constant>
+        </cm:property>
+      </cm:properties>
+      <cm:vname>
+        <cm:mimedesc cm:id="iUpAS8F-ngZtHQ_om" cm:mimetype="text/plain" cm:encoding="utf-8">Publicacao</cm:mimedesc>
+      </cm:vname>
+    </cm:element>
+    <cm:element cm:id="iMMUJGt_rD3TaLrDX" cm:name="CadastrarPublicacao" cm:type="ps:feature" cm:class="ps:feature" cm:default="on">
+      <cm:relations cm:id="iBWehhRK4hvzC2hh3" cm:class="ps:parents">
+        <cm:relation cm:id="iIWqdv0_3S0UdQI8C" cm:type="ps:parent">
+          <cm:target cm:id="inW_lYiDwu-wvdhvB">./iOf0cYVzfbhpucMHb</cm:target>
+        </cm:relation>
+      </cm:relations>
+      <cm:properties>
+        <cm:property cm:id="iVV-DoiBRgZk1Druy" cm:type="ps:string" cm:fixed="true" cm:readonly="true" cm:name="ps:Source">
+          <cm:constant cm:id="isRM2aX-w91UOq3rQ" cm:type="ps:string">Rodrigo</cm:constant>
+        </cm:property>
+        <cm:property cm:id="iW0XGPmjYk0nOm8V3" cm:type="ps:datetime" cm:fixed="true" cm:readonly="true" cm:name="ps:Created">
+          <cm:constant cm:id="i3MZaFRB6Rh42_Wir" cm:type="ps:datetime">2010-06-09T15:50:36.932Z</cm:constant>
+        </cm:property>
+        <cm:property cm:id="in2wT2lpSgmYdhivL" cm:type="ps:string" cm:fixed="true" cm:readonly="true" cm:name="ps:ChangedBy">
+          <cm:constant cm:id="i7m6cqCTBRR7gK7JG" cm:type="ps:string">Rodrigo</cm:constant>
+        </cm:property>
+        <cm:property cm:id="iGanRis1NAMsJOYu4" cm:type="ps:datetime" cm:fixed="true" cm:readonly="true" cm:name="ps:Changed">
+          <cm:constant cm:id="ivSJV5h6ju2vGFX9-" cm:type="ps:datetime">2010-06-09T15:50:36.932Z</cm:constant>
+        </cm:property>
+      </cm:properties>
+      <cm:vname>
+        <cm:mimedesc cm:id="iRUgTcMkT92BRTwx3" cm:mimetype="text/plain" cm:encoding="utf-8">CadastrarPublicacao</cm:mimedesc>
+      </cm:vname>
+    </cm:element>
+    <cm:element cm:id="iCVEckzqoEXSUdBTJ" cm:name="EditarPublicacao" cm:type="ps:feature" cm:class="ps:feature" cm:default="on">
+      <cm:relations cm:id="i3qG2dQoeKzvHEVTp" cm:class="ps:parents">
+        <cm:relation cm:id="ibJAzCnLBqUcOX0N7" cm:type="ps:parent">
+          <cm:target cm:id="iXyNexGxCXROv21UI">./iOf0cYVzfbhpucMHb</cm:target>
+        </cm:relation>
+      </cm:relations>
+      <cm:properties>
+        <cm:property cm:id="ifE9A_szW0nUz64dx" cm:type="ps:string" cm:fixed="true" cm:readonly="true" cm:name="ps:Source">
+          <cm:constant cm:id="izUNd6X_V9mgAqMvj" cm:type="ps:string">Rodrigo</cm:constant>
+        </cm:property>
+        <cm:property cm:id="i9FTQoiRc0yH8nQZQ" cm:type="ps:datetime" cm:fixed="true" cm:readonly="true" cm:name="ps:Created">
+          <cm:constant cm:id="im9m6viP161eOJJb6" cm:type="ps:datetime">2010-06-09T15:50:51.146Z</cm:constant>
+        </cm:property>
+        <cm:property cm:id="iG5ngQ2Gb4GAAhV4b" cm:type="ps:string" cm:fixed="true" cm:readonly="true" cm:name="ps:ChangedBy">
+          <cm:constant cm:id="ivHhGMnoMh_RATZZ-" cm:type="ps:string">Rodrigo</cm:constant>
+        </cm:property>
+        <cm:property cm:id="i1OD2VlXhbMRaDgde" cm:type="ps:datetime" cm:fixed="true" cm:readonly="true" cm:name="ps:Changed">
+          <cm:constant cm:id="iipVUCQxDUE_qXLtY" cm:type="ps:datetime">2010-06-09T15:50:51.146Z</cm:constant>
+        </cm:property>
+      </cm:properties>
+      <cm:vname>
+        <cm:mimedesc cm:id="izIxLdOKnXRvGnc_r" cm:mimetype="text/plain" cm:encoding="utf-8">EditarPublicacao</cm:mimedesc>
+      </cm:vname>
+    </cm:element>
+    <cm:element cm:id="i61Jt-GoBmM_dzlCK" cm:name="BuscarPublicacao" cm:type="ps:feature" cm:class="ps:feature" cm:default="on">
+      <cm:relations cm:id="iOcUmZR03aRrDCn2o" cm:class="ps:parents">
+        <cm:relation cm:id="i5WNgtEIxRv5PkrUa" cm:type="ps:parent">
+          <cm:target cm:id="ivt3akreOGuE2lHmL">./iOf0cYVzfbhpucMHb</cm:target>
+        </cm:relation>
+      </cm:relations>
+      <cm:properties>
+        <cm:property cm:id="iyetvmgvtQs-7yUgJ" cm:type="ps:string" cm:fixed="true" cm:readonly="true" cm:name="ps:Source">
+          <cm:constant cm:id="i1nAtQS7CZial54z8" cm:type="ps:string">Rodrigo</cm:constant>
+        </cm:property>
+        <cm:property cm:id="igCxqKnjI2bximfbc" cm:type="ps:datetime" cm:fixed="true" cm:readonly="true" cm:name="ps:Created">
+          <cm:constant cm:id="iuMqyISKbT8ITC_3n" cm:type="ps:datetime">2010-06-09T15:51:19.289Z</cm:constant>
+        </cm:property>
+        <cm:property cm:id="impPsAkXP38EiQZI6" cm:type="ps:string" cm:fixed="true" cm:readonly="true" cm:name="ps:ChangedBy">
+          <cm:constant cm:id="ikQu5qjny0daqwhf7" cm:type="ps:string">Rodrigo</cm:constant>
+        </cm:property>
+        <cm:property cm:id="ied9kdcPp1Z0O83-K" cm:type="ps:datetime" cm:fixed="true" cm:readonly="true" cm:name="ps:Changed">
+          <cm:constant cm:id="ixaxwDSuZVlnwFkER" cm:type="ps:datetime">2010-06-09T15:51:19.289Z</cm:constant>
+        </cm:property>
+      </cm:properties>
+      <cm:vname>
+        <cm:mimedesc cm:id="iKNsOYyMIRo9UxIIi" cm:mimetype="text/plain" cm:encoding="utf-8">BuscarPublicacao</cm:mimedesc>
+      </cm:vname>
+    </cm:element>
+    <cm:element cm:id="iBGKJL6e3sZu7dGES" cm:name="RemoverPublicacao" cm:type="ps:feature" cm:class="ps:feature" cm:default="off">
+      <cm:relations cm:id="iqWkWQ-JMh7glGgnF" cm:class="ps:parents">
+        <cm:relation cm:id="ikXGEfiVq63tgPT1_" cm:type="ps:parent">
+          <cm:target cm:id="iPtRotExmQny-TJSg">./iOf0cYVzfbhpucMHb</cm:target>
+        </cm:relation>
+      </cm:relations>
+      <cm:properties>
+        <cm:property cm:id="i3wsvuCeNiNyQ4MpG" cm:type="ps:string" cm:fixed="true" cm:readonly="true" cm:name="ps:Source">
+          <cm:constant cm:id="iNb0RAXPdIgXppZtZ" cm:type="ps:string">Rodrigo</cm:constant>
+        </cm:property>
+        <cm:property cm:id="iiQbr7frDS9cfxhME" cm:type="ps:datetime" cm:fixed="true" cm:readonly="true" cm:name="ps:Created">
+          <cm:constant cm:id="i2d7CcavU8OlnRxCr" cm:type="ps:datetime">2010-06-09T15:51:44.682Z</cm:constant>
+        </cm:property>
+        <cm:property cm:id="i-T1qdUL-2IFg63Cb" cm:type="ps:string" cm:fixed="true" cm:readonly="true" cm:name="ps:ChangedBy">
+          <cm:constant cm:id="itiQncVxzuznUy7oT" cm:type="ps:string">Rodrigo</cm:constant>
+        </cm:property>
+        <cm:property cm:id="ilQVP4T-67sexXZle" cm:type="ps:datetime" cm:fixed="true" cm:readonly="true" cm:name="ps:Changed">
+          <cm:constant cm:id="i9IzzFVs9MdO9Yfj8" cm:type="ps:datetime">2010-06-09T15:51:44.682Z</cm:constant>
+        </cm:property>
+      </cm:properties>
+      <cm:vname>
+        <cm:mimedesc cm:id="iiVt4__7_u4sKrhym" cm:mimetype="text/plain" cm:encoding="utf-8">RemoverPublicacao</cm:mimedesc>
+      </cm:vname>
+    </cm:element>
+    <cm:element cm:id="iNjmviuiKwfHYXIC6" cm:name="GerarPDFPublicacao" cm:type="ps:feature" cm:class="ps:feature" cm:default="off">
+      <cm:relations cm:id="ip-E9E81awOy218N-" cm:class="ps:parents">
+        <cm:relation cm:id="iBk-IGA4klXbGm5DB" cm:type="ps:parent">
+          <cm:target cm:id="ikhnk483EpP4i7v--">./iOf0cYVzfbhpucMHb</cm:target>
+        </cm:relation>
+      </cm:relations>
+      <cm:properties>
+        <cm:property cm:id="iSYqcsYFBKGPbQzt1" cm:type="ps:string" cm:fixed="true" cm:readonly="true" cm:name="ps:Source">
+          <cm:constant cm:id="imw7VSbCifTxYRGY_" cm:type="ps:string">Rodrigo</cm:constant>
+        </cm:property>
+        <cm:property cm:id="isPAEd4LRYdnOzNbW" cm:type="ps:datetime" cm:fixed="true" cm:readonly="true" cm:name="ps:Created">
+          <cm:constant cm:id="i1y4ESBMQ8C_7J22e" cm:type="ps:datetime">2010-06-09T15:53:43.257Z</cm:constant>
+        </cm:property>
+        <cm:property cm:id="iewG7I4ZmVbLaitHz" cm:type="ps:string" cm:fixed="true" cm:readonly="true" cm:name="ps:ChangedBy">
+          <cm:constant cm:id="if3BG6dOzFwK6Gfkq" cm:type="ps:string">Rodrigo</cm:constant>
+        </cm:property>
+        <cm:property cm:id="i--BGPi0wBu5OnwFb" cm:type="ps:datetime" cm:fixed="true" cm:readonly="true" cm:name="ps:Changed">
+          <cm:constant cm:id="iQEoXsCQ_EEjtOxzi" cm:type="ps:datetime">2010-06-09T15:53:43.257Z</cm:constant>
+        </cm:property>
+      </cm:properties>
+      <cm:vname>
+        <cm:mimedesc cm:id="i8GaenT7-PW2OrhRX" cm:mimetype="text/plain" cm:encoding="utf-8">GerarPDFPublicacao</cm:mimedesc>
+      </cm:vname>
+    </cm:element>
+    <cm:element cm:id="iBO0JTocHCC2_lsWG" cm:name="GerarBibTeXPublicacao" cm:type="ps:feature" cm:class="ps:feature" cm:default="on">
+      <cm:relations cm:id="ieygKjamtWoEXmuew" cm:class="ps:parents">
+        <cm:relation cm:id="i7bQOjrTm_pljdrR5" cm:type="ps:parent">
+          <cm:target cm:id="iJmLdbpxbRcwDzTqB">./iOf0cYVzfbhpucMHb</cm:target>
+        </cm:relation>
+      </cm:relations>
+      <cm:properties>
+        <cm:property cm:id="iBfqduI7vIRSK1ChG" cm:type="ps:string" cm:fixed="true" cm:readonly="true" cm:name="ps:Source">
+          <cm:constant cm:id="ibgudD6AopR8YvMBM" cm:type="ps:string">Rodrigo</cm:constant>
+        </cm:property>
+        <cm:property cm:id="i4BkqKo2H2EXgZZFt" cm:type="ps:datetime" cm:fixed="true" cm:readonly="true" cm:name="ps:Created">
+          <cm:constant cm:id="iagimY6joTNgsCGNZ" cm:type="ps:datetime">2010-06-09T15:54:02.769Z</cm:constant>
+        </cm:property>
+        <cm:property cm:id="iC1LovnKczbXHCXdQ" cm:type="ps:string" cm:fixed="true" cm:readonly="true" cm:name="ps:ChangedBy">
+          <cm:constant cm:id="iBeR1LTXbfMl_jwFx" cm:type="ps:string">Rodrigo</cm:constant>
+        </cm:property>
+        <cm:property cm:id="ihzUHvI89d3zhpQNI" cm:type="ps:datetime" cm:fixed="true" cm:readonly="true" cm:name="ps:Changed">
+          <cm:constant cm:id="iUUNjTXseoOoSJYXQ" cm:type="ps:datetime">2010-06-09T15:54:02.769Z</cm:constant>
+        </cm:property>
+      </cm:properties>
+      <cm:vname>
+        <cm:mimedesc cm:id="iYvzJrZ6qtxQUGrtX" cm:mimetype="text/plain" cm:encoding="utf-8">GerarBibTeXPublicacao</cm:mimedesc>
+      </cm:vname>
+    </cm:element>
+    <cm:element cm:id="i-QxQjc5UziVuJs0Z" cm:name="GerarListaPublicacoes" cm:type="ps:feature" cm:class="ps:feature" cm:default="on">
+      <cm:relations cm:id="ilbMf8mZC0dQP2LUq" cm:class="ps:parents">
+        <cm:relation cm:id="iM7O63bQkjNhrP90p" cm:type="ps:parent">
+          <cm:target cm:id="iwtcxZ55mAC9ZpFYp">./iOf0cYVzfbhpucMHb</cm:target>
+        </cm:relation>
+      </cm:relations>
+      <cm:relations cm:id="iMU5u8CQntowGZX6X" cm:class="ps:children">
+        <cm:relation cm:id="ialc5tc3S909Cvu94" cm:type="ps:alternative">
+          <cm:target cm:id="iW6G2QkCegjXRq-eh">./i-tVQqos0rsnVHmor</cm:target>
+          <cm:target cm:id="i7MIN3o2UYJWwAA05">./idRAi1HjiuGlEcCQG</cm:target>
+        </cm:relation>
+      </cm:relations>
+      <cm:properties>
+        <cm:property cm:id="ieNx4qzmKLOLU8rtl" cm:type="ps:string" cm:fixed="true" cm:readonly="true" cm:name="ps:Source">
+          <cm:constant cm:id="ibtBjPQnnzUFBJ-C7" cm:type="ps:string">Rodrigo</cm:constant>
+        </cm:property>
+        <cm:property cm:id="iiZhclltKmY7G7Eer" cm:type="ps:datetime" cm:fixed="true" cm:readonly="true" cm:name="ps:Created">
+          <cm:constant cm:id="iwDu6-nku6FBDHrTa" cm:type="ps:datetime">2010-06-09T15:54:46.030Z</cm:constant>
+        </cm:property>
+        <cm:property cm:id="ihxEPQfthCKko0JfV" cm:type="ps:string" cm:fixed="true" cm:readonly="true" cm:name="ps:ChangedBy">
+          <cm:constant cm:id="iU-NeFvS9JBOyRQJp" cm:type="ps:string">Rodrigo</cm:constant>
+        </cm:property>
+        <cm:property cm:id="iYW2OH6EpX4G5qIg-" cm:type="ps:datetime" cm:fixed="true" cm:readonly="true" cm:name="ps:Changed">
+          <cm:constant cm:id="i2nMaW6xt9ZduOEDJ" cm:type="ps:datetime">2010-06-09T15:55:31.983Z</cm:constant>
+        </cm:property>
+      </cm:properties>
+      <cm:vname>
+        <cm:mimedesc cm:id="i2I6Oi4Yppv-FEJzE" cm:mimetype="text/plain" cm:encoding="utf-8">GerarListaPublicacoes</cm:mimedesc>
+      </cm:vname>
+    </cm:element>
+    <cm:element cm:id="i-tVQqos0rsnVHmor" cm:name="BibTeX" cm:type="ps:feature" cm:class="ps:feature">
+      <cm:relations cm:id="iqfS2tGf-k4B57ECD" cm:class="ps:parents">
+        <cm:relation cm:id="iJSKxdBRJFAbJDrRt" cm:type="ps:parent">
+          <cm:target cm:id="iMJfSJbNBRuH7LcKa">./i-QxQjc5UziVuJs0Z</cm:target>
+        </cm:relation>
+      </cm:relations>
+      <cm:properties>
+        <cm:property cm:id="igAANCbmnRiFklSoW" cm:type="ps:string" cm:fixed="true" cm:readonly="true" cm:name="ps:Source">
+          <cm:constant cm:id="iIP0NUm-nIdlnBihQ" cm:type="ps:string">Rodrigo</cm:constant>
+        </cm:property>
+        <cm:property cm:id="iT-Z9_QHjpYrU5iVW" cm:type="ps:datetime" cm:fixed="true" cm:readonly="true" cm:name="ps:Created">
+          <cm:constant cm:id="iLkEid9_Q_VW4KOr6" cm:type="ps:datetime">2010-06-09T15:55:21.410Z</cm:constant>
+        </cm:property>
+        <cm:property cm:id="iqMGsXputcsJimGB6" cm:type="ps:string" cm:fixed="true" cm:readonly="true" cm:name="ps:ChangedBy">
+          <cm:constant cm:id="iAKB0n-MQiOe-VcvJ" cm:type="ps:string">Rodrigo</cm:constant>
+        </cm:property>
+        <cm:property cm:id="iQowvQgOfe8ycoPYO" cm:type="ps:datetime" cm:fixed="true" cm:readonly="true" cm:name="ps:Changed">
+          <cm:constant cm:id="iBUk-XuyZ2s5aBNO3" cm:type="ps:datetime">2010-06-09T15:55:21.410Z</cm:constant>
+        </cm:property>
+      </cm:properties>
+      <cm:vname>
+        <cm:mimedesc cm:id="ip7H0px5TjZrutIxq" cm:mimetype="text/plain" cm:encoding="utf-8">BibTeX</cm:mimedesc>
+      </cm:vname>
+    </cm:element>
+    <cm:element cm:id="idRAi1HjiuGlEcCQG" cm:name="PDF" cm:type="ps:feature" cm:class="ps:feature">
+      <cm:relations cm:id="i8d6pG3KO6L0HoJ84" cm:class="ps:parents">
+        <cm:relation cm:id="iqRQ9-r2tWdNVJe_t" cm:type="ps:parent">
+          <cm:target cm:id="i5zOVd3D_GSgkjshl">./i-QxQjc5UziVuJs0Z</cm:target>
+        </cm:relation>
+      </cm:relations>
+      <cm:properties>
+        <cm:property cm:id="ipBP9GyRMbsKu8zP7" cm:type="ps:string" cm:fixed="true" cm:readonly="true" cm:name="ps:Source">
+          <cm:constant cm:id="ifCUzSRqK1IPRzYCc" cm:type="ps:string">Rodrigo</cm:constant>
+        </cm:property>
+        <cm:property cm:id="ipNm0MEFDnDNw4Thy" cm:type="ps:datetime" cm:fixed="true" cm:readonly="true" cm:name="ps:Created">
+          <cm:constant cm:id="ivMp9O3aiyclTM1Gj" cm:type="ps:datetime">2010-06-09T15:55:31.982Z</cm:constant>
+        </cm:property>
+        <cm:property cm:id="i0xj1Khxk0hXVcu_r" cm:type="ps:string" cm:fixed="true" cm:readonly="true" cm:name="ps:ChangedBy">
+          <cm:constant cm:id="ilwpI9M4V2vz4IrU-" cm:type="ps:string">Rodrigo</cm:constant>
+        </cm:property>
+        <cm:property cm:id="iqlIhSR-unkU_Us8Y" cm:type="ps:datetime" cm:fixed="true" cm:readonly="true" cm:name="ps:Changed">
+          <cm:constant cm:id="iC7_s4ijSr5_KVFKz" cm:type="ps:datetime">2010-06-09T15:55:31.982Z</cm:constant>
+        </cm:property>
+      </cm:properties>
+      <cm:vname>
+        <cm:mimedesc cm:id="iWPWy-u85IvT7CYJB" cm:mimetype="text/plain" cm:encoding="utf-8">PDF</cm:mimedesc>
+      </cm:vname>
+    </cm:element>
+    <cm:element cm:id="iVBhP0PqVi_R-0DMv" cm:name="Idioma" cm:type="ps:feature" cm:class="ps:feature" cm:default="on">
+      <cm:relations cm:id="ioQCo37QgVY8ARpx1" cm:class="ps:parents">
+        <cm:relation cm:id="ix_5-UqGKYDUxKrdy" cm:type="ps:parent">
+          <cm:target cm:id="ijRFkJpJ8byR-Pnna">./ibU5RfrULEyRXT2rV</cm:target>
+        </cm:relation>
+      </cm:relations>
+      <cm:relations cm:id="iX4f__4ZM9mThQaYo" cm:class="ps:children">
+        <cm:relation cm:id="i0UUtMfHsrSFTN5Pz" cm:type="ps:alternative">
+          <cm:target cm:id="i9bTXMti7Eo5seU_g">./idYAdoKQ-4_dJO1p-</cm:target>
+          <cm:target cm:id="iqdV4IzF_nB56N6yQ">./irK6r65mF_sSamQfZ</cm:target>
+        </cm:relation>
+      </cm:relations>
+      <cm:properties>
+        <cm:property cm:id="iuirvdpc-iBBYL9Wn" cm:type="ps:string" cm:fixed="true" cm:readonly="true" cm:name="ps:Source">
+          <cm:constant cm:id="i4nTW9mVaLJantLE6" cm:type="ps:string">Rodrigo</cm:constant>
+        </cm:property>
+        <cm:property cm:id="ilo6CuC_dqmllMqx_" cm:type="ps:datetime" cm:fixed="true" cm:readonly="true" cm:name="ps:Created">
+          <cm:constant cm:id="iuQFvFye-uYiallxK" cm:type="ps:datetime">2010-06-09T15:58:06.213Z</cm:constant>
+        </cm:property>
+        <cm:property cm:id="i4X6eafKS4Zu_2_sY" cm:type="ps:string" cm:fixed="true" cm:readonly="true" cm:name="ps:ChangedBy">
+          <cm:constant cm:id="iG2vZ1a2pWILkhY3R" cm:type="ps:string">Rodrigo</cm:constant>
+        </cm:property>
+        <cm:property cm:id="ihPZaMu8AmH1_wAD_" cm:type="ps:datetime" cm:fixed="true" cm:readonly="true" cm:name="ps:Changed">
+          <cm:constant cm:id="iDDz6BsZQJ6CZ-ySj" cm:type="ps:datetime">2010-06-09T15:58:26.633Z</cm:constant>
+        </cm:property>
+      </cm:properties>
+      <cm:vname>
+        <cm:mimedesc cm:id="ihwwv9izZLtfzIG0t" cm:mimetype="text/plain" cm:encoding="utf-8">Idioma</cm:mimedesc>
+      </cm:vname>
+    </cm:element>
+    <cm:element cm:id="idYAdoKQ-4_dJO1p-" cm:name="Ingles" cm:type="ps:feature" cm:class="ps:feature">
+      <cm:relations cm:id="iQHiD8ekW8vNeiCuQ" cm:class="ps:parents">
+        <cm:relation cm:id="iWaV5rZn5USaqlpXp" cm:type="ps:parent">
+          <cm:target cm:id="iMiLVjTyR-Ahssyhq">./iVBhP0PqVi_R-0DMv</cm:target>
+        </cm:relation>
+      </cm:relations>
+      <cm:properties>
+        <cm:property cm:id="i8eQPjPRvM2C0mZtf" cm:type="ps:string" cm:fixed="true" cm:readonly="true" cm:name="ps:Source">
+          <cm:constant cm:id="isI5gpiuWhsIlkDzy" cm:type="ps:string">Rodrigo</cm:constant>
+        </cm:property>
+        <cm:property cm:id="iAV6k-Liso7AzN39H" cm:type="ps:datetime" cm:fixed="true" cm:readonly="true" cm:name="ps:Created">
+          <cm:constant cm:id="ivD1fYtJEcswdkcii" cm:type="ps:datetime">2010-06-09T15:58:16.008Z</cm:constant>
+        </cm:property>
+        <cm:property cm:id="iixlUW-uDtFFEOW6y" cm:type="ps:string" cm:fixed="true" cm:readonly="true" cm:name="ps:ChangedBy">
+          <cm:constant cm:id="ir7Cq2IOW3iqbgTYB" cm:type="ps:string">Rodrigo</cm:constant>
+        </cm:property>
+        <cm:property cm:id="iZnGt_MPOmNzV7mf8" cm:type="ps:datetime" cm:fixed="true" cm:readonly="true" cm:name="ps:Changed">
+          <cm:constant cm:id="iX21V-F-Ub4bK6iqg" cm:type="ps:datetime">2010-06-09T15:58:16.008Z</cm:constant>
+        </cm:property>
+      </cm:properties>
+      <cm:vname>
+        <cm:mimedesc cm:id="iQrNM4O6PENQ-IJqK" cm:mimetype="text/plain" cm:encoding="utf-8">Ingles</cm:mimedesc>
+      </cm:vname>
+    </cm:element>
+    <cm:element cm:id="irK6r65mF_sSamQfZ" cm:name="Portugues" cm:type="ps:feature" cm:class="ps:feature">
+      <cm:relations cm:id="iRGf31DjkmDy5OkMM" cm:class="ps:parents">
+        <cm:relation cm:id="iiyBSviI7gcqRnFYR" cm:type="ps:parent">
+          <cm:target cm:id="iuKG2ID5kFacFJuc4">./iVBhP0PqVi_R-0DMv</cm:target>
+        </cm:relation>
+      </cm:relations>
+      <cm:properties>
+        <cm:property cm:id="indnZszbBM9gy2pnC" cm:type="ps:string" cm:fixed="true" cm:readonly="true" cm:name="ps:Source">
+          <cm:constant cm:id="ie2Yhzv-kIagKeoTU" cm:type="ps:string">Rodrigo</cm:constant>
+        </cm:property>
+        <cm:property cm:id="iVaYtKNBaliFjht2l" cm:type="ps:datetime" cm:fixed="true" cm:readonly="true" cm:name="ps:Created">
+          <cm:constant cm:id="iBNyWt-VyffgRdpuV" cm:type="ps:datetime">2010-06-09T15:58:26.633Z</cm:constant>
+        </cm:property>
+        <cm:property cm:id="iRjxlUxOVSf-dEVJG" cm:type="ps:string" cm:fixed="true" cm:readonly="true" cm:name="ps:ChangedBy">
+          <cm:constant cm:id="iEOUyxTE2I3PzMnS-" cm:type="ps:string">Rodrigo</cm:constant>
+        </cm:property>
+        <cm:property cm:id="iT3AJ2kh-Tp3305UE" cm:type="ps:datetime" cm:fixed="true" cm:readonly="true" cm:name="ps:Changed">
+          <cm:constant cm:id="izoyoYZMO7YpIhU6i" cm:type="ps:datetime">2010-06-09T15:58:26.633Z</cm:constant>
+        </cm:property>
+      </cm:properties>
+      <cm:vname>
+        <cm:mimedesc cm:id="ijvIxPusxPGFnLKil" cm:mimetype="text/plain" cm:encoding="utf-8">Portugues</cm:mimedesc>
+      </cm:vname>
+    </cm:element>
+    <cm:element cm:id="iKRi9zMIeLcdyzUqk" cm:name="LinhaPesquisa" cm:type="ps:feature" cm:class="ps:feature">
+      <cm:relations cm:id="i5UPvwBPBpWGR3ho1" cm:class="ps:parents">
+        <cm:relation cm:id="ibUxjyCj_Inev9yIY" cm:type="ps:parent">
+          <cm:target cm:id="iAoY4RuxkrrS0nf4Q">./ibU5RfrULEyRXT2rV</cm:target>
+        </cm:relation>
+      </cm:relations>
+      <cm:relations cm:id="iiLZFNRRqBo4GXHqx" cm:class="ps:children">
+        <cm:relation cm:id="iGq2JMGZ2GsGmdT1_" cm:type="ps:mandatory">
+          <cm:target cm:id="imF9Ama0vmnx2e96C">./iFnpRPBTZvp6gb9EY</cm:target>
+          <cm:target cm:id="iMLkxKJOsrDvoAq7-">./iTWuNhOq7-eT9RcCz</cm:target>
+          <cm:target cm:id="iy3EBcho_X4S2jPPa">./iTtDimYc90qQKCyUF</cm:target>
+          <cm:target cm:id="i01LoLt8HaKoey1H_">./iMI3ks-pzob7fw6Uc</cm:target>
+          <cm:target cm:id="iU8Y__8pyEyM10PDi">./i0X3qF4kfJ-c4sYhV</cm:target>
+        </cm:relation>
+      </cm:relations>
+      <cm:properties>
+        <cm:property cm:id="i96UtcXUR_UM5Ifwp" cm:type="ps:string" cm:fixed="true" cm:readonly="true" cm:name="ps:Source">
+          <cm:constant cm:id="iNor4cQDUL2HnRSrr" cm:type="ps:string">Rodrigo</cm:constant>
+        </cm:property>
+        <cm:property cm:id="ic8uunedw6Yc96BwR" cm:type="ps:datetime" cm:fixed="true" cm:readonly="true" cm:name="ps:Created">
+          <cm:constant cm:id="ij6D3qcjybAxMi_fJ" cm:type="ps:datetime">2010-06-09T15:59:14.208Z</cm:constant>
+        </cm:property>
+        <cm:property cm:id="iHwy5lQ5sLNbjbitd" cm:type="ps:string" cm:fixed="true" cm:readonly="true" cm:name="ps:ChangedBy">
+          <cm:constant cm:id="ihNxBsD6_DyxF844y" cm:type="ps:string">Rodrigo</cm:constant>
+        </cm:property>
+        <cm:property cm:id="i36Vql_j3MPOvpoHd" cm:type="ps:datetime" cm:fixed="true" cm:readonly="true" cm:name="ps:Changed">
+          <cm:constant cm:id="i_W3IiFgmLOnC_RT3" cm:type="ps:datetime">2010-06-09T16:02:01.397Z</cm:constant>
+        </cm:property>
+      </cm:properties>
+      <cm:vname>
+        <cm:mimedesc cm:id="iiPUTCArsMnXXwHZS" cm:mimetype="text/plain" cm:encoding="utf-8">LinhaPesquisa</cm:mimedesc>
+      </cm:vname>
+    </cm:element>
+    <cm:element cm:id="iFnpRPBTZvp6gb9EY" cm:name="CadastrarLinhaPesquisa" cm:type="ps:feature" cm:class="ps:feature" cm:default="on">
+      <cm:relations cm:id="iUlwVUUi8EyiWRkiO" cm:class="ps:parents">
+        <cm:relation cm:id="iPBAUjXEDdB8mgzok" cm:type="ps:parent">
+          <cm:target cm:id="i9J2GyjsNnc5rEGwH">./iKRi9zMIeLcdyzUqk</cm:target>
+        </cm:relation>
+      </cm:relations>
+      <cm:properties>
+        <cm:property cm:id="ivYUV-8zGTttKO_TQ" cm:type="ps:string" cm:fixed="true" cm:readonly="true" cm:name="ps:Source">
+          <cm:constant cm:id="iFX2DC7Xrw48QUJ5q" cm:type="ps:string">Rodrigo</cm:constant>
+        </cm:property>
+        <cm:property cm:id="ih-paFP82dpcG1lf4" cm:type="ps:datetime" cm:fixed="true" cm:readonly="true" cm:name="ps:Created">
+          <cm:constant cm:id="ipJDv5PPzGc8JDRa6" cm:type="ps:datetime">2010-06-09T15:59:30.165Z</cm:constant>
+        </cm:property>
+        <cm:property cm:id="iMgbxhHOmGV9F9lK8" cm:type="ps:string" cm:fixed="true" cm:readonly="true" cm:name="ps:ChangedBy">
+          <cm:constant cm:id="idHiKzkwyc4DrVHNo" cm:type="ps:string">Rodrigo</cm:constant>
+        </cm:property>
+        <cm:property cm:id="iT2GvsBA8kUXCe6Mc" cm:type="ps:datetime" cm:fixed="true" cm:readonly="true" cm:name="ps:Changed">
+          <cm:constant cm:id="iw7CsD6czUnXQdtAp" cm:type="ps:datetime">2010-06-09T16:00:03.441Z</cm:constant>
+        </cm:property>
+      </cm:properties>
+      <cm:vname>
+        <cm:mimedesc cm:id="iismLDSYKPePr1uOR" cm:mimetype="text/plain" cm:encoding="utf-8">CadastrarLinhaPesquisa</cm:mimedesc>
+      </cm:vname>
+    </cm:element>
+    <cm:element cm:id="iTWuNhOq7-eT9RcCz" cm:name="EditarLinhaPesquisa" cm:type="ps:feature" cm:class="ps:feature" cm:default="on">
+      <cm:relations cm:id="iZLfcwybXDco4K7z4" cm:class="ps:parents">
+        <cm:relation cm:id="iFnaWHJOz0W8D9jZU" cm:type="ps:parent">
+          <cm:target cm:id="iY3BTPoOShB_jTxD-">./iKRi9zMIeLcdyzUqk</cm:target>
+        </cm:relation>
+      </cm:relations>
+      <cm:properties>
+        <cm:property cm:id="iJSaiZP8-m_-6tDG0" cm:type="ps:string" cm:fixed="true" cm:readonly="true" cm:name="ps:Source">
+          <cm:constant cm:id="igJ2jaJqo4lKgWEzI" cm:type="ps:string">Rodrigo</cm:constant>
+        </cm:property>
+        <cm:property cm:id="iVkPmmRL06OG4QWVJ" cm:type="ps:datetime" cm:fixed="true" cm:readonly="true" cm:name="ps:Created">
+          <cm:constant cm:id="iwPe8m3PsHaWLlNMm" cm:type="ps:datetime">2010-06-09T15:59:47.031Z</cm:constant>
+        </cm:property>
+        <cm:property cm:id="iWog9b7ldRacZv0IY" cm:type="ps:string" cm:fixed="true" cm:readonly="true" cm:name="ps:ChangedBy">
+          <cm:constant cm:id="i1ZVJCKABq7I44JyH" cm:type="ps:string">Rodrigo</cm:constant>
+        </cm:property>
+        <cm:property cm:id="i8Gu09FZIkzX5XvdL" cm:type="ps:datetime" cm:fixed="true" cm:readonly="true" cm:name="ps:Changed">
+          <cm:constant cm:id="iOfeuQeBCGk6CwP0p" cm:type="ps:datetime">2010-06-09T16:00:08.879Z</cm:constant>
+        </cm:property>
+      </cm:properties>
+      <cm:vname>
+        <cm:mimedesc cm:id="iGafAsTUk8eWRgs2v" cm:mimetype="text/plain" cm:encoding="utf-8">EditarLinhaPesquisa</cm:mimedesc>
+      </cm:vname>
+    </cm:element>
+    <cm:element cm:id="iTtDimYc90qQKCyUF" cm:name="RemoverLinhaPesquisa" cm:type="ps:feature" cm:class="ps:feature" cm:default="on">
+      <cm:relations cm:id="iT5cLG_lhGvfPI_xw" cm:class="ps:parents">
+        <cm:relation cm:id="i4KBKHVZVmTyL3akJ" cm:type="ps:parent">
+          <cm:target cm:id="iOV2t40lHdB8vPAs1">./iKRi9zMIeLcdyzUqk</cm:target>
+        </cm:relation>
+      </cm:relations>
+      <cm:properties>
+        <cm:property cm:id="iMXRRrQn6UKRRlB1A" cm:type="ps:string" cm:fixed="true" cm:readonly="true" cm:name="ps:Source">
+          <cm:constant cm:id="iwvATM44Bs5pCedmw" cm:type="ps:string">Rodrigo</cm:constant>
+        </cm:property>
+        <cm:property cm:id="i_9ABO6X98phVnVAa" cm:type="ps:datetime" cm:fixed="true" cm:readonly="true" cm:name="ps:Created">
+          <cm:constant cm:id="i2AeEq-pnLgF0j4eB" cm:type="ps:datetime">2010-06-09T16:00:59.792Z</cm:constant>
+        </cm:property>
+        <cm:property cm:id="ixqBnyY84Q5KMYNUy" cm:type="ps:string" cm:fixed="true" cm:readonly="true" cm:name="ps:ChangedBy">
+          <cm:constant cm:id="i4DvxdnMWT3uKqwvX" cm:type="ps:string">Rodrigo</cm:constant>
+        </cm:property>
+        <cm:property cm:id="i0cur7Sd12r_W1P7F" cm:type="ps:datetime" cm:fixed="true" cm:readonly="true" cm:name="ps:Changed">
+          <cm:constant cm:id="i9P3cuvPW5Xap6__i" cm:type="ps:datetime">2010-06-09T16:00:59.792Z</cm:constant>
+        </cm:property>
+      </cm:properties>
+      <cm:vname>
+        <cm:mimedesc cm:id="iCXavbjXeqGt_-Bij" cm:mimetype="text/plain" cm:encoding="utf-8">RemoverLinhaPesquisa</cm:mimedesc>
+      </cm:vname>
+    </cm:element>
+    <cm:element cm:id="iMI3ks-pzob7fw6Uc" cm:name="BuscarLinhaPesquisa" cm:type="ps:feature" cm:class="ps:feature" cm:default="on">
+      <cm:relations cm:id="iYSN7Sd8b_jIEbFMp" cm:class="ps:parents">
+        <cm:relation cm:id="iANYlb81_FTd3v-RO" cm:type="ps:parent">
+          <cm:target cm:id="iboi2CvsFFNBeFa8b">./iKRi9zMIeLcdyzUqk</cm:target>
+        </cm:relation>
+      </cm:relations>
+      <cm:properties>
+        <cm:property cm:id="iEnALDzM2o6YlxlTT" cm:type="ps:string" cm:fixed="true" cm:readonly="true" cm:name="ps:Source">
+          <cm:constant cm:id="idefBPwrFj4yMVC44" cm:type="ps:string">Rodrigo</cm:constant>
+        </cm:property>
+        <cm:property cm:id="ixJ_udbn4qKelAvQ-" cm:type="ps:datetime" cm:fixed="true" cm:readonly="true" cm:name="ps:Created">
+          <cm:constant cm:id="iKsZH7eS1l_TiufYM" cm:type="ps:datetime">2010-06-09T16:01:20.531Z</cm:constant>
+        </cm:property>
+        <cm:property cm:id="i69xxw6RjpSYrOu0O" cm:type="ps:string" cm:fixed="true" cm:readonly="true" cm:name="ps:ChangedBy">
+          <cm:constant cm:id="iyOAqnG9-b7w380k7" cm:type="ps:string">Rodrigo</cm:constant>
+        </cm:property>
+        <cm:property cm:id="icp65ZlfVNx8GIirw" cm:type="ps:datetime" cm:fixed="true" cm:readonly="true" cm:name="ps:Changed">
+          <cm:constant cm:id="imd1opGyZNQWOZJvG" cm:type="ps:datetime">2010-06-09T16:01:20.531Z</cm:constant>
+        </cm:property>
+      </cm:properties>
+      <cm:vname>
+        <cm:mimedesc cm:id="iY11xozZt8HD7e-I4" cm:mimetype="text/plain" cm:encoding="utf-8">BuscarLinhaPesquisa</cm:mimedesc>
+      </cm:vname>
+    </cm:element>
+    <cm:element cm:id="i0X3qF4kfJ-c4sYhV" cm:name="ListarLinhaPesquisa" cm:type="ps:feature" cm:class="ps:feature" cm:default="on">
+      <cm:relations cm:id="iZpvlRlPp1plUAEkA" cm:class="ps:parents">
+        <cm:relation cm:id="iaWoY8L-sPjXGBHvo" cm:type="ps:parent">
+          <cm:target cm:id="ivNa0lb32DFyaUJXa">./iKRi9zMIeLcdyzUqk</cm:target>
+        </cm:relation>
+      </cm:relations>
+      <cm:properties>
+        <cm:property cm:id="iJuUEqOBueanaHpvH" cm:type="ps:string" cm:fixed="true" cm:readonly="true" cm:name="ps:Source">
+          <cm:constant cm:id="iIZ_0w_QTQd338jxg" cm:type="ps:string">Rodrigo</cm:constant>
+        </cm:property>
+        <cm:property cm:id="iKM4SSobDwhgTSU01" cm:type="ps:datetime" cm:fixed="true" cm:readonly="true" cm:name="ps:Created">
+          <cm:constant cm:id="iY6KNNpgqn2Y_5kk_" cm:type="ps:datetime">2010-06-09T16:02:01.396Z</cm:constant>
+        </cm:property>
+        <cm:property cm:id="iINwEmpv67Ml6QKUX" cm:type="ps:string" cm:fixed="true" cm:readonly="true" cm:name="ps:ChangedBy">
+          <cm:constant cm:id="iCIwTiqZosqEHyEsQ" cm:type="ps:string">Rodrigo</cm:constant>
+        </cm:property>
+        <cm:property cm:id="i-Q88-zyINKSGm2YX" cm:type="ps:datetime" cm:fixed="true" cm:readonly="true" cm:name="ps:Changed">
+          <cm:constant cm:id="ijoeugHjSnUdyf385" cm:type="ps:datetime">2010-06-09T16:02:01.396Z</cm:constant>
+        </cm:property>
+      </cm:properties>
+      <cm:vname>
+        <cm:mimedesc cm:id="i-yrcAvPa9zcplIR_" cm:mimetype="text/plain" cm:encoding="utf-8">ListarLinhaPesquisa</cm:mimedesc>
+      </cm:vname>
+    </cm:element>
+    <cm:element cm:id="iZTkanK0WhvmLqFsd" cm:name="PaginaMembro" cm:type="ps:feature" cm:class="ps:feature" cm:default="on">
+      <cm:relations cm:id="iGBbcRNH08Oos6NgQ" cm:class="ps:parents">
+        <cm:relation cm:id="ifDlJhqpp23eMN-r9" cm:type="ps:parent">
+          <cm:target cm:id="ioUXBG6avFouViUMl">./iN2JOE2ZET4ExHqPH</cm:target>
+        </cm:relation>
+      </cm:relations>
+      <cm:properties>
+        <cm:property cm:id="iUfJTRpZhdHA5VCF6" cm:type="ps:string" cm:fixed="true" cm:readonly="true" cm:name="ps:Source">
+          <cm:constant cm:id="iCrfhdE4AUpgJcoDI" cm:type="ps:string">Rodrigo</cm:constant>
+        </cm:property>
+        <cm:property cm:id="iowfpEadfW_2xvxLQ" cm:type="ps:datetime" cm:fixed="true" cm:readonly="true" cm:name="ps:Created">
+          <cm:constant cm:id="itsP8pIPSV2T9Jlak" cm:type="ps:datetime">2010-06-09T16:05:15.634Z</cm:constant>
+        </cm:property>
+        <cm:property cm:id="iJlMAC4W8wM0n5Dj6" cm:type="ps:string" cm:fixed="true" cm:readonly="true" cm:name="ps:ChangedBy">
+          <cm:constant cm:id="ikvA2jBeercGMVrf0" cm:type="ps:string">Rodrigo</cm:constant>
+        </cm:property>
+        <cm:property cm:id="ifMNgTGrq3JAALSpW" cm:type="ps:datetime" cm:fixed="true" cm:readonly="true" cm:name="ps:Changed">
+          <cm:constant cm:id="iiNhHBkeRMQdtd152" cm:type="ps:datetime">2010-06-09T16:05:15.634Z</cm:constant>
+        </cm:property>
+      </cm:properties>
+      <cm:vname>
+        <cm:mimedesc cm:id="iNlQkxF-rE6PRvHU_" cm:mimetype="text/plain" cm:encoding="utf-8">PaginaMembro</cm:mimedesc>
+      </cm:vname>
+    </cm:element>
+    <cm:element cm:id="ierzr-QLCb4rENR39" cm:name="Grupo" cm:type="ps:feature" cm:class="ps:feature" cm:default="on">
+      <cm:relations cm:id="iX-OQFuID5SMJjde0" cm:class="ps:parents">
+        <cm:relation cm:id="i7Zxc_O-ieOjA8J9c" cm:type="ps:parent">
+          <cm:target cm:id="iBjDYJ40fH0pvBYYV">./ibU5RfrULEyRXT2rV</cm:target>
+        </cm:relation>
+      </cm:relations>
+      <cm:relations cm:id="iRZiFRf-nd7DXqPWN" cm:class="ps:children">
+        <cm:relation cm:id="inTeXlpdA3u0CcNdI" cm:type="ps:mandatory">
+          <cm:target cm:id="iiNQFbrQuDqJy7eRk">./iStsokTCjsI11G2ZV</cm:target>
+        </cm:relation>
+      </cm:relations>
+      <cm:properties>
+        <cm:property cm:id="iN4pDhvRyeC-yPMHa" cm:type="ps:string" cm:fixed="true" cm:readonly="true" cm:name="ps:Source">
+          <cm:constant cm:id="iA6UwqD40brXCYSOu" cm:type="ps:string">Rodrigo</cm:constant>
+        </cm:property>
+        <cm:property cm:id="iSLO3TIVgeNCJ6p_j" cm:type="ps:datetime" cm:fixed="true" cm:readonly="true" cm:name="ps:Created">
+          <cm:constant cm:id="iMUmWI6a9NUPx08_O" cm:type="ps:datetime">2010-06-09T16:05:49.921Z</cm:constant>
+        </cm:property>
+        <cm:property cm:id="ioctuIJd9oSpnEVbt" cm:type="ps:string" cm:fixed="true" cm:readonly="true" cm:name="ps:ChangedBy">
+          <cm:constant cm:id="isgl-ypCRGtwlgRiL" cm:type="ps:string">Rodrigo</cm:constant>
+        </cm:property>
+        <cm:property cm:id="iBinriCVDQUI4M40U" cm:type="ps:datetime" cm:fixed="true" cm:readonly="true" cm:name="ps:Changed">
+          <cm:constant cm:id="iKu2UidDvV2qZXulh" cm:type="ps:datetime">2010-06-09T16:06:07.774Z</cm:constant>
+        </cm:property>
+      </cm:properties>
+      <cm:vname>
+        <cm:mimedesc cm:id="iVv1XtyzwBipdI8ZQ" cm:mimetype="text/plain" cm:encoding="utf-8">Grupo</cm:mimedesc>
+      </cm:vname>
+    </cm:element>
+    <cm:element cm:id="iStsokTCjsI11G2ZV" cm:name="PaginaGrupo" cm:type="ps:feature" cm:class="ps:feature" cm:default="on">
+      <cm:relations cm:id="iydcJMSTn9KUl37hG" cm:class="ps:parents">
+        <cm:relation cm:id="iom2Eit5TN0QxvViE" cm:type="ps:parent">
+          <cm:target cm:id="iYHWQwPz2iYX4oRUA">./ierzr-QLCb4rENR39</cm:target>
+        </cm:relation>
+      </cm:relations>
+      <cm:properties>
+        <cm:property cm:id="iSzbgaud-0sgBqHQ9" cm:type="ps:string" cm:fixed="true" cm:readonly="true" cm:name="ps:Source">
+          <cm:constant cm:id="iecH6R8zNtQOSeb3_" cm:type="ps:string">Rodrigo</cm:constant>
+        </cm:property>
+        <cm:property cm:id="iLuExusiLQRJHnHea" cm:type="ps:datetime" cm:fixed="true" cm:readonly="true" cm:name="ps:Created">
+          <cm:constant cm:id="ibibrouhh_3CNJDOm" cm:type="ps:datetime">2010-06-09T16:06:07.774Z</cm:constant>
+        </cm:property>
+        <cm:property cm:id="iMtmILIrmaj027ZTz" cm:type="ps:string" cm:fixed="true" cm:readonly="true" cm:name="ps:ChangedBy">
+          <cm:constant cm:id="iyBr2mMVp8uopmyG7" cm:type="ps:string">Rodrigo</cm:constant>
+        </cm:property>
+        <cm:property cm:id="iUuoHssobX6sFyFop" cm:type="ps:datetime" cm:fixed="true" cm:readonly="true" cm:name="ps:Changed">
+          <cm:constant cm:id="iNyp2QpQvRUMd3fBM" cm:type="ps:datetime">2010-06-09T16:06:07.774Z</cm:constant>
+        </cm:property>
+      </cm:properties>
+      <cm:vname>
+        <cm:mimedesc cm:id="i9sJywWQeTgeD6VnI" cm:mimetype="text/plain" cm:encoding="utf-8">PaginaGrupo</cm:mimedesc>
+      </cm:vname>
+    </cm:element>
+    <cm:element cm:id="imcV3H_uEEZwlbWFL" cm:name="ProjetoPesquisa" cm:type="ps:feature" cm:class="ps:feature">
+      <cm:relations cm:id="imQLc08NzvFk4VQhF" cm:class="ps:parents">
+        <cm:relation cm:id="iY1fXCPPaDdwgB7nt" cm:type="ps:parent">
+          <cm:target cm:id="ie1xvucaqMXm5L3si">./ibU5RfrULEyRXT2rV</cm:target>
+        </cm:relation>
+      </cm:relations>
+      <cm:relations cm:id="i4FARUigaAa9czmUf" cm:class="ps:children">
+        <cm:relation cm:id="i2LhZSZPURD5GtTll" cm:type="ps:mandatory">
+          <cm:target cm:id="iCuYYYcqdAF1BP2gf">./izyrpNCALnrkgaYF_</cm:target>
+        </cm:relation>
+      </cm:relations>
+      <cm:properties>
+        <cm:property cm:id="i4g2j2kVE2xg-XDa4" cm:type="ps:string" cm:fixed="true" cm:readonly="true" cm:name="ps:Source">
+          <cm:constant cm:id="i1kQxWqN69uSOG4sx" cm:type="ps:string">Rodrigo</cm:constant>
+        </cm:property>
+        <cm:property cm:id="iEX2Tt0mHYEmcieVE" cm:type="ps:datetime" cm:fixed="true" cm:readonly="true" cm:name="ps:Created">
+          <cm:constant cm:id="iFTs2pxiW3oZA2Yg2" cm:type="ps:datetime">2010-06-09T16:07:21.914Z</cm:constant>
+        </cm:property>
+        <cm:property cm:id="izEntN2oMr5w26y46" cm:type="ps:string" cm:fixed="true" cm:readonly="true" cm:name="ps:ChangedBy">
+          <cm:constant cm:id="iwUeD3_-UcX855vLz" cm:type="ps:string">Rodrigo</cm:constant>
+        </cm:property>
+        <cm:property cm:id="iYNdyF4bZjVIOkFOe" cm:type="ps:datetime" cm:fixed="true" cm:readonly="true" cm:name="ps:Changed">
+          <cm:constant cm:id="i5Q_Pc9X3dQLC_q0h" cm:type="ps:datetime">2010-06-09T16:10:35.731Z</cm:constant>
+        </cm:property>
+      </cm:properties>
+      <cm:vname>
+        <cm:mimedesc cm:id="iIgtZT7m_eYdxreP1" cm:mimetype="text/plain" cm:encoding="utf-8">ProjetoPesquisa</cm:mimedesc>
+      </cm:vname>
+    </cm:element>
+    <cm:element cm:id="izyrpNCALnrkgaYF_" cm:name="CadastrarProjetoPesquisa" cm:type="ps:feature" cm:class="ps:feature" cm:default="on">
+      <cm:relations cm:id="ie-m_YRgjAagYae4V" cm:class="ps:parents">
+        <cm:relation cm:id="ijTi1HZYW_TyYEI0O" cm:type="ps:parent">
+          <cm:target cm:id="iLmJNJrigKzseZogX">./imcV3H_uEEZwlbWFL</cm:target>
+        </cm:relation>
+      </cm:relations>
+      <cm:properties>
+        <cm:property cm:id="iYgERhxiWBwvu-b5a" cm:type="ps:string" cm:fixed="true" cm:readonly="true" cm:name="ps:Source">
+          <cm:constant cm:id="i6gAFcsVthUAzjPu-" cm:type="ps:string">Rodrigo</cm:constant>
+        </cm:property>
+        <cm:property cm:id="iuv-ubhMyLpp8ybHD" cm:type="ps:datetime" cm:fixed="true" cm:readonly="true" cm:name="ps:Created">
+          <cm:constant cm:id="ifDL46gFP7kMklbdQ" cm:type="ps:datetime">2010-06-09T16:07:35.952Z</cm:constant>
+        </cm:property>
+        <cm:property cm:id="iJrCKhQjlXUm-7el0" cm:type="ps:string" cm:fixed="true" cm:readonly="true" cm:name="ps:ChangedBy">
+          <cm:constant cm:id="iiGLfGgzXe99G1g98" cm:type="ps:string">Rodrigo</cm:constant>
+        </cm:property>
+        <cm:property cm:id="iKUNm89Bdu5QO2gM_" cm:type="ps:datetime" cm:fixed="true" cm:readonly="true" cm:name="ps:Changed">
+          <cm:constant cm:id="i2WvrG2os9r_fiqVP" cm:type="ps:datetime">2010-06-09T16:07:35.952Z</cm:constant>
+        </cm:property>
+      </cm:properties>
+      <cm:vname>
+        <cm:mimedesc cm:id="i2cHLLb25HQj-jVe8" cm:mimetype="text/plain" cm:encoding="utf-8">CadastrarProjetoPesquisa</cm:mimedesc>
+      </cm:vname>
+    </cm:element>
+    <cm:element cm:id="iiG0QLUeDUX6AreGl" cm:name="AssociarProjetoPesquisa" cm:type="ps:feature" cm:class="ps:feature">
+      <cm:relations cm:id="i0N5FYFPtcOKHHMta" cm:class="ps:parents">
+        <cm:relation cm:id="iSiltze6M1CAJAoY-" cm:type="ps:parent">
+          <cm:target cm:id="icXZMXz5UMBwKVsNX">./iOf0cYVzfbhpucMHb</cm:target>
+        </cm:relation>
+      </cm:relations>
+      <cm:properties>
+        <cm:property cm:id="iM4ovVqnLg3Ii5GyU" cm:type="ps:string" cm:fixed="true" cm:readonly="true" cm:name="ps:Source">
+          <cm:constant cm:id="iNWKT2BK-r6LHEeb_" cm:type="ps:string">Rodrigo</cm:constant>
+        </cm:property>
+        <cm:property cm:id="ixgSP17SnfbViHzpK" cm:type="ps:datetime" cm:fixed="true" cm:readonly="true" cm:name="ps:Created">
+          <cm:constant cm:id="idI8BBym-Upw9BsDo" cm:type="ps:datetime">2010-06-09T16:10:56.165Z</cm:constant>
+        </cm:property>
+        <cm:property cm:id="iNPB7OForTkfhfuT8" cm:type="ps:string" cm:fixed="true" cm:readonly="true" cm:name="ps:ChangedBy">
+          <cm:constant cm:id="iruahwuGgUqwmUb4Y" cm:type="ps:string">Rodrigo</cm:constant>
+        </cm:property>
+        <cm:property cm:id="imnND4bJMR8kkmO5P" cm:type="ps:datetime" cm:fixed="true" cm:readonly="true" cm:name="ps:Changed">
+          <cm:constant cm:id="iAZ_SUTfR5eT673Ao" cm:type="ps:datetime">2010-06-09T16:10:56.165Z</cm:constant>
+        </cm:property>
+      </cm:properties>
+      <cm:vname>
+        <cm:mimedesc cm:id="iKVgyY6W1qh3gOUkV" cm:mimetype="text/plain" cm:encoding="utf-8">AssociarProjetoPesquisa</cm:mimedesc>
+      </cm:vname>
+    </cm:element>
+  </cm:elements>
+</cm:consulmodel>

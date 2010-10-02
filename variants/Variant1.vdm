@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cm:consulmodel xmlns:cm="http://www.pure-systems.com/consul/model" cm:id="izSUKM-8O1RzhDlRZ" cm:version="1.5" cm:type="ps:vdm">
+  <cm:head>
+    <cm:properties>
+      <cm:property cm:id="i-ayR64I2ee041wGP" cm:type="ps:string" cm:invisible="true" cm:name="ps:name">
+        <cm:constant cm:id="i-_RorYal51TPImwt" cm:type="ps:string">Variant1</cm:constant>
+      </cm:property>
+      <cm:property cm:id="iwW6-TtL1jz5pX3p9" cm:type="ps:string" cm:invisible="true" cm:name="ps:author">
+        <cm:constant cm:id="iTY0KotY7Ic7V1DEi" cm:type="ps:string">fhcl</cm:constant>
+      </cm:property>
+      <cm:property cm:id="iVF3jHLpVDE5tu8UZ" cm:type="ps:string" cm:invisible="true" cm:name="ps:version">
+        <cm:constant cm:id="ilbbcTyYKVPnNz1pD" cm:type="ps:string">1.0</cm:constant>
+      </cm:property>
+      <cm:property cm:id="ieorOpHHVOdqjlQio" cm:type="ps:datetime" cm:invisible="true" cm:name="ps:created">
+        <cm:constant cm:id="ib6-7Lo09JYjMVnhO" cm:type="ps:datetime">2007-09-03T12:48:05.869Z</cm:constant>
+      </cm:property>
+    </cm:properties>
+  </cm:head>
+  <cm:elements>
+    <cm:element cm:id="iOYgt91tbU0hsIvG6" cm:name="TesteFeatures.RootFeature" cm:type="ps:unselected" cm:class="ps:selection">
+      <cm:relations cm:id="i4vuNjvVG10PXbfTF" cm:class="ps:references">
+        <cm:relation cm:id="inXp4QFwVap6gRhqb" cm:type="ps:references">
+          <cm:target cm:id="ilPRwrMNF_LXvWgnt">il3UttUMKiLdjA-tC/ibU5RfrULEyRXT2rV</cm:target>
+        </cm:relation>
+      </cm:relations>
+      <cm:properties>
+        <cm:property cm:id="i2kO9ThVIMoa3EHtf" cm:type="ps:string" cm:invisible="true" cm:name="ps:selector">
+          <cm:constant cm:id="irrXKwZhrE0z2eGT8" cm:type="ps:string">ps:user</cm:constant>
+        </cm:property>
+        <cm:property cm:id="ibaiXZNtmEyFksN-R" cm:type="ps:string" cm:fixed="true" cm:readonly="true" cm:name="ps:Source">
+          <cm:constant cm:id="iEV1CLMyFB_NE6A76" cm:type="ps:string">Rodrigo</cm:constant>
+        </cm:property>
+        <cm:property cm:id="ijqyk9LV_XEr1P1uC" cm:type="ps:datetime" cm:fixed="true" cm:readonly="true" cm:name="ps:Created">
+          <cm:constant cm:id="iW2ds0KiPVMyo5s6M" cm:type="ps:datetime">2010-06-09T15:37:49.701Z</cm:constant>
+        </cm:property>
+        <cm:property cm:id="i6QwmfVQesZxmNLzU" cm:type="ps:string" cm:fixed="true" cm:readonly="true" cm:name="ps:ChangedBy">
+          <cm:constant cm:id="iVYlDqkBuV-ySMLH_" cm:type="ps:string">Rodrigo</cm:constant>
+        </cm:property>
+        <cm:property cm:id="ijMrVX9Zo5n1woGJG" cm:type="ps:datetime" cm:fixed="true" cm:readonly="true" cm:name="ps:Changed">
+          <cm:constant cm:id="it4z0yiRTP09qGurM" cm:type="ps:datetime">2010-06-09T15:37:53.292Z</cm:constant>
+        </cm:property>
+      </cm:properties>
+    </cm:element>
+  </cm:elements>
+</cm:consulmodel>

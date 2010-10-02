@@ -1,0 +1,66 @@
+<feature min="1" max="1" name="RGMS" type="NONE" id="My Feature Model">
+  <feature min="1" max="1" name="Membro" type="NONE" id="membro">
+    <feature min="1" max="1" name="CadastrarMembro" type="NONE" id="cadastrarMembro">
+    </feature>
+    <feature min="1" max="1" name="EditarMembro" type="NONE" id="editarMembro">
+    </feature>
+    <feature min="1" max="1" name="BuscarMembro" type="NONE" id="buscarMembro">
+    </feature>
+    <feature min="1" max="1" name="RemoverMembro" type="NONE" id="removerMembro">
+    </feature>
+    <feature min="1" max="1" name="PaginaMembro" type="NONE" id="paginaMembro">
+    </feature>
+  </feature>
+  <feature min="1" max="1" name="Publicacao" type="NONE" id="publicacao">
+    <feature min="1" max="1" name="CadastrarPublicacao" type="NONE" id="cadastrarPublicacao">
+    </feature>
+    <feature min="1" max="1" name="EditarPublicacao" type="NONE" id="editarPublicacao">
+    </feature>
+    <feature min="1" max="1" name="BuscarPublicacao" type="NONE" id="buscarPublicacao">
+    </feature>
+    <feature min="1" max="1" name="GerarBibTeXPublicacao" type="NONE" id="gerarBibTeXPublicacao">
+    </feature>
+    <feature min="1" max="1" name="GerarListaPublicacoes" type="NONE" id="gerarListaPublicacoes">
+      <featureGroup min="1" max="1" id="group0">
+        <feature min="0" max="1" name="BibTeX" type="NONE" id="bibTeX">
+        </feature>
+        <feature min="0" max="1" name="PDF" type="NONE" id="pDF">
+        </feature>
+      </featureGroup>
+    </feature>
+    <feature min="0" max="1" name="RemoverPublicacao" type="NONE" id="removerPublicacao">
+    </feature>
+    <feature min="0" max="1" name="GerarPDFPublicacao" type="NONE" id="gerarPDFPublicacao">
+    </feature>
+    <feature min="0" max="1" name="AssociarProjetoPesquisa" type="NONE" id="associarProjetoPesquisa">
+    </feature>
+  </feature>
+  <feature min="1" max="1" name="Idioma" type="NONE" id="idioma">
+    <featureGroup min="1" max="1" id="group">
+      <feature min="0" max="1" name="Ingles" type="NONE" id="ingles">
+      </feature>
+      <feature min="0" max="1" name="Portugues" type="NONE" id="portugues">
+      </feature>
+    </featureGroup>
+  </feature>
+  <feature min="1" max="1" name="Grupo" type="NONE" id="grupo">
+    <feature min="1" max="1" name="PaginaGrupo" type="NONE" id="paginaGrupo">
+    </feature>
+  </feature>
+  <feature min="0" max="1" name="LinhaPesquisa" type="NONE" id="linhaPesquisa">
+    <feature min="1" max="1" name="CadastrarLinhaPesquisa" type="NONE" id="cadastrarLinhaPesquisa">
+    </feature>
+    <feature min="1" max="1" name="EditarLinhaPesquisa" type="NONE" id="editarLinhaPesquisa">
+    </feature>
+    <feature min="1" max="1" name="RemoverLinhaPesquisa" type="NONE" id="removerLinhaPesquisa">
+    </feature>
+    <feature min="1" max="1" name="BuscarLinhaPesquisa" type="NONE" id="buscarLinhaPesquisa">
+    </feature>
+    <feature min="1" max="1" name="ListarLinhaPesquisa" type="NONE" id="listarLinhaPesquisa">
+    </feature>
+  </feature>
+  <feature min="0" max="1" name="ProjetoPesquisa" type="NONE" id="projetoPesquisa">
+    <feature min="1" max="1" name="CadastrarProjetoPesquisa" type="NONE" id="cadastrarProjetoPesquisa">
+    </feature>
+  </feature>
+</feature>
