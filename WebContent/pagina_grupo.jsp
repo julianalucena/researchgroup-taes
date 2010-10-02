@@ -1,13 +1,13 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<%@page import="br.ufpe.cin.in980.logic.Fachada"%>
+<%@page import="br.ufpe.cin.in980.fachada.Fachada"%>
 <%@page import="java.util.List"%>
-<%@page import="br.ufpe.cin.in980.basic.Estudante"%>
-<%@page import="br.ufpe.cin.in980.basic.Professor"%>
-<%@page import="br.ufpe.cin.in980.basic.Pesquisador"%>
-<%@page import="br.ufpe.cin.in980.view.AuxCompilacaoCondicional"%>
-<%@page import="br.ufpe.cin.in980.view.AuxMenuProjetoPesquisa"%><html>
+<%@page import="br.ufpe.cin.in980.membro.Estudante"%>
+<%@page import="br.ufpe.cin.in980.membro.Pesquisador"%>
+<%@page import="br.ufpe.cin.in980.membro.ProfessorPesquisador"%>
+<%@page import="br.ufpe.cin.in980.util.AuxCompilacaoCondicional"%>
+<%@page import="br.ufpe.cin.in980.projetopesquisa.AuxMenuProjetoPesquisa"%><html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <%@ include file="layout/header.rsc" %>
@@ -41,10 +41,10 @@
 					<h3><%= prop.getCaptions().getString("professoresKey") %>: </h3>
 					<%
 						try {
-							List<Professor> professores = fachada.listarProfessores();
+							List<ProfessorPesquisador> professores = fachada.listarProfessores();
 					%>
 					<%
-							for (Professor professor : professores) {
+							for (ProfessorPesquisador professor : professores) {
 					%>
 							<table>
 								<tr>

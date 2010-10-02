@@ -3,13 +3,13 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 
 <%@page import="java.util.List"%>
-<%@page import="br.ufpe.cin.in980.basic.Membro"%>
-<%@page import="br.ufpe.cin.in980.logic.Fachada"%>
-<%@page import="br.ufpe.cin.in980.basic.NaoMembro"%>
-<%@page import="br.ufpe.cin.in980.view.AuxCompilacaoCondicional"%>
-<%@page import="br.ufpe.cin.in980.projeto.AssociarProjetoAux"%>
+<%@page import="br.ufpe.cin.in980.membro.Membro"%>
+<%@page import="br.ufpe.cin.in980.fachada.Fachada"%>
+<%@page import="br.ufpe.cin.in980.membro.NaoMembro"%>
+<%@page import="br.ufpe.cin.in980.util.AuxCompilacaoCondicional"%>
+<%@page import="br.ufpe.cin.in980.projetopesquisa.AssociarProjetoAux"%>
 
-<%@page import="br.ufpe.cin.in980.view.AuxMenuProjetoPesquisa"%><html>
+<%@page import="br.ufpe.cin.in980.projetopesquisa.AuxMenuProjetoPesquisa"%><html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <%@ include file="layout/header.rsc" %>

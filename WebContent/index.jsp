@@ -5,8 +5,8 @@
 <%@page import="java.util.Properties"%>
 <%@page import="java.io.FileInputStream"%>
 <%@page import="java.io.File"%>
-<%@page import="br.ufpe.cin.in980.view.AuxCompilacaoCondicional"%>
-<%@page import="br.ufpe.cin.in980.view.AuxMenuProjetoPesquisa"%><html>
+<%@page import="br.ufpe.cin.in980.util.AuxCompilacaoCondicional"%>
+<%@page import="br.ufpe.cin.in980.projetopesquisa.AuxMenuProjetoPesquisa"%><html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <%@ include file="layout/header.rsc" %>

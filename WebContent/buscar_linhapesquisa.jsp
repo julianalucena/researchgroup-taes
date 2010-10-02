@@ -4,13 +4,13 @@
 
 <%@page import="java.util.List"%>
 <%@page import="br.ufpe.cin.in980.linhapesquisa.LinhaPesquisa"%>
-<%@page import="br.ufpe.cin.in980.logic.Fachada"%>
-<%@page import="br.ufpe.cin.in980.basic.Membro"%>
-<%@page import="br.ufpe.cin.in980.basic.Publicacao"%>
+<%@page import="br.ufpe.cin.in980.fachada.Fachada"%>
+<%@page import="br.ufpe.cin.in980.membro.Membro"%>
+<%@page import="br.ufpe.cin.in980.publicacao.Publicacao"%>
 <%@page import="java.util.ArrayList"%>
-<%@page import="br.ufpe.cin.in980.view.AuxCompilacaoCondicional"%>
+<%@page import="br.ufpe.cin.in980.util.AuxCompilacaoCondicional"%>
 
-<%@page import="br.ufpe.cin.in980.view.AuxMenuProjetoPesquisa"%><html>
+<%@page import="br.ufpe.cin.in980.projetopesquisa.AuxMenuProjetoPesquisa"%><html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <%@ include file="layout/header.rsc" %>
