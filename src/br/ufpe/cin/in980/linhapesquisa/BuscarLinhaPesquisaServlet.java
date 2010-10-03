@@ -4,14 +4,14 @@ import java.io.IOException;
 import java.util.List;
 
 import javax.servlet.ServletException;
-import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import br.ufpe.cin.in980.fachada.Fachada;
+import br.ufpe.cin.in980.util.HttpServletComum;
 
-public class BuscarLinhaPesquisaServlet extends HttpServlet {
+public class BuscarLinhaPesquisaServlet extends HttpServletComum {
 	private static final long serialVersionUID = 1L;
 
 	public BuscarLinhaPesquisaServlet() {
@@ -32,10 +32,5 @@ public class BuscarLinhaPesquisaServlet extends HttpServlet {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-	}
-
-	protected void doPost(HttpServletRequest request,
-			HttpServletResponse response) throws ServletException, IOException {
-		this.doGet(request, response);
 	}
 }

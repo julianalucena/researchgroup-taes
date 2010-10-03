@@ -5,15 +5,15 @@ import java.util.ArrayList;
 import java.util.List;
 
 import javax.servlet.ServletException;
-import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import br.ufpe.cin.in980.fachada.Fachada;
 import br.ufpe.cin.in980.membro.Membro;
 import br.ufpe.cin.in980.publicacao.Publicacao;
+import br.ufpe.cin.in980.util.HttpServletComum;
 
-public class CadastrarLinhaPesquisaServlet extends HttpServlet {
+public class CadastrarLinhaPesquisaServlet extends HttpServletComum {
 	private static final long serialVersionUID = 1L;
 
 	public CadastrarLinhaPesquisaServlet() {
@@ -57,11 +57,6 @@ public class CadastrarLinhaPesquisaServlet extends HttpServlet {
 				linksRelacionados, membros, publicacoes);
 		
 		return linhaPesquisa;
-	}
-
-	protected void doPost(HttpServletRequest request,
-			HttpServletResponse response) throws ServletException, IOException {
-		this.doGet(request, response);
 	}
 
 	private void preencherPublicacoes(String[] idPublicacoes,

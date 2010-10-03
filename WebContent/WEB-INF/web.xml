@@ -194,4 +194,14 @@
     <servlet-name>ProjetoPesquisaServlet</servlet-name>
     <url-pattern>/cadastrar_projeto_pesquisa.do</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>HttpServletComum</display-name>
+    <servlet-name>HttpServletComum</servlet-name>
+    <servlet-class>br.ufpe.cin.in980.util.HttpServletComum</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>HttpServletComum</servlet-name>
+    <url-pattern>/HttpServletComum</url-pattern>
+  </servlet-mapping>
 </web-app>

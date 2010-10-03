@@ -13,8 +13,9 @@ import javax.servlet.http.HttpSession;
 import br.ufpe.cin.in980.fachada.Fachada;
 import br.ufpe.cin.in980.membro.Membro;
 import br.ufpe.cin.in980.membro.NaoMembro;
+import br.ufpe.cin.in980.util.HttpServletComum;
 
-public class EditarPublicacao2Servlet extends HttpServlet {
+public class EditarPublicacao2Servlet extends HttpServletComum {
 	private static final long serialVersionUID = 1L;
 
 	public EditarPublicacao2Servlet() {
@@ -46,12 +47,6 @@ public class EditarPublicacao2Servlet extends HttpServlet {
 						response);
 			}
 		}
-	}
-
-	@Override
-	protected void doPost(HttpServletRequest request,
-			HttpServletResponse response) throws ServletException, IOException {
-		this.doGet(request, response);
 	}
 
 	private void preencherNaoMembros(String[] idNaoMembros,

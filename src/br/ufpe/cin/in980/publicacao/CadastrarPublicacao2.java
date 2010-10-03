@@ -5,7 +5,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 import javax.servlet.ServletException;
-import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
@@ -13,8 +12,9 @@ import javax.servlet.http.HttpSession;
 import br.ufpe.cin.in980.fachada.Fachada;
 import br.ufpe.cin.in980.membro.Membro;
 import br.ufpe.cin.in980.membro.NaoMembro;
+import br.ufpe.cin.in980.util.HttpServletComum;
 
-public class CadastrarPublicacao2 extends HttpServlet {
+public class CadastrarPublicacao2 extends HttpServletComum {
 
 	private static final long serialVersionUID = 1L;
 
@@ -47,12 +47,6 @@ public class CadastrarPublicacao2 extends HttpServlet {
 						response);
 			}
 		}
-	}
-
-	@Override
-	protected void doPost(HttpServletRequest request,
-			HttpServletResponse response) throws ServletException, IOException {
-		this.doGet(request, response);
 	}
 
 	private void preencherNaoMembros(String[] idNaoMembros,

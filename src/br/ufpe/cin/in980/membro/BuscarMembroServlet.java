@@ -8,14 +8,14 @@ import java.io.SyncFailedException;
 import java.util.List;
 
 import javax.servlet.ServletException;
-import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import br.ufpe.cin.in980.fachada.Fachada;
+import br.ufpe.cin.in980.util.HttpServletComum;
 
-public class BuscarMembroServlet extends HttpServlet {
+public class BuscarMembroServlet extends HttpServletComum {
 	private static final long serialVersionUID = 1L;
 
 	public BuscarMembroServlet() {
@@ -54,11 +54,5 @@ public class BuscarMembroServlet extends HttpServlet {
 			fd.sync();
 			fos.close();
 		}
-	}
-
-	@Override
-	protected void doPost(HttpServletRequest request,
-			HttpServletResponse response) throws ServletException, IOException {
-		this.doGet(request, response);
 	}
 }
