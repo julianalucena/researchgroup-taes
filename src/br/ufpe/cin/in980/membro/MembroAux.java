@@ -13,6 +13,8 @@ import org.apache.commons.fileupload.FileUploadException;
 import org.apache.commons.fileupload.disk.DiskFileItemFactory;
 import org.apache.commons.fileupload.servlet.ServletFileUpload;
 
+import br.ufpe.cin.in980.membro.ProfessorPesquisador.TipoVinculo;
+
 
 
 public class MembroAux {
@@ -106,12 +108,12 @@ public class MembroAux {
 		}
 		Membro membro = null;
 		if (tipo.equals("pesquisador")) {
-			membro = new Pesquisador(idMembro, nome, departamento,
+			membro = new ProfessorPesquisador(idMembro, nome, departamento,
 					universidade, email, telefone, website, cidade, pais, foto,
-					status, null);
+					status, null, TipoVinculo.PESQUISADOR);
 		} else if (tipo.equals("professor")) {
-			membro = new Professor(idMembro, nome, departamento, universidade,
-					email, telefone, website, cidade, pais, foto, status, null);
+			membro = new ProfessorPesquisador(idMembro, nome, departamento, universidade,
+					email, telefone, website, cidade, pais, foto, status, null, TipoVinculo.PROFESSOR);
 		} else {
 			membro = new Estudante(idMembro, nome, departamento, universidade,
 					email, telefone, website, cidade, pais, foto, status, null,

@@ -4,7 +4,6 @@
 <%@page import="br.ufpe.cin.in980.fachada.Fachada"%>
 <%@page import="java.util.List"%>
 <%@page import="br.ufpe.cin.in980.membro.Estudante"%>
-<%@page import="br.ufpe.cin.in980.membro.Pesquisador"%>
 <%@page import="br.ufpe.cin.in980.membro.ProfessorPesquisador"%>
 <%@page import="br.ufpe.cin.in980.util.AuxCompilacaoCondicional"%>
 <%@page import="br.ufpe.cin.in980.projetopesquisa.AuxMenuProjetoPesquisa"%><html>
@@ -79,11 +78,11 @@
 					<%
 						
 						try {
-							List<Pesquisador> pesquisadores = fachada.listarPesquisadores();
+							List<ProfessorPesquisador> pesquisadores = fachada.listarPesquisadores();
 					%>
 						<table>
 					<%
-							for (Pesquisador pesquisador : pesquisadores) {
+							for (ProfessorPesquisador pesquisador : pesquisadores) {
 					%>
 								<tr>
 									<td> <%= prop.getCaptions().getString("nomeKey") %>: </td>

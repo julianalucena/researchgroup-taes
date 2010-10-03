@@ -44,11 +44,11 @@ public class ControleMembro {
 		return this.membroDAO.listarMembros();
 	}
 
-	public List<Professor> listarProfessores() throws Exception {
+	public List<ProfessorPesquisador> listarProfessores() throws Exception {
 		return this.membroDAO.listarProfessores();
 	}
 
-	public List<Pesquisador> listarPesquisadores() throws Exception {
+	public List<ProfessorPesquisador> listarPesquisadores() throws Exception {
 		return this.membroDAO.listarPesquisadores();
 	}
 

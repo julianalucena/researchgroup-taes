@@ -6,6 +6,7 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
+import br.ufpe.cin.in980.membro.ProfessorPesquisador.TipoVinculo;
 import br.ufpe.cin.in980.publicacao.Publicacao;
 import br.ufpe.cin.in980.util.JDBCConnection;
 
@@ -130,14 +131,15 @@ public class MembroDAO {
 		return retorno;
 	}
 
-	public List<Professor> listarProfessores() throws Exception {
+	public List<ProfessorPesquisador> listarProfessores() throws Exception {
 		PreparedStatement stat = this.conexao.getConnection().prepareStatement(
 				"SELECT nome, foto, departamento, universidade FROM membro m "
 						+ "JOIN professor p ON m.idMembro=p.fk_membro");
 		ResultSet tab = stat.executeQuery();
-		List<Professor> retorno = new ArrayList<Professor>();
+		List<ProfessorPesquisador> retorno = new ArrayList<ProfessorPesquisador>();
 		while (tab.next()) {
-			Professor professor = new Professor();
+			ProfessorPesquisador professor = new ProfessorPesquisador();
+			professor.setTipoVinculo(TipoVinculo.PROFESSOR);
 			professor.setNomeMembro(tab.getString(1));
 			professor.setFoto(tab.getBytes(2));
 			professor.setDepartamento(tab.getString(3));
@@ -149,14 +151,15 @@ public class MembroDAO {
 		return retorno;
 	}
 
-	public List<Pesquisador> listarPesquisadores() throws Exception {
+	public List<ProfessorPesquisador> listarPesquisadores() throws Exception {
 		PreparedStatement stat = this.conexao.getConnection().prepareStatement(
 				"SELECT nome, foto, departamento, universidade FROM membro m "
 						+ "JOIN pesquisador p ON m.idMembro=p.fk_membro");
 		ResultSet tab = stat.executeQuery();
-		List<Pesquisador> retorno = new ArrayList<Pesquisador>();
+		List<ProfessorPesquisador> retorno = new ArrayList<ProfessorPesquisador>();
 		while (tab.next()) {
-			Pesquisador pesquisador = new Pesquisador();
+			ProfessorPesquisador pesquisador = new ProfessorPesquisador();
+			pesquisador.setTipoVinculo(TipoVinculo.PESQUISADOR);
 			pesquisador.setNomeMembro(tab.getString(1));
 			pesquisador.setFoto(tab.getBytes(2));
 			pesquisador.setDepartamento(tab.getString(3));
@@ -208,10 +211,15 @@ public class MembroDAO {
 			throws SQLException {
 		if (membro instanceof Estudante) {
 			this.cadastrarEstudante(idMembro, (Estudante) membro);
-		} else if (membro instanceof Pesquisador) {
-			this.cadastrarPesquisador(idMembro, (Pesquisador) membro);
-		} else if (membro instanceof Professor) {
-			this.cadastrarProfessor(idMembro, (Professor) membro);
+		} else if (membro instanceof ProfessorPesquisador) {
+			
+			TipoVinculo tipoVinculo = ((ProfessorPesquisador) membro).getTipoVinculo();
+			
+			if (tipoVinculo.equals(TipoVinculo.PESQUISADOR)) {
+				this.cadastrarPesquisador(idMembro, (ProfessorPesquisador) membro);				
+			} else {				
+				this.cadastrarProfessor(idMembro, (ProfessorPesquisador) membro);
+			}
 		}
 	}
 
@@ -229,7 +237,7 @@ public class MembroDAO {
 		stat.close();
 	}
 
-	private void cadastrarProfessor(long idMembro, Professor professor)
+	private void cadastrarProfessor(long idMembro, ProfessorPesquisador professor)
 			throws SQLException {
 		PreparedStatement stat = this.conexao.getConnection().prepareStatement(
 				"INSERT INTO professor(FK_membro) VALUES (?)");
@@ -238,7 +246,7 @@ public class MembroDAO {
 		stat.close();
 	}
 
-	private void cadastrarPesquisador(long idMembro, Pesquisador pesquisador)
+	private void cadastrarPesquisador(long idMembro, ProfessorPesquisador pesquisador)
 			throws SQLException {
 		PreparedStatement stat = this.conexao.getConnection().prepareStatement(
 				"INSERT INTO pesquisador(FK_membro) VALUES (?)");

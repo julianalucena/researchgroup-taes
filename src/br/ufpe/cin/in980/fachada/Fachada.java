@@ -7,8 +7,7 @@ import br.ufpe.cin.in980.membro.ControleNaoMembro;
 import br.ufpe.cin.in980.membro.Estudante;
 import br.ufpe.cin.in980.membro.Membro;
 import br.ufpe.cin.in980.membro.NaoMembro;
-import br.ufpe.cin.in980.membro.Pesquisador;
-import br.ufpe.cin.in980.membro.Professor;
+import br.ufpe.cin.in980.membro.ProfessorPesquisador;
 import br.ufpe.cin.in980.publicacao.ControlePublicacao;
 import br.ufpe.cin.in980.publicacao.Publicacao;
 import br.ufpe.cin.in980.util.JDBCConnection;
@@ -132,18 +131,18 @@ public class Fachada {
 		}
 	}
 
-	public List<Professor> listarProfessores() throws Exception {
+	public List<ProfessorPesquisador> listarProfessores() throws Exception {
 		this.conexao.createConnection();
 		ControleMembro controleMembro = new ControleMembro(this.conexao);
-		List<Professor> retorno = controleMembro.listarProfessores();
+		List<ProfessorPesquisador> retorno = controleMembro.listarProfessores();
 		this.conexao.closeConnection();
 		return retorno;
 	}
 
-	public List<Pesquisador> listarPesquisadores() throws Exception {
+	public List<ProfessorPesquisador> listarPesquisadores() throws Exception {
 		this.conexao.createConnection();
 		ControleMembro controleMembro = new ControleMembro(this.conexao);
-		List<Pesquisador> retorno = controleMembro.listarPesquisadores();
+		List<ProfessorPesquisador> retorno = controleMembro.listarPesquisadores();
 		this.conexao.closeConnection();
 		return retorno;
 	}
