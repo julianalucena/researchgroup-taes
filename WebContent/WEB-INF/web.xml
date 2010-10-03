@@ -8,7 +8,7 @@
     <description></description>
     <display-name>CadastrarMembroServlet</display-name>
     <servlet-name>CadastrarMembroServlet</servlet-name>
-    <servlet-class>br.ufpe.cin.in980.view.CadastrarMembroServlet</servlet-class>
+    <servlet-class>br.ufpe.cin.in980.membro.CadastrarMembroServlet</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>CadastrarMembroServlet</servlet-name>
@@ -18,7 +18,7 @@
     <description></description>
     <display-name>AdicionaisAjaxServlet</display-name>
     <servlet-name>AdicionaisAjaxServlet</servlet-name>
-    <servlet-class>br.ufpe.cin.in980.view.AdicionaisAjaxServlet</servlet-class>
+    <servlet-class>br.ufpe.cin.in980.util.AdicionaisAjaxServlet</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>AdicionaisAjaxServlet</servlet-name>
@@ -28,7 +28,7 @@
     <description></description>
     <display-name>BuscarMembroServlet</display-name>
     <servlet-name>BuscarMembroServlet</servlet-name>
-    <servlet-class>br.ufpe.cin.in980.view.BuscarMembroServlet</servlet-class>
+    <servlet-class>br.ufpe.cin.in980.membro.BuscarMembroServlet</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>BuscarMembroServlet</servlet-name>
@@ -38,7 +38,7 @@
     <description></description>
     <display-name>EditarMembroServlet</display-name>
     <servlet-name>EditarMembroServlet</servlet-name>
-    <servlet-class>br.ufpe.cin.in980.view.EditarMembroServlet</servlet-class>
+    <servlet-class>br.ufpe.cin.in980.membro.EditarMembroServlet</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>EditarMembroServlet</servlet-name>
@@ -48,7 +48,7 @@
     <description></description>
     <display-name>DeletarMembroServlet</display-name>
     <servlet-name>DeletarMembroServlet</servlet-name>
-    <servlet-class>br.ufpe.cin.in980.view.DeletarMembroServlet</servlet-class>
+    <servlet-class>br.ufpe.cin.in980.membro.DeletarMembroServlet</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>DeletarMembroServlet</servlet-name>
@@ -58,7 +58,7 @@
     <description></description>
     <display-name>CadastrarPublicacaoServlet</display-name>
     <servlet-name>CadastrarPublicacaoServlet</servlet-name>
-    <servlet-class>br.ufpe.cin.in980.view.CadastrarPublicacaoServlet</servlet-class>
+    <servlet-class>br.ufpe.cin.in980.publicacao.CadastrarPublicacaoServlet</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>CadastrarPublicacaoServlet</servlet-name>
@@ -68,7 +68,7 @@
     <description></description>
     <display-name>CadastrarPublicacao2</display-name>
     <servlet-name>CadastrarPublicacao2</servlet-name>
-    <servlet-class>br.ufpe.cin.in980.view.CadastrarPublicacao2</servlet-class>
+    <servlet-class>br.ufpe.cin.in980.publicacao.CadastrarPublicacao2</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>CadastrarPublicacao2</servlet-name>
@@ -78,7 +78,7 @@
     <description></description>
     <display-name>BuscarPublicacaoServlet</display-name>
     <servlet-name>BuscarPublicacaoServlet</servlet-name>
-    <servlet-class>br.ufpe.cin.in980.view.BuscarPublicacaoServlet</servlet-class>
+    <servlet-class>br.ufpe.cin.in980.publicacao.BuscarPublicacaoServlet</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>BuscarPublicacaoServlet</servlet-name>
@@ -88,7 +88,7 @@
     <description></description>
     <display-name>RemoverPublicacaoServlet</display-name>
     <servlet-name>RemoverPublicacaoServlet</servlet-name>
-    <servlet-class>br.ufpe.cin.in980.view.RemoverPublicacaoServlet</servlet-class>
+    <servlet-class>br.ufpe.cin.in980.publicacao.RemoverPublicacaoServlet</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>RemoverPublicacaoServlet</servlet-name>
@@ -98,7 +98,7 @@
     <description></description>
     <display-name>EditarPublicacaoServlet</display-name>
     <servlet-name>EditarPublicacaoServlet</servlet-name>
-    <servlet-class>br.ufpe.cin.in980.view.EditarPublicacaoServlet</servlet-class>
+    <servlet-class>br.ufpe.cin.in980.publicacao.EditarPublicacaoServlet</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>EditarPublicacaoServlet</servlet-name>
@@ -108,7 +108,7 @@
     <description></description>
     <display-name>EditarPublicacao2Servlet</display-name>
     <servlet-name>EditarPublicacao2Servlet</servlet-name>
-    <servlet-class>br.ufpe.cin.in980.view.EditarPublicacao2Servlet</servlet-class>
+    <servlet-class>br.ufpe.cin.in980.publicacao.EditarPublicacao2Servlet</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>EditarPublicacao2Servlet</servlet-name>
@@ -118,7 +118,7 @@
     <description></description>
     <display-name>BibtexPublicacaoServlet</display-name>
     <servlet-name>BibtexPublicacaoServlet</servlet-name>
-    <servlet-class>br.ufpe.cin.in980.view.BibtexPublicacaoServlet</servlet-class>
+    <servlet-class>br.ufpe.cin.in980.bibtex.BibtexPublicacaoServlet</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>BibtexPublicacaoServlet</servlet-name>
@@ -128,7 +128,7 @@
     <description></description>
     <display-name>DownloadPDFServlet</display-name>
     <servlet-name>DownloadPDFServlet</servlet-name>
-    <servlet-class>br.ufpe.cin.in980.view.DownloadPDFServlet</servlet-class>
+    <servlet-class>br.ufpe.cin.in980.pdf.DownloadPDFServlet</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>DownloadPDFServlet</servlet-name>
@@ -178,7 +178,7 @@
     <description></description>
     <display-name>GerarListaPublicacaoServlet</display-name>
     <servlet-name>GerarListaPublicacaoServlet</servlet-name>
-    <servlet-class>br.ufpe.cin.in980.view.GerarListaPublicacaoServlet</servlet-class>
+    <servlet-class>br.ufpe.cin.in980.pdf.GerarListaPublicacaoServlet</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>GerarListaPublicacaoServlet</servlet-name>
@@ -188,7 +188,7 @@
     <description></description>
     <display-name>ProjetoPesquisaServlet</display-name>
     <servlet-name>ProjetoPesquisaServlet</servlet-name>
-    <servlet-class>br.ufpe.cin.in980.projeto.ProjetoPesquisaServlet</servlet-class>
+    <servlet-class>br.ufpe.cin.in980.projetopesquisa.ProjetoPesquisaServlet</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>ProjetoPesquisaServlet</servlet-name>
