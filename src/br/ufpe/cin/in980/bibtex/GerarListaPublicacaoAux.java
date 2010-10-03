@@ -4,9 +4,9 @@ import br.ufpe.cin.in980.membro.Membro;
 import br.ufpe.cin.in980.membro.NaoMembro;
 import br.ufpe.cin.in980.publicacao.ArtConferencia;
 import br.ufpe.cin.in980.publicacao.ArtPeriodicoRevista;
-import br.ufpe.cin.in980.publicacao.DissertacaoMestrado;
+import br.ufpe.cin.in980.publicacao.Monografia;
+import br.ufpe.cin.in980.publicacao.Monografia.TipoMonografia;
 import br.ufpe.cin.in980.publicacao.Publicacao;
-import br.ufpe.cin.in980.publicacao.TeseDoutorado;
 
 public class GerarListaPublicacaoAux {
 
@@ -60,46 +60,49 @@ public class GerarListaPublicacaoAux {
 			bib.append("pages\t= \"");
 			bib.append(periodicoRevista.getPaginas());
 			bib.append("\"\n}");
-		} else if (publicacao instanceof DissertacaoMestrado) {
-			DissertacaoMestrado dissertacaoMestrado = (DissertacaoMestrado) publicacao;
-			bib.append("@Mastersthesis{");
-			bib.append(getNomes(dissertacaoMestrado));
-			bib.append(",\n");
-			bib.append("author\t= \"");
-			bib.append(getNomeAutores(dissertacaoMestrado));
-			bib.append("\",\n");
-			bib.append("title\t= \"");
-			bib.append(dissertacaoMestrado.getTitulo());
-			bib.append("\",\n");
-			bib.append("school\t= \"");
-			bib.append(dissertacaoMestrado.getEscola());
-			bib.append("\",\n");
-			bib.append("year\t= \"");
-			bib.append(dissertacaoMestrado.getAno());
-			bib.append("\",\n");
-			bib.append("month\t= \"");
-			bib.append(dissertacaoMestrado.getMes());
-			bib.append("\",\n}");
-		} else if (publicacao instanceof TeseDoutorado) {
-			TeseDoutorado teseDoutorado = (TeseDoutorado) publicacao;
-			bib.append("@Phdthesis{");
-			bib.append(getNomes(teseDoutorado));
-			bib.append(",\n");
-			bib.append("author\t= \"");
-			bib.append(getNomeAutores(teseDoutorado));
-			bib.append("\",\n");
-			bib.append("title\t= \"");
-			bib.append(teseDoutorado.getTitulo());
-			bib.append("\",\n");
-			bib.append("school\t= \"");
-			bib.append(teseDoutorado.getEscola());
-			bib.append("\",\n");
-			bib.append("year\t= \"");
-			bib.append(teseDoutorado.getAno());
-			bib.append("\",\n");
-			bib.append("month\t= \"");
-			bib.append(teseDoutorado.getMes());
-			bib.append("\",\n}");
+		} else if (publicacao instanceof Monografia) {
+			TipoMonografia tipoMonografia = ((Monografia) publicacao).getTipoMonografia();
+			if (tipoMonografia.equals(TipoMonografia.DISSERTACAO_MESTRADO)) {
+				Monografia dissertacaoMestrado = (Monografia) publicacao;
+				bib.append("@Mastersthesis{");
+				bib.append(getNomes(dissertacaoMestrado));
+				bib.append(",\n");
+				bib.append("author\t= \"");
+				bib.append(getNomeAutores(dissertacaoMestrado));
+				bib.append("\",\n");
+				bib.append("title\t= \"");
+				bib.append(dissertacaoMestrado.getTitulo());
+				bib.append("\",\n");
+				bib.append("school\t= \"");
+				bib.append(dissertacaoMestrado.getEscola());
+				bib.append("\",\n");
+				bib.append("year\t= \"");
+				bib.append(dissertacaoMestrado.getAno());
+				bib.append("\",\n");
+				bib.append("month\t= \"");
+				bib.append(dissertacaoMestrado.getMes());
+				bib.append("\",\n}");
+			} else if (tipoMonografia.equals(TipoMonografia.TESE_DOUTORADO)) {
+				Monografia teseDoutorado = (Monografia) publicacao;
+				bib.append("@Phdthesis{");
+				bib.append(getNomes(teseDoutorado));
+				bib.append(",\n");
+				bib.append("author\t= \"");
+				bib.append(getNomeAutores(teseDoutorado));
+				bib.append("\",\n");
+				bib.append("title\t= \"");
+				bib.append(teseDoutorado.getTitulo());
+				bib.append("\",\n");
+				bib.append("school\t= \"");
+				bib.append(teseDoutorado.getEscola());
+				bib.append("\",\n");
+				bib.append("year\t= \"");
+				bib.append(teseDoutorado.getAno());
+				bib.append("\",\n");
+				bib.append("month\t= \"");
+				bib.append(teseDoutorado.getMes());
+				bib.append("\",\n}");
+			}
 		}
 		return bib;
 	}

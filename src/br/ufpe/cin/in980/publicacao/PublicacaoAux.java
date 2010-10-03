@@ -15,6 +15,7 @@ import org.apache.commons.fileupload.servlet.ServletFileUpload;
 
 //#ifdef projeto_pesquisa
 import br.ufpe.cin.in980.projetopesquisa.ProjetoPesquisa;
+import br.ufpe.cin.in980.publicacao.Monografia.TipoMonografia;
 
 public class PublicacaoAux {
 
@@ -109,11 +110,11 @@ public class PublicacaoAux {
 			publicacao = new ArtConferencia(idPublicacao, titulo, ano, null,
 					null, pdf, conferencia, paginas, mes);
 		} else if (tipoPublicacao.equals("dissertacaomestrado")) {
-			publicacao = new DissertacaoMestrado(idPublicacao, titulo, ano,
-					null, null, pdf, escola, mes);
+			publicacao = new Monografia(idPublicacao, titulo, ano,
+					null, null, pdf, escola, mes, TipoMonografia.DISSERTACAO_MESTRADO);
 		} else {
-			publicacao = new TeseDoutorado(idPublicacao, titulo, ano, null,
-					null, pdf, escola, mes);
+			publicacao = new Monografia(idPublicacao, titulo, ano, null,
+					null, pdf, escola, mes, TipoMonografia.TESE_DOUTORADO);
 		}
 		// #ifdef projeto_pesquisa
 		publicacao.setProjetoPesquisa(new ProjetoPesquisa(idProjetoPesquisa,

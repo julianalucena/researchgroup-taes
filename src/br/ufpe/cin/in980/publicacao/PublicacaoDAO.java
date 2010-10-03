@@ -8,6 +8,7 @@ import java.util.List;
 
 import br.ufpe.cin.in980.membro.Membro;
 import br.ufpe.cin.in980.membro.NaoMembro;
+import br.ufpe.cin.in980.publicacao.Monografia.TipoMonografia;
 import br.ufpe.cin.in980.util.JDBCConnection;
 
 public class PublicacaoDAO {
@@ -119,15 +120,16 @@ public class PublicacaoDAO {
 		return null;
 	}
 
-	private DissertacaoMestrado getDissertacaoMestrado(Long idPublicacao)
+	private Monografia getDissertacaoMestrado(Long idPublicacao)
 			throws Exception {
 		PreparedStatement stat = this.conexao.getConnection().prepareStatement(
 				"SELECT * FROM dissertacao_mestrado WHERE fk_publicacao = ?");
 		stat.setLong(1, idPublicacao);
-		DissertacaoMestrado dissertacaoMestrado = null;
+		Monografia dissertacaoMestrado = null;
 		ResultSet tab = stat.executeQuery();
 		if (tab.next()) {
-			dissertacaoMestrado = new DissertacaoMestrado();
+			dissertacaoMestrado = new Monografia();
+			dissertacaoMestrado.setTipoMonografia(TipoMonografia.DISSERTACAO_MESTRADO);
 			dissertacaoMestrado.setEscola(tab.getString(2));
 			dissertacaoMestrado.setMes(tab.getInt(3));
 		}
@@ -136,14 +138,15 @@ public class PublicacaoDAO {
 		return dissertacaoMestrado;
 	}
 
-	private TeseDoutorado getTeseDoutorado(Long idPublicacao) throws Exception {
+	private Monografia getTeseDoutorado(Long idPublicacao) throws Exception {
 		PreparedStatement stat = this.conexao.getConnection().prepareStatement(
 				"SELECT * FROM tese_doutorado WHERE fk_publicacao = ?");
 		stat.setLong(1, idPublicacao);
-		TeseDoutorado teseDoutorado = null;
+		Monografia teseDoutorado = null;
 		ResultSet tab = stat.executeQuery();
 		if (tab.next()) {
-			teseDoutorado = new TeseDoutorado();
+			teseDoutorado = new Monografia();
+			teseDoutorado.setTipoMonografia(TipoMonografia.TESE_DOUTORADO);
 			teseDoutorado.setEscola(tab.getString(2));
 			teseDoutorado.setMes(tab.getInt(3));
 		}
@@ -207,14 +210,18 @@ public class PublicacaoDAO {
 			this.cadastrarArtPeriodicoRevista((ArtPeriodicoRevista) publicacao);
 		} else if (publicacao instanceof ArtConferencia) {
 			this.cadastrarArtConferencia((ArtConferencia) publicacao);
-		} else if (publicacao instanceof DissertacaoMestrado) {
-			this.cadastrarDissertacaoMestrado((DissertacaoMestrado) publicacao);
-		} else if (publicacao instanceof TeseDoutorado) {
-			this.cadastrarTeseDoutorado((TeseDoutorado) publicacao);
+		} else if (publicacao instanceof Monografia) {
+			TipoMonografia tipoMonografia = ((Monografia) publicacao).getTipoMonografia();
+			
+			if (tipoMonografia.equals(TipoMonografia.DISSERTACAO_MESTRADO)){
+				this.cadastrarDissertacaoMestrado((Monografia) publicacao);
+			}else if (tipoMonografia.equals(TipoMonografia.TESE_DOUTORADO)){
+				this.cadastrarTeseDoutorado((Monografia) publicacao);				
+			}
 		}
 	}
 
-	private void cadastrarTeseDoutorado(TeseDoutorado teseDoutorado)
+	private void cadastrarTeseDoutorado(Monografia teseDoutorado)
 			throws SQLException {
 		PreparedStatement stat = this.conexao
 				.getConnection()
@@ -228,7 +235,7 @@ public class PublicacaoDAO {
 	}
 
 	private void cadastrarDissertacaoMestrado(
-			DissertacaoMestrado dissertacaoMestrado) throws SQLException {
+			Monografia dissertacaoMestrado) throws SQLException {
 		PreparedStatement stat = this.conexao
 				.getConnection()
 				.prepareStatement(
