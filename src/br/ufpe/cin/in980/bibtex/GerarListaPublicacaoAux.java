@@ -19,15 +19,16 @@ public class GerarListaPublicacaoAux {
 		if (publicacao instanceof ArtConferencia) {
 			
 			ArtConferencia conferencia = (ArtConferencia) publicacao;
-			bib.append("@Conference{" + nomesAutorTitulo + "booktitle\t= \"" + "\",\n year\t= \"" + conferencia.getAno() + "\",\n pages\t= \"" + conferencia.getPaginas() 
+			bib.append("@Conference{" + nomesAutorTitulo + "booktitle\t= \"" + "\",\n year\t= \"" + conferencia.getAno() 
+					+ "\",\n pages\t= \"" + conferencia.getPaginas() 
 					+ "\",\n month\t= \"" + conferencia.getMes() + "\"\n}");
 
 		} else if (publicacao instanceof ArtPeriodicoRevista) {
 			
 			ArtPeriodicoRevista periodicoRevista = (ArtPeriodicoRevista) publicacao;
-			bib.append("@Article{" + nomesAutorTitulo + "journal\t= \"" + periodicoRevista.getJournal() + "\",\n year\t= \"" + periodicoRevista.getAno() 
-					+ "\",\n volume\t= \"" + periodicoRevista.getVolume() + "\",\n number\t= \"" + periodicoRevista.getNumero() 
-					+ "\"\n} pages\t= \"" + periodicoRevista.getPaginas() + "\"\n}");
+			bib.append("@Article{" + nomesAutorTitulo + "journal\t= \"" + periodicoRevista.getJournal() 
+					+ "\",\n year\t= \"" + periodicoRevista.getAno() + "\",\n volume\t= \"" + periodicoRevista.getVolume() 
+					+ "\",\n number\t= \"" + periodicoRevista.getNumero() + "\"\n} pages\t= \"" + periodicoRevista.getPaginas() + "\"\n}");
 			
 		} else if (publicacao instanceof Monografia) {
 			
@@ -39,8 +40,8 @@ public class GerarListaPublicacaoAux {
 				bib.append("@Phdthesis{");
 			}
 			
-			bib.append(nomesAutorTitulo + "school\t= \"" + ((Monografia) publicacao).getEscola() + "\",\n year\t= \"" + publicacao.getAno() + "\",\n month\t= \""
-					+ ((Monografia) publicacao).getMes() + "\",\n}");
+			bib.append(nomesAutorTitulo + "school\t= \"" + ((Monografia) publicacao).getEscola() + "\",\n year\t= \"" + publicacao.getAno() 
+					+ "\",\n month\t= \"" + ((Monografia) publicacao).getMes() + "\"\n}");
 		}
 		
 		return bib;

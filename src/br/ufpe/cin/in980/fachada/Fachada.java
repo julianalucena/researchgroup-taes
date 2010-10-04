@@ -25,23 +25,22 @@ public class Fachada {
 	public static Fachada obterInstancia() {
 		return INSTANCIA;
 	}
+	
+	public JDBCConnection getConexao() {
+		return conexao;
+	}
 
 	public void cadastrarMembro(Membro membro) throws Exception {
 		if (membro != null) {
-			this.conexao.createConnection();
 			ControleMembro controleMembro = new ControleMembro(this.conexao);
 			controleMembro.cadastrarMembro(membro);
-			this.conexao.commitTransaction();
-			this.conexao.closeConnection();
 		}
 	}
 
 	public List<Membro> buscarMembro(String termo) throws Exception {
 		if (termo != null) {
-			this.conexao.createConnection();
 			ControleMembro controleMembro = new ControleMembro(this.conexao);
 			List<Membro> retorno = controleMembro.buscarMembro(termo);
-			this.conexao.closeConnection();
 			return retorno;
 		}
 		return null;
@@ -49,61 +48,46 @@ public class Fachada {
 
 	public void editarMembro(Membro membro) throws Exception {
 		if (membro != null) {
-			this.conexao.createConnection();
 			ControleMembro controleMembro = new ControleMembro(this.conexao);
 			controleMembro.editarMembro(membro);
-			this.conexao.commitTransaction();
-			this.conexao.closeConnection();
 		}
 
 	}
 
 	public void deletarMembro(Membro membro) throws Exception {
 		if (membro != null) {
-			this.conexao.createConnection();
 			ControleMembro controleMembro = new ControleMembro(this.conexao);
 			controleMembro.deletarMembro(membro);
-			this.conexao.commitTransaction();
-			this.conexao.closeConnection();
 		}
 	}
 
 	public List<Membro> listarMembros() throws Exception {
-		this.conexao.createConnection();
 		ControleMembro controleMembro = new ControleMembro(this.conexao);
 		List<Membro> retorno = controleMembro.listarMembros();
-		this.conexao.closeConnection();
 		return retorno;
 	}
 
 	public List<NaoMembro> listarNaoMembros() throws Exception {
-		this.conexao.createConnection();
 		ControleNaoMembro controleNaoMembro = new ControleNaoMembro(
 				this.conexao);
 		List<NaoMembro> retorno = controleNaoMembro.listarNaoMembros();
-		this.conexao.closeConnection();
 		return retorno;
 	}
 
 	public void cadastrarPublicacao(Publicacao publicacao) throws Exception {
 		if (publicacao != null) {
-			this.conexao.createConnection();
 			ControlePublicacao controlePublicacao = new ControlePublicacao(
 					this.conexao);
 			controlePublicacao.cadastrarPublicacao(publicacao);
-			this.conexao.commitTransaction();
-			this.conexao.closeConnection();
 		}
 	}
 
 	public List<Publicacao> buscarPublicacoes(String termo) throws Exception {
 		List<Publicacao> retorno = null;
 		if (termo != null) {
-			this.conexao.createConnection();
 			ControlePublicacao controlePublicacao = new ControlePublicacao(
 					this.conexao);
 			retorno = controlePublicacao.buscarPublicacoes(termo);
-			this.conexao.closeConnection();
 		}
 		return retorno;
 	}
@@ -111,47 +95,36 @@ public class Fachada {
 	public Publicacao buscarPublicacao(Long idPublicacao) throws Exception {
 		Publicacao retorno = null;
 		if (idPublicacao != null) {
-			this.conexao.createConnection();
 			ControlePublicacao controlePublicacao = new ControlePublicacao(
 					this.conexao);
 			retorno = controlePublicacao.buscarPublicacao(idPublicacao);
-			this.conexao.closeConnection();
 		}
 		return retorno;
 	}
 
 	public void editarPublicacao(Publicacao publicacao) throws Exception {
 		if (publicacao != null) {
-			this.conexao.createConnection();
 			ControlePublicacao controlePublicacao = new ControlePublicacao(
 					this.conexao);
 			controlePublicacao.editarPublicacao(publicacao);
-			this.conexao.commitTransaction();
-			this.conexao.closeConnection();
 		}
 	}
 
 	public List<ProfessorPesquisador> listarProfessores() throws Exception {
-		this.conexao.createConnection();
 		ControleMembro controleMembro = new ControleMembro(this.conexao);
 		List<ProfessorPesquisador> retorno = controleMembro.listarProfessores();
-		this.conexao.closeConnection();
 		return retorno;
 	}
 
 	public List<ProfessorPesquisador> listarPesquisadores() throws Exception {
-		this.conexao.createConnection();
 		ControleMembro controleMembro = new ControleMembro(this.conexao);
 		List<ProfessorPesquisador> retorno = controleMembro.listarPesquisadores();
-		this.conexao.closeConnection();
 		return retorno;
 	}
 
 	public List<Estudante> listarEstudantes() throws Exception {
-		this.conexao.createConnection();
 		ControleMembro controleMembro = new ControleMembro(this.conexao);
 		List<Estudante> retorno = controleMembro.listarEstudantes();
-		this.conexao.closeConnection();
 		return retorno;
 	}
 }
