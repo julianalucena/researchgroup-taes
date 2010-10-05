@@ -4,16 +4,7 @@
   <welcome-file-list>
     <welcome-file>index.jsp</welcome-file>
   </welcome-file-list>
-  <servlet>
-    <description></description>
-    <display-name>CadastrarMembroServlet</display-name>
-    <servlet-name>CadastrarMembroServlet</servlet-name>
-    <servlet-class>br.ufpe.cin.in980.membro.CadastrarMembroServlet</servlet-class>
-  </servlet>
-  <servlet-mapping>
-    <servlet-name>CadastrarMembroServlet</servlet-name>
-    <url-pattern>/cadastrar_membro.do</url-pattern>
-  </servlet-mapping>
+
   <servlet>
     <description></description>
     <display-name>AdicionaisAjaxServlet</display-name>
@@ -33,26 +24,6 @@
   <servlet-mapping>
     <servlet-name>BuscarMembroServlet</servlet-name>
     <url-pattern>/buscar_membro.do</url-pattern>
-  </servlet-mapping>
-  <servlet>
-    <description></description>
-    <display-name>EditarMembroServlet</display-name>
-    <servlet-name>EditarMembroServlet</servlet-name>
-    <servlet-class>br.ufpe.cin.in980.membro.EditarMembroServlet</servlet-class>
-  </servlet>
-  <servlet-mapping>
-    <servlet-name>EditarMembroServlet</servlet-name>
-    <url-pattern>/editar_membro.do</url-pattern>
-  </servlet-mapping>
-  <servlet>
-    <description></description>
-    <display-name>DeletarMembroServlet</display-name>
-    <servlet-name>DeletarMembroServlet</servlet-name>
-    <servlet-class>br.ufpe.cin.in980.membro.DeletarMembroServlet</servlet-class>
-  </servlet>
-  <servlet-mapping>
-    <servlet-name>DeletarMembroServlet</servlet-name>
-    <url-pattern>/deletar_membro.do</url-pattern>
   </servlet-mapping>
   <servlet>
     <description></description>
@@ -203,5 +174,15 @@
   <servlet-mapping>
     <servlet-name>HttpServletComum</servlet-name>
     <url-pattern>/HttpServletComum</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>ControladorMembroServlet</display-name>
+    <servlet-name>ControladorMembroServlet</servlet-name>
+    <servlet-class>br.ufpe.cin.in980.membro.ControladorMembroServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ControladorMembroServlet</servlet-name>
+    <url-pattern>/controlador_membro.do</url-pattern>
   </servlet-mapping>
 </web-app>

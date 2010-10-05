@@ -48,12 +48,13 @@
 			<div id="colunaA-interna">
 				<div class="chamada-principal">
 					<h2><%= prop.getCaptions().getString("editarMembroKey") %></h2>
-					<form action="editar_membro.do" method="POST" enctype="multipart/form-data" >
+					<form action="controlador_membro.do" method="POST" enctype="multipart/form-data" >
+						<input type="hidden" name="acao" value="editar">
 						<input name="idmembro" type="hidden" id="hidden" value="<%= membro.getIdMembro() %>" >
 						<table id="table">
 								<tr>
 									<td><%= prop.getCaptions().getString("nomeKey") %>: </td>
-									<td> <input id="nome" name="nome" type="text" value="<%= membro.getNomeMembro() %>" disabled="disabled"> </td>
+									<td> <input id="nome" name="nome" type="text" value="<%= membro.getNomeMembro() %>"> </td>
 								</tr>
 								<tr>
 									<td><%= prop.getCaptions().getString("tipoKey") %>: </td>

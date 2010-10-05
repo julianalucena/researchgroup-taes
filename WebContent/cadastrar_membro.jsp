@@ -56,7 +56,8 @@
 			<div id="colunaA-interna">
 				<div class="chamada-principal">
 					<h2><%= prop.getCaptions().getString("cadastrarMembroKey") %></h2>
-					<form action="cadastrar_membro.do" method="POST" enctype="multipart/form-data" >
+					<form action="controlador_membro.do" method="POST" enctype="multipart/form-data" >
+						<input type="hidden" name="acao" value="cadastrar">
 						<table>
 							<tr>
 								<td><%= prop.getCaptions().getString("nomeKey") %>: </td>

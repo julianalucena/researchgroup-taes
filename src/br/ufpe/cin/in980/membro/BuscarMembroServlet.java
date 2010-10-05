@@ -45,9 +45,8 @@ public class BuscarMembroServlet extends HttpServletComum {
 			throws FileNotFoundException, IOException, SyncFailedException {
 		for (Membro membro : membros) {
 			FileOutputStream fos = new FileOutputStream(
-					"C:\\Users\\Rodrigo\\Documents\\My Dropbox"
-							+ "\\workspace\\researchgroup\\WebContent\\imgtemp\\"
-							+ membro.getIdMembro() + ".jpg");
+					"D:\\CIn\\7-periodo\\workspace\\researchgroup-taes" +
+					"\\WebContent\\imgtemp" + membro.getIdMembro() + ".jpg");
 			fos.write(membro.getFoto());
 			FileDescriptor fd = fos.getFD();
 			fos.flush();

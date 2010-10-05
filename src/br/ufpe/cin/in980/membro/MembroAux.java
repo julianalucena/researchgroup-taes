@@ -18,9 +18,9 @@ import br.ufpe.cin.in980.membro.ProfessorPesquisador.TipoVinculo;
 
 
 public class MembroAux {
-
+	
 	public Membro membroAux(HttpServletRequest request,
-			HttpServletResponse response) throws ServletException, IOException {
+			HttpServletResponse response, List<FileItem> items) throws ServletException, IOException {
 		Long idMembro = new Long(0l);
 		String nome = null;
 		String tipo = null;
@@ -37,75 +37,64 @@ public class MembroAux {
 		byte[] foto = null;
 		String status = null;
 
-		if (ServletFileUpload.isMultipartContent(request)) {
-			FileItemFactory factory = new DiskFileItemFactory();
-			ServletFileUpload upload = new ServletFileUpload(factory);
-
-			List<FileItem> items = null;
-			try {
-				items = upload.parseRequest(request);
-			} catch (FileUploadException e) {
-				e.printStackTrace();
-				return null;
+		for (FileItem item : items) {
+			if (item.getFieldName().equals("idmembro")) {
+				idMembro = new Long(item.getString());
 			}
-			for (FileItem item : items) {
-				if (item.getFieldName().equals("idmembro")) {
-					idMembro = new Long(item.getString());
-				}
-				if (item.getFieldName().equals("nome")) {
-					nome = item.getString();
-				}
-				if (item.getFieldName().equals("tipo")) {
-					tipo = item.getString();
-				}
-				if (item.getFieldName().equals("tipoEstudante")) {
-					tipoEstudante = item.getString();
-				}
-				if (item.getFieldName().equals("nomeorientador")) {
-					nomeOrientador = item.getString();
-				}
-				if (item.getFieldName().equals("nomecoorientador")) {
-					nomeCoorientador = item.getString();
-				}
-				if (item.getFieldName().equals("departamento")) {
-					departamento = item.getString();
-				}
-				if (item.getFieldName().equals("universidade")) {
-					universidade = item.getString();
-				}
-				if (item.getFieldName().equals("email")) {
-					email = item.getString();
-				}
-				if (item.getFieldName().equals("telefone")) {
-					telefone = item.getString();
-				}
-				if (item.getFieldName().equals("website")) {
-					website = item.getString();
-				}
-				if (item.getFieldName().equals("cidade")) {
-					cidade = item.getString();
-				}
-				if (item.getFieldName().equals("pais")) {
-					pais = item.getString();
-				}
-				if (item.getFieldName().equals("status")) {
-					status = item.getString();
-				}
-				if (!item.isFormField()) {
-					String nomeFoto = item.getName();
-					if (nomeFoto.length() > 0) {
-						if (nomeFoto.endsWith(".jpg")
-								|| nomeFoto.endsWith(".png")
-								|| nomeFoto.endsWith(".gif")) {
-							foto = item.get();
-						} else {
-							request.getRequestDispatcher("falha.jsp").forward(
-									request, response);
-						}
+			if (item.getFieldName().equals("nome")) {
+				nome = item.getString();
+			}
+			if (item.getFieldName().equals("tipo")) {
+				tipo = item.getString();
+			}
+			if (item.getFieldName().equals("tipoEstudante")) {
+				tipoEstudante = item.getString();
+			}
+			if (item.getFieldName().equals("nomeorientador")) {
+				nomeOrientador = item.getString();
+			}
+			if (item.getFieldName().equals("nomecoorientador")) {
+				nomeCoorientador = item.getString();
+			}
+			if (item.getFieldName().equals("departamento")) {
+				departamento = item.getString();
+			}
+			if (item.getFieldName().equals("universidade")) {
+				universidade = item.getString();
+			}
+			if (item.getFieldName().equals("email")) {
+				email = item.getString();
+			}
+			if (item.getFieldName().equals("telefone")) {
+				telefone = item.getString();
+			}
+			if (item.getFieldName().equals("website")) {
+				website = item.getString();
+			}
+			if (item.getFieldName().equals("cidade")) {
+				cidade = item.getString();
+			}
+			if (item.getFieldName().equals("pais")) {
+				pais = item.getString();
+			}
+			if (item.getFieldName().equals("status")) {
+				status = item.getString();
+			}
+			if (!item.isFormField()) {
+				String nomeFoto = item.getName();
+				if (nomeFoto.length() > 0) {
+					if (nomeFoto.endsWith(".jpg")
+							|| nomeFoto.endsWith(".png")
+							|| nomeFoto.endsWith(".gif")) {
+						foto = item.get();
+					} else {
+						request.getRequestDispatcher("falha.jsp").forward(
+								request, response);
 					}
 				}
 			}
 		}
+
 		Membro membro = null;
 		if (tipo.equals("pesquisador")) {
 			membro = new ProfessorPesquisador(idMembro, nome, departamento,
