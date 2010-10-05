@@ -18,7 +18,7 @@ public class Fachada {
 	private JDBCConnection conexao;
 
 	private Fachada() {
-		this.conexao = new JDBCConnection("root", "004907", "localhost",
+		this.conexao = new JDBCConnection("root", "!tia*go", "localhost",
 				"researchgroup");
 	}
 

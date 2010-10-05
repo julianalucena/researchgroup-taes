@@ -86,7 +86,7 @@
 							<td align="center"> <%= membro.getStatus() %> </td>
 							<td align="center"> <a href="pagina_membro.jsp?nomemembro=<%= membro.getNomeMembro() %>" > Página </a> </td>
 							<td align="center"> <a href="editar_membro.jsp?nomemembro=<%= membro.getNomeMembro() %>" > <img border="0" alt="editar" src="img/edit.gif"> </a> </td>
-							<td align="center"> <a href="deletar_membro.do?idmembro=<%= membro.getIdMembro() %>" > <img border="0" alt="remover" src="img/delete.jpg"> </a> </td>
+							<td align="center"> <a href="controlador_membro.do?acao=deletar&idmembro=<%= membro.getIdMembro() %>" > <img border="0" alt="remover" src="img/delete.jpg"> </a> </td>
 						</tr>
 						<% 
 							} 
