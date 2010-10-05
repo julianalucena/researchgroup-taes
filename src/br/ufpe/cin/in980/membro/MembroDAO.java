@@ -10,13 +10,17 @@ import br.ufpe.cin.in980.membro.ProfessorPesquisador.TipoVinculo;
 import br.ufpe.cin.in980.publicacao.Publicacao;
 import br.ufpe.cin.in980.util.JDBCConnection;
 
-public class MembroDAO {
+public class MembroDAO implements IMembroDAO {
 
 	private JDBCConnection conexao;
 
-	public MembroDAO(JDBCConnection conexao) {
+	public void setConexao(JDBCConnection conexao) {
 		this.conexao = conexao;
 	}
+
+//	public MembroDAO(JDBCConnection conexao) {
+//		this.conexao = conexao;
+//	}
 
 	public void cadastrarMembro(Membro membro) throws Exception {
 		if (this.existeMembro(membro)) {

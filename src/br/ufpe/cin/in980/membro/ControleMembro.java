@@ -2,14 +2,42 @@ package br.ufpe.cin.in980.membro;
 
 import java.util.List;
 
+import org.springframework.beans.BeansException;
+import org.springframework.beans.factory.config.BeanFactoryPostProcessor;
+import org.springframework.beans.factory.config.ConfigurableListableBeanFactory;
+import org.springframework.beans.factory.support.DefaultListableBeanFactory;
+import org.springframework.beans.factory.support.PropertiesBeanDefinitionReader;
+import org.springframework.beans.factory.xml.XmlBeanDefinitionReader;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+import org.springframework.context.support.FileSystemXmlApplicationContext;
+import org.springframework.context.support.GenericApplicationContext;
+import org.springframework.core.io.ClassPathResource;
+import org.springframework.web.context.support.XmlWebApplicationContext;
+
 import br.ufpe.cin.in980.util.JDBCConnection;
 
 public class ControleMembro {
 
-	private MembroDAO membroDAO;
+	private IMembroDAO membroDAO;
 
+	// Dependency Injection
+	public void setMembroDAO(IMembroDAO membroDAO) {
+		this.membroDAO = membroDAO;
+	}
+
+	public ControleMembro() {
+		
+	}
+	
 	public ControleMembro(JDBCConnection conexao) {
-		this.membroDAO = new MembroDAO(conexao);
+		ApplicationContext ctx = new FileSystemXmlApplicationContext("file:/Users/julianalucena/Desktop/taes/workspace/researchgroup/WebContent/WEB-INF/applicationContext.xml");
+		//ApplicationContext ctx = new FileSystemXmlApplicationContext("classpath:applicationContext.xml");
+		 
+		this.membroDAO = (IMembroDAO) ctx.getBean("IMembroDAO");
+		
+		//this.membroDAO = new MembroDAO(conexao);
+		this.membroDAO.setConexao(conexao);
 	}
 
 	public void cadastrarMembro(Membro membro) throws Exception {
@@ -73,3 +101,4 @@ public class ControleMembro {
 	}
 
 }
+
