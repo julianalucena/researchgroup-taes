@@ -10,6 +10,7 @@ import br.ufpe.cin.in980.membro.NaoMembro;
 import br.ufpe.cin.in980.membro.ProfessorPesquisador;
 import br.ufpe.cin.in980.publicacao.ControlePublicacao;
 import br.ufpe.cin.in980.publicacao.Publicacao;
+import br.ufpe.cin.in980.util.BDProperties;
 import br.ufpe.cin.in980.util.JDBCConnection;
 
 public class Fachada {
@@ -18,8 +19,14 @@ public class Fachada {
 	private JDBCConnection conexao;
 
 	private Fachada() {
-		this.conexao = new JDBCConnection("root", "!tia*go", "localhost",
-				"researchgroup");
+		BDProperties bd = BDProperties.getInstance();
+		String username = bd.getProperty("username");
+		String password = bd.getProperty("password");
+		String driverName = bd.getProperty("driverName");
+		String url = bd.getProperty("url");
+		
+		this.conexao = new JDBCConnection(username, password, driverName,
+				url);
 	}
 
 	public static Fachada obterInstancia() {

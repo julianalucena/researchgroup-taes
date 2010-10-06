@@ -12,12 +12,12 @@ public class JDBCConnection {
 	private String url;
 	private Connection connection;
 
-	public JDBCConnection(String username, String password, String host,
-			String schema) {
-		this.driverName = "com.mysql.jdbc.Driver";
+	public JDBCConnection(String username, String password, String drivername,
+			String url) {
+		this.driverName = drivername;
 		this.password = password;
 		this.username = username;
-		this.url = "jdbc:mysql://" + host + "/" + schema;
+		this.url = url;
 	}
 
 	public void createConnection() {
