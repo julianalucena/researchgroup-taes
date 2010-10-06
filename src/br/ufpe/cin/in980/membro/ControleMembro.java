@@ -16,6 +16,7 @@ import org.springframework.core.io.ClassPathResource;
 import org.springframework.web.context.support.XmlWebApplicationContext;
 
 import br.ufpe.cin.in980.util.JDBCConnection;
+import br.ufpe.cin.in980.util.Spring;
 
 public class ControleMembro {
 
@@ -31,12 +32,7 @@ public class ControleMembro {
 	}
 	
 	public ControleMembro(JDBCConnection conexao) {
-		ApplicationContext ctx = new FileSystemXmlApplicationContext("file:/Users/julianalucena/Desktop/taes/workspace/researchgroup/WebContent/WEB-INF/applicationContext.xml");
-		//ApplicationContext ctx = new FileSystemXmlApplicationContext("classpath:applicationContext.xml");
-		 
-		this.membroDAO = (IMembroDAO) ctx.getBean("IMembroDAO");
-		
-		//this.membroDAO = new MembroDAO(conexao);
+		this.membroDAO = (IMembroDAO) Spring.getContext().getBean("IMembroDAO");
 		this.membroDAO.setConexao(conexao);
 	}
 
