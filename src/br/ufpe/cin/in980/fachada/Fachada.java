@@ -8,6 +8,7 @@ import br.ufpe.cin.in980.membro.Estudante;
 import br.ufpe.cin.in980.membro.Membro;
 import br.ufpe.cin.in980.membro.NaoMembro;
 import br.ufpe.cin.in980.membro.ProfessorPesquisador;
+import br.ufpe.cin.in980.membro.TipoMembroListar;
 import br.ufpe.cin.in980.publicacao.ControlePublicacao;
 import br.ufpe.cin.in980.publicacao.Publicacao;
 import br.ufpe.cin.in980.util.BDProperties;
@@ -68,12 +69,6 @@ public class Fachada {
 		}
 	}
 
-	public List<Membro> listarMembros() throws Exception {
-		ControleMembro controleMembro = new ControleMembro(this.conexao);
-		List<Membro> retorno = controleMembro.listarMembros();
-		return retorno;
-	}
-
 	public List<NaoMembro> listarNaoMembros() throws Exception {
 		ControleNaoMembro controleNaoMembro = new ControleNaoMembro(
 				this.conexao);
@@ -117,21 +112,10 @@ public class Fachada {
 		}
 	}
 
-	public List<ProfessorPesquisador> listarProfessores() throws Exception {
+	public List<Membro> listar(TipoMembroListar tipo) throws Exception {
 		ControleMembro controleMembro = new ControleMembro(this.conexao);
-		List<ProfessorPesquisador> retorno = controleMembro.listarProfessores();
+		List<Membro> retorno = controleMembro.listar(tipo);
 		return retorno;
 	}
 
-	public List<ProfessorPesquisador> listarPesquisadores() throws Exception {
-		ControleMembro controleMembro = new ControleMembro(this.conexao);
-		List<ProfessorPesquisador> retorno = controleMembro.listarPesquisadores();
-		return retorno;
-	}
-
-	public List<Estudante> listarEstudantes() throws Exception {
-		ControleMembro controleMembro = new ControleMembro(this.conexao);
-		List<Estudante> retorno = controleMembro.listarEstudantes();
-		return retorno;
-	}
 }

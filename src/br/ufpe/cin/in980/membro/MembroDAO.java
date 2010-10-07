@@ -59,18 +59,7 @@ public class MembroDAO implements IMembroDAO {
 		ResultSet tab = stat.executeQuery();
 		List<Membro> retorno = new ArrayList<Membro>();
 		while (tab.next()) {
-			Membro membro = new Membro();
-			membro.setIdMembro(tab.getLong(1));
-			membro.setNomeMembro(tab.getString(2));
-			membro.setDepartamento(tab.getString(3));
-			membro.setUniversidade(tab.getString(4));
-			membro.setEmail(tab.getString(5));
-			membro.setTelefone(tab.getString(6));
-			membro.setWebsite(tab.getString(7));
-			membro.setCidade(tab.getString(8));
-			membro.setPais(tab.getString(9));
-			membro.setFoto(tab.getBytes(10));
-			membro.setStatus(tab.getString(11));
+			Membro membro = encapsularMembro(tab);
 
 			adicionarPublicacoes(membro);
 			// HOOK
@@ -116,18 +105,7 @@ public class MembroDAO implements IMembroDAO {
 		ResultSet tab = stat.executeQuery();
 		List<Membro> retorno = new ArrayList<Membro>();
 		while (tab.next()) {
-			Membro membro = new Membro();
-			membro.setIdMembro(tab.getLong(1));
-			membro.setNomeMembro(tab.getString(2));
-			membro.setDepartamento(tab.getString(3));
-			membro.setUniversidade(tab.getString(4));
-			membro.setEmail(tab.getString(5));
-			membro.setTelefone(tab.getString(6));
-			membro.setWebsite(tab.getString(7));
-			membro.setCidade(tab.getString(8));
-			membro.setPais(tab.getString(9));
-			membro.setFoto(tab.getBytes(10));
-			membro.setStatus(tab.getString(11));
+			Membro membro = encapsularMembro(tab);
 			retorno.add(membro);
 		}
 		tab.close();
@@ -135,63 +113,89 @@ public class MembroDAO implements IMembroDAO {
 		return retorno;
 	}
 
-	public List<ProfessorPesquisador> listarProfessores() throws Exception {
-		PreparedStatement stat = this.conexao.getConnection().prepareStatement(
-				"SELECT nome, foto, departamento, universidade FROM membro m "
-						+ "JOIN professor p ON m.idMembro=p.fk_membro");
+	public List<Membro> listar(TipoMembroListar tipo) throws Exception {
+		String statement = "SELECT nome, foto, departamento, universidade FROM membro m";
+		
+		if (!tipo.equals(TipoMembroListar.MEMBRO)) {
+			statement = statement + " JOIN " + tipo.toString() + " p ON m.idMembro=p.fk_membro";
+		}			
+		
+		PreparedStatement stat = this.conexao.getConnection().prepareStatement(statement);
+		
 		ResultSet tab = stat.executeQuery();
-		List<ProfessorPesquisador> retorno = new ArrayList<ProfessorPesquisador>();
+		List<Membro> retorno = new ArrayList<Membro>();
 		while (tab.next()) {
-			ProfessorPesquisador professor = new ProfessorPesquisador();
-			professor.setTipoVinculo(TipoVinculo.PROFESSOR);
-			professor.setNomeMembro(tab.getString(1));
-			professor.setFoto(tab.getBytes(2));
-			professor.setDepartamento(tab.getString(3));
-			professor.setUniversidade(tab.getString(4));
-			retorno.add(professor);
+			Membro membro = encapsular(tab, tipo);
+			retorno.add(membro);
 		}
+		
 		stat.close();
 		tab.close();
 		return retorno;
 	}
-
-	public List<ProfessorPesquisador> listarPesquisadores() throws Exception {
-		PreparedStatement stat = this.conexao.getConnection().prepareStatement(
-				"SELECT nome, foto, departamento, universidade FROM membro m "
-						+ "JOIN pesquisador p ON m.idMembro=p.fk_membro");
-		ResultSet tab = stat.executeQuery();
-		List<ProfessorPesquisador> retorno = new ArrayList<ProfessorPesquisador>();
-		while (tab.next()) {
-			ProfessorPesquisador pesquisador = new ProfessorPesquisador();
-			pesquisador.setTipoVinculo(TipoVinculo.PESQUISADOR);
-			pesquisador.setNomeMembro(tab.getString(1));
-			pesquisador.setFoto(tab.getBytes(2));
-			pesquisador.setDepartamento(tab.getString(3));
-			pesquisador.setUniversidade(tab.getString(4));
-			retorno.add(pesquisador);
+	
+	private Membro encapsular(ResultSet tab, TipoMembroListar tipo) throws SQLException {
+		
+		Membro retorno = null;
+		
+		if (tipo.equals(TipoMembroListar.MEMBRO)) {
+			retorno = encapsularMembro(tab);
+		}else if (tipo.equals(TipoMembroListar.ESTUDANTE)) {
+			retorno = encapsularEstudante(tab);
+		}else if (tipo.equals(TipoMembroListar.PESQUISADOR)) {
+			retorno = encapsularPesquisador(tab);
+		}else if (tipo.equals(TipoMembroListar.PROFESSOR)) {
+			retorno = encapsularProfessor(tab);
 		}
-		stat.close();
-		tab.close();
+		
 		return retorno;
 	}
 
-	public List<Estudante> listarEstudantes() throws Exception {
-		PreparedStatement stat = this.conexao.getConnection().prepareStatement(
-				"SELECT nome, foto, departamento, universidade FROM membro m "
-						+ "JOIN estudante p ON m.idMembro=p.fk_membro");
-		ResultSet tab = stat.executeQuery();
-		List<Estudante> retorno = new ArrayList<Estudante>();
-		while (tab.next()) {
-			Estudante estudante = new Estudante();
-			estudante.setNomeMembro(tab.getString(1));
-			estudante.setFoto(tab.getBytes(2));
-			estudante.setDepartamento(tab.getString(3));
-			estudante.setUniversidade(tab.getString(4));
-			retorno.add(estudante);
-		}
-		stat.close();
-		tab.close();
-		return retorno;
+	private Membro encapsularMembro(ResultSet tab) throws SQLException {
+		Membro membro = new Membro();
+		membro.setIdMembro(tab.getLong(1));
+		membro.setNomeMembro(tab.getString(2));
+		membro.setDepartamento(tab.getString(3));
+		membro.setUniversidade(tab.getString(4));
+		membro.setEmail(tab.getString(5));
+		membro.setTelefone(tab.getString(6));
+		membro.setWebsite(tab.getString(7));
+		membro.setCidade(tab.getString(8));
+		membro.setPais(tab.getString(9));
+		membro.setFoto(tab.getBytes(10));
+		membro.setStatus(tab.getString(11));
+		return membro;
+	}
+	
+	private ProfessorPesquisador encapsularProfessor(ResultSet tab)
+			throws SQLException {
+		ProfessorPesquisador professor = new ProfessorPesquisador();
+		professor.setTipoVinculo(TipoVinculo.PROFESSOR);
+		professor.setNomeMembro(tab.getString(1));
+		professor.setFoto(tab.getBytes(2));
+		professor.setDepartamento(tab.getString(3));
+		professor.setUniversidade(tab.getString(4));
+		return professor;
+	}
+
+	private ProfessorPesquisador encapsularPesquisador(ResultSet tab)
+			throws SQLException {
+		ProfessorPesquisador pesquisador = new ProfessorPesquisador();
+		pesquisador.setTipoVinculo(TipoVinculo.PESQUISADOR);
+		pesquisador.setNomeMembro(tab.getString(1));
+		pesquisador.setFoto(tab.getBytes(2));
+		pesquisador.setDepartamento(tab.getString(3));
+		pesquisador.setUniversidade(tab.getString(4));
+		return pesquisador;
+	}
+
+	private Estudante encapsularEstudante(ResultSet tab) throws SQLException {
+		Estudante estudante = new Estudante();
+		estudante.setNomeMembro(tab.getString(1));
+		estudante.setFoto(tab.getBytes(2));
+		estudante.setDepartamento(tab.getString(3));
+		estudante.setUniversidade(tab.getString(4));
+		return estudante;
 	}
 
 	private boolean existeMembro(Membro membro) throws SQLException {

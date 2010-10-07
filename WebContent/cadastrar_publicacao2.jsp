@@ -1,3 +1,4 @@
+<%@page import="br.ufpe.cin.in980.membro.TipoMembroListar"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
@@ -44,7 +45,7 @@
 								<% 
 			 						List<Membro> membrosautores = null;
 			 						try {
-			 							membrosautores = Fachada.obterInstancia().listarMembros();
+			 							membrosautores = Fachada.obterInstancia().listar(TipoMembroListar.MEMBRO);
 			 						} catch (Exception e) {
 			 							e.printStackTrace();
 			 							request.getRequestDispatcher("falha.jsp")
