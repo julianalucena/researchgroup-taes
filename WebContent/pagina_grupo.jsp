@@ -1,3 +1,5 @@
+<%@page import="br.ufpe.cin.in980.membro.ProfessorPesquisador"%>
+<%@page import="br.ufpe.cin.in980.membro.TipoMembroListar"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
@@ -5,6 +7,7 @@
 <%@page import="java.util.List"%>
 <%@page import="br.ufpe.cin.in980.membro.Estudante"%>
 <%@page import="br.ufpe.cin.in980.membro.ProfessorPesquisador"%>
+<%@page import="br.ufpe.cin.in980.membro.Membro"%>
 <%@page import="br.ufpe.cin.in980.util.AuxCompilacaoCondicional"%>
 <%@page import="br.ufpe.cin.in980.projetopesquisa.AuxMenuProjetoPesquisa"%><html>
 <head>
@@ -40,10 +43,11 @@
 					<h3><%= prop.getCaptions().getString("professoresKey") %>: </h3>
 					<%
 						try {
-							List<ProfessorPesquisador> professores = fachada.listarProfessores();
+							List<Membro> professores = fachada.listar(TipoMembroListar.PROFESSOR);
 					%>
 					<%
-							for (ProfessorPesquisador professor : professores) {
+							for (Membro membro : professores) {
+								ProfessorPesquisador professor = ((ProfessorPesquisador) membro);
 					%>
 							<table>
 								<tr>
@@ -78,11 +82,12 @@
 					<%
 						
 						try {
-							List<ProfessorPesquisador> pesquisadores = fachada.listarPesquisadores();
+							List<Membro> pesquisadores = fachada.listar(TipoMembroListar.PESQUISADOR);
 					%>
 						<table>
 					<%
-							for (ProfessorPesquisador pesquisador : pesquisadores) {
+							for (Membro membro : pesquisadores) {
+								ProfessorPesquisador pesquisador = ((ProfessorPesquisador) membro);
 					%>
 								<tr>
 									<td> <%= prop.getCaptions().getString("nomeKey") %>: </td>
@@ -116,11 +121,12 @@
 					<%
 						
 						try {
-							List<Estudante> estudantes = fachada.listarEstudantes();
+							List<Membro> estudantes = fachada.listar(TipoMembroListar.ESTUDANTE);
 					%>
 						<table>
 					<%
-							for (Estudante estudante : estudantes) {
+							for (Membro membro : estudantes) {
+								Estudante estudante = ((Estudante) membro);
 					%>
 								<tr>
 									<td> <%= prop.getCaptions().getString("nomeKey") %>: </td>

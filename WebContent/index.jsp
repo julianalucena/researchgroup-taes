@@ -10,6 +10,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <%@ include file="layout/header.rsc" %>
+<%= AuxCompilacaoCondicional.getAnalyticsScript() %>
 </head>
 <body>
 	<div id="area-busca">

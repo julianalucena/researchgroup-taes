@@ -12,10 +12,10 @@ public class MessageProperties {
 		this.captions = ResourceBundle.getBundle("Messages", new Locale("pt",
 				"BR"));
 		// #else
-		// @ this.captions = ResourceBundle
-		// @ .getBundle("Messages", new
-		// @ Locale("en",
-		// @ "US"));
+//@		 this.captions = ResourceBundle
+//@		 .getBundle("Messages", new
+//@		 Locale("en",
+//@		 "US"));
 		// #endif
 	}
 
