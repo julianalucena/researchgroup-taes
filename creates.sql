@@ -146,3 +146,36 @@ CREATE TABLE projetopesquisa_publicacao (
   FOREIGN KEY (idPublicacao) REFERENCES publicacao(idPublicacao) ON DELETE CASCADE,
   PRIMARY KEY (idProjetoPesquisa, idPublicacao)
 );
+
+CREATE TABLE tipo_publicacao (
+id int(10) not null auto_increment
+, nome varchar(100) not null
+, PRIMARY KEY(id)
+);
+
+CREATE TABLE tipo_propriedade (
+id int(10) not null auto_increment
+, nome varchar(100) not null
+, tipo varchar(100) not null
+, idTipoPublicacao  int(10) not null
+, PRIMARY KEY (id)
+, FOREIGN KEY (idTipoPublicacao ) REFERENCES tipo_publicacao (id)
+);
+
+CREATE TABLE publicacao_AOM (
+id int(10) not null auto_increment
+, nome varchar(100) not null
+, idTipoPublicacao int(10) not null
+, PRIMARY KEY (id)
+, FOREIGN KEY (idTipoPublicacao) REFERENCES tipo_publicacao (id)
+);
+
+CREATE TABLE propriedade (
+id int(10) not null auto_increment
+, nome varchar(100) not null
+, idPublicacao int(10) not null
+, idTipoPropriedade int(10) not null
+, PRIMARY KEY (id)
+, FOREIGN KEY (idPublicacao) REFERENCES publicacao_AOM (id)
+, FOREIGN KEY (idTipoPropriedade) REFERENCES tipo_propriedade (id) 
+);
