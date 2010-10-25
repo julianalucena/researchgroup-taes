@@ -11,6 +11,7 @@ import br.ufpe.cin.in980.membro.ProfessorPesquisador;
 import br.ufpe.cin.in980.membro.TipoMembroListar;
 import br.ufpe.cin.in980.publicacao.ControlePublicacao;
 import br.ufpe.cin.in980.publicacao.Publicacao;
+import br.ufpe.cin.in980.publicacao.PublicacaoAOM;
 import br.ufpe.cin.in980.util.BDProperties;
 import br.ufpe.cin.in980.util.JDBCConnection;
 
@@ -28,6 +29,7 @@ public class Fachada {
 		
 		this.conexao = new JDBCConnection(username, password, driverName,
 				url);
+		
 	}
 
 	public static Fachada obterInstancia() {
@@ -84,8 +86,8 @@ public class Fachada {
 		}
 	}
 
-	public List<Publicacao> buscarPublicacoes(String termo) throws Exception {
-		List<Publicacao> retorno = null;
+	public List<PublicacaoAOM> buscarPublicacoes(String termo) throws Exception {
+		List<PublicacaoAOM> retorno = null;
 		if (termo != null) {
 			ControlePublicacao controlePublicacao = new ControlePublicacao(
 					this.conexao);

@@ -14,16 +14,8 @@ public class TipoPropriedade {
 		return nomePropriedade;
 	}
 
-	public void setNomePropriedade(String nomePropriedade) {
-		this.nomePropriedade = nomePropriedade;
-	}
-
 	public String getTipo() {
 		return tipo;
-	}
-
-	public void setTipo(String tipo) {
-		this.tipo = tipo;
 	}
 
 }

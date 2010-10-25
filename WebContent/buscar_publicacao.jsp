@@ -4,6 +4,9 @@
 
 <%@page import="java.util.List"%>
 <%@page import="br.ufpe.cin.in980.publicacao.Publicacao"%>
+<%@page import="br.ufpe.cin.in980.publicacao.PublicacaoAOM"%>
+<%@page import="br.ufpe.cin.in980.publicacao.TipoPropriedade"%>
+<%@page import="br.ufpe.cin.in980.publicacao.Propriedade"%>
 <%@page import="br.ufpe.cin.in980.membro.Membro"%>
 <%@page import="br.ufpe.cin.in980.membro.NaoMembro"%>
 <%@page import="java.util.ArrayList"%>
@@ -49,47 +52,26 @@
 						</table>
 					</form>
 					<% 	
-						List<Publicacao> publicacoes = (ArrayList<Publicacao>) session.getAttribute("publicacoes");
+						List<PublicacaoAOM> publicacoes = (ArrayList<PublicacaoAOM>) session.getAttribute("publicacoes");
 						if (publicacoes != null) { 
 					%>
 					<br>
 					<h2> <%= prop.getCaptions().getString("resultadosKey") %> </h2>
 					<table border="1">
 						<tr>
-							<td align="center" > id: </td>
-							<td align="center" > <%= prop.getCaptions().getString("tituloKey") %>: </td>
-							<td align="center" > <%= prop.getCaptions().getString("anoKey") %>: </td>
-							<td align="center" > <%= prop.getCaptions().getString("autoresMembrosKey") %>: </td>
-							<td align="center" > <%= prop.getCaptions().getString("autoresNaoMembrosKey") %>: </td>
-							<td align="center" > BibTeX: </td>
-							<td align="center" > PDF </td>
-							<td align="center" > <%= prop.getCaptions().getString("editarKey") %>: </td>
-							<td align="center" > <%= prop.getCaptions().getString("removerKey") %>: </td>
+							<% for (TipoPropriedade tipoPropriedade : publicacoes.get(0).getTipoEntidade().getTiposPropriedade()) { %>
+								<td align="center" > <%= tipoPropriedade.getNomePropriedade() %> </td>
+							<% } %>
 						</tr>
-						<% for (Publicacao publicacao : publicacoes) { 
-							String membros = "";
-							for (Membro membro : publicacao.getAutoresMembros()) {
-								membros += membro.getNomeMembro() + ", ";
-							}  
-							String naoMembros = "";
-							for (NaoMembro naoMembro : publicacao.getAutoresNaoMembros()) {
-								naoMembros += naoMembro.getNome() + ", ";
-							}  
-						%>
+
+						<% for (PublicacaoAOM publicacao : publicacoes) { %>
 							<tr>
-								<td align="center" > <%= publicacao.getIdPublicacao() %> </td>
-								<td align="center" > <%= publicacao.getTitulo() %> </td>
-								<td align="center" > <%= publicacao.getAno() %> </td>
-								<td align="center" > <%= membros %> </td>
-								<td align="center" > <%= naoMembros %> </td>
-								<td align="center" > <a href="bibtex_publicacao.do?idpublicacao=<%= publicacao.getIdPublicacao() %>">Gerar</a> </td>
-								<td align="center" > <a href="download_pdf.do?idpublicacao=<%= publicacao.getIdPublicacao() %>" > PDF </a> </td>
-								<td align="center" > <a href="editar_publicacao.jsp?idpublicacao=<%= publicacao.getIdPublicacao() %>"> <img border="0" alt="editar" src="img/edit.gif"> </a> </td>
-								<td align="center" > <a href="remover_publicacao.do?idpublicacao=<%= publicacao.getIdPublicacao() %>"> <img border="0" alt="remover" src="img/delete.jpg"> </a> </td>
-							</tr>
-						<% 
-							} 
-						%>
+							<% for (Propriedade propriedade : publicacao.getPropriedades()) { %>
+								<td align="center" > <%= propriedade.getValor() %> </td>
+							<% } %>
+
+						</tr>
+						<% } %>
 					</table>
 					<% } %>
 			</div>

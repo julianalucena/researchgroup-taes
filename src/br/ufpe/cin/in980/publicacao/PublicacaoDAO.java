@@ -5,7 +5,6 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
-
 import br.ufpe.cin.in980.membro.Membro;
 import br.ufpe.cin.in980.membro.NaoMembro;
 import br.ufpe.cin.in980.publicacao.Monografia.TipoMonografia;
@@ -19,6 +18,65 @@ public class PublicacaoDAO {
 		this.conexao = conexao;
 	}
 
+	public List<PublicacaoAOM> buscarPublicacoesAOM(String termo) throws SQLException {
+		PreparedStatement statPublicacoes = this.conexao.getConnection().prepareStatement(
+		"SELECT P.*, TP.nome FROM publicacao_aom P, tipo_publicacao TP WHERE P.nome LIKE '%' ? '%'");
+		statPublicacoes.setString(1, termo);
+		ResultSet tab = statPublicacoes.executeQuery();
+		
+		List<PublicacaoAOM> retorno = new ArrayList<PublicacaoAOM>();
+		while (tab.next()) {
+			Long idPublicacao = tab.getLong(1);
+			String nomeDEPRECATED = tab.getString(2);
+			Long tipoPublicacaoId = tab.getLong(3);
+			String nomeTipoEntidade = tab.getString(4);
+			
+			TipoPublicacao tipoPublicacao = new TipoPublicacao(nomeTipoEntidade);
+	
+			PreparedStatement statTiposPropriedade = this.conexao.getConnection().prepareStatement(
+			"SELECT * FROM tipo_propriedade TPROP WHERE idTipoPublicacao = ?");
+			statTiposPropriedade.setLong(1, tipoPublicacaoId);
+			ResultSet rsTipoPropriedade = statTiposPropriedade.executeQuery();
+			
+			while (rsTipoPropriedade.next()) {
+				String nomeTProPriedade = rsTipoPropriedade.getString(2);
+				String tipoTPropriedade = rsTipoPropriedade.getString(3);
+				
+				TipoPropriedade tpProp = new TipoPropriedade(nomeTProPriedade, tipoTPropriedade);
+				tipoPublicacao.addTipoPropriedade(tpProp);
+			}
+			statTiposPropriedade.close();
+			rsTipoPropriedade.close();
+			
+			PublicacaoAOM publicacaoAOM = new PublicacaoAOM(tipoPublicacao);
+			
+			PreparedStatement statPropriedades = this.conexao.getConnection().prepareStatement(
+			"SELECT * FROM propriedade PROP, tipo_propriedade TPROP WHERE PROP.idPublicacao = ? AND PROP.idTipoPropriedade = TPROP.id;");
+			statPropriedades.setLong(1, idPublicacao);
+			ResultSet rsPropriedades = statPropriedades.executeQuery();
+			
+			while (rsPropriedades.next()) {
+				String valorPropriedade = rsPropriedades.getString(2);
+				String nomeTProPriedade = rsPropriedades.getString(6);
+				String tipoTPropriedade = rsPropriedades.getString(7);
+
+				TipoPropriedade tpProp = new TipoPropriedade(nomeTProPriedade, tipoTPropriedade);
+				Propriedade prop = new Propriedade(tpProp, valorPropriedade);
+				
+				publicacaoAOM.addPropriedade(prop);
+			}
+			statPropriedades.close();
+			rsPropriedades.close();
+			
+			retorno.add(publicacaoAOM);
+			
+		}
+		statPublicacoes.close();
+		tab.close();
+		
+		return retorno;
+	}
+	
 	public List<Publicacao> buscarPublicacoes(String termo) throws Exception {
 		PreparedStatement stat = this.conexao.getConnection().prepareStatement(
 				"SELECT * FROM publicacao WHERE titulo LIKE '%' ? '%'");
@@ -331,5 +389,5 @@ public class PublicacaoDAO {
 		stat3.close();
 		tab3.close();
 	}
-
+	
 }

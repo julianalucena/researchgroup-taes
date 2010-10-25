@@ -1,5 +1,6 @@
 package br.ufpe.cin.in980.publicacao;
 
+import java.sql.SQLException;
 import java.util.List;
 
 import br.ufpe.cin.in980.util.JDBCConnection;
@@ -8,7 +9,7 @@ public class ControlePublicacao {
 
 	private PublicacaoDAO publicacaoDAO;
 
-	public ControlePublicacao(JDBCConnection conexao) {
+	public ControlePublicacao(JDBCConnection conexao) throws SQLException {
 		this.publicacaoDAO = new PublicacaoDAO(conexao);
 	}
 
@@ -19,11 +20,12 @@ public class ControlePublicacao {
 		this.publicacaoDAO.cadastrarPublicacao(publicacao);
 	}
 
-	public List<Publicacao> buscarPublicacoes(String termo) throws Exception {
+	public List<PublicacaoAOM> buscarPublicacoes(String termo) throws Exception {
 		// if (termo.isEmpty()) {
 		// throw new Exception("Termo inv�lido!");
 		// }
-		return this.publicacaoDAO.buscarPublicacoes(termo);
+		//////////return this.publicacaoDAO.buscarPublicacoes(termo);
+		return this.publicacaoDAO.buscarPublicacoesAOM(termo);
 	}
 
 	public Publicacao buscarPublicacao(Long idPublicacao) throws Exception {

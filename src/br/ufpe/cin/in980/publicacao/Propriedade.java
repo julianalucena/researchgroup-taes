@@ -16,15 +16,8 @@ public class Propriedade {
 		return tipoPropriedade;
 	}
 
-	public void setTipoPropriedade(TipoPropriedade tipoPropriedade) {
-		this.tipoPropriedade = tipoPropriedade;
-	}
-
 	public Object getValor() {
 		return valor;
 	}
-
-	public void setValor(Object valor) {
-		this.valor = valor;
-	}
+	
 }

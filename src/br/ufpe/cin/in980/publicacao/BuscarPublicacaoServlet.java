@@ -24,7 +24,7 @@ public class BuscarPublicacaoServlet extends HttpServletComum {
 			HttpServletResponse response) throws ServletException, IOException {
 		String termo = request.getParameter("termo");
 		Fachada fachada = Fachada.obterInstancia();
-		List<Publicacao> publicacoes;
+		List<PublicacaoAOM> publicacoes;
 		try {
 			publicacoes = fachada.buscarPublicacoes(termo);
 			HttpSession session = request.getSession(true);
