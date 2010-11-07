@@ -99,20 +99,6 @@ public class MembroDAO implements IMembroDAO {
 		stat.close();
 	}
 
-	public List<Membro> listarMembros() throws Exception {
-		PreparedStatement stat = this.conexao.getConnection().prepareStatement(
-				"SELECT * FROM membro");
-		ResultSet tab = stat.executeQuery();
-		List<Membro> retorno = new ArrayList<Membro>();
-		while (tab.next()) {
-			Membro membro = encapsularMembro(tab);
-			retorno.add(membro);
-		}
-		tab.close();
-		stat.close();
-		return retorno;
-	}
-
 	public List<Membro> listar(TipoMembroListar tipo) throws Exception {
 		String statement = "SELECT nome, foto, departamento, universidade FROM membro m";
 		
@@ -274,16 +260,21 @@ public class MembroDAO implements IMembroDAO {
 		ResultSet tab2 = stat2.executeQuery();
 		List<Publicacao> publicacoes = new ArrayList<Publicacao>();
 		while (tab2.next()) {
-			Publicacao publicacao = new Publicacao();
-			publicacao.setIdPublicacao(tab2.getLong(3));
-			publicacao.setTitulo(tab2.getString(4));
-			publicacao.setAno(tab2.getInt(5));
-			publicacao.setPdf(tab2.getBytes(6));
+			Publicacao publicacao = encapsularPublicacao(tab2);
 			publicacoes.add(publicacao);
 		}
 		membro.setPublicacoes(publicacoes);
 		stat2.close();
 		tab2.close();
+	}
+
+	private Publicacao encapsularPublicacao(ResultSet tab2) throws SQLException {
+		Publicacao publicacao = new Publicacao();
+		publicacao.setIdPublicacao(tab2.getLong(3));
+		publicacao.setTitulo(tab2.getString(4));
+		publicacao.setAno(tab2.getInt(5));
+		publicacao.setPdf(tab2.getBytes(6));
+		return publicacao;
 	}
 
 	// HOOK

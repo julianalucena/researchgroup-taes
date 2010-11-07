@@ -5,3 +5,4 @@
 build/
 .metadata/
 *.swp
+.ccfxprepdir/

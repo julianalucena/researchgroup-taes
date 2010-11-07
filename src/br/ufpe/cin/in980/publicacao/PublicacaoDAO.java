@@ -27,18 +27,24 @@ public class PublicacaoDAO {
 		List<Publicacao> retorno = new ArrayList<Publicacao>();
 		while (tab.next()) {
 			Long idPublicacao = tab.getLong(1);
-			Publicacao publicacao = definirPublicacao(idPublicacao);
-			publicacao.setIdPublicacao(tab.getLong(1));
-			publicacao.setTitulo(tab.getString(2));
-			publicacao.setAno(tab.getInt(3));
-			publicacao.setPdf(tab.getBytes(4));
-			adicionarMembrosPublicacao(publicacao);
-			adicionarNaoMembrosPublicacao(publicacao);
+			Publicacao publicacao = encapsularPublicacao(tab, idPublicacao);
 			retorno.add(publicacao);
 		}
 		stat.close();
 		tab.close();
 		return retorno;
+	}
+
+	private Publicacao encapsularPublicacao(ResultSet tab, Long idPublicacao)
+			throws Exception, SQLException {
+		Publicacao publicacao = definirPublicacao(idPublicacao);
+		publicacao.setIdPublicacao(tab.getLong(1));
+		publicacao.setTitulo(tab.getString(2));
+		publicacao.setAno(tab.getInt(3));
+		publicacao.setPdf(tab.getBytes(4));
+		adicionarMembrosPublicacao(publicacao);
+		adicionarNaoMembrosPublicacao(publicacao);
+		return publicacao;
 	}
 
 	public void cadastrarPublicacao(Publicacao publicacao) throws Exception {
@@ -56,7 +62,14 @@ public class PublicacaoDAO {
 		}
 		tab.close();
 		stat.close();
+		
 		publicacao.setIdPublicacao(idPublicacao);
+		cadastrarRelacionamentos(publicacao, idPublicacao);
+		this.definirPublicacao(publicacao);
+	}
+
+	private void cadastrarRelacionamentos(Publicacao publicacao,
+			long idPublicacao) throws Exception {
 		this.cadastrarRelacionamentoComMembro(idPublicacao, publicacao
 				.getAutoresMembros());
 		if (publicacao.getAutoresNaoMembros() != null
@@ -64,7 +77,6 @@ public class PublicacaoDAO {
 			this.cadastrarRelacionamentoComNaoMembro(idPublicacao, publicacao
 					.getAutoresNaoMembros());
 		}
-		this.definirPublicacao(publicacao);
 	}
 
 	public void editarPublicacao(Publicacao publicacao) throws Exception {

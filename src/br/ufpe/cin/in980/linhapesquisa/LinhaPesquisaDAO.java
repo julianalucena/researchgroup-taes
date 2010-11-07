@@ -39,14 +39,19 @@ public class LinhaPesquisaDAO {
 			idLinhaPesquisa = tab.getLong(1);
 		}
 		linhaPesquisa.setIdLinhaPesquisa(idLinhaPesquisa);
+		cadastrarRelacionamentos(linhaPesquisa);
+		tab.close();
+		stat.close();
+	}
+
+	private void cadastrarRelacionamentos(LinhaPesquisa linhaPesquisa)
+			throws SQLException {
 		if (!linhaPesquisa.getMembros().isEmpty()) {
 			cadastrarMembros(linhaPesquisa);
 		}
 		if (!linhaPesquisa.getPublicacoes().isEmpty()) {
 			cadastrarPublicacoes(linhaPesquisa);
 		}
-		tab.close();
-		stat.close();
 	}
 
 	public List<LinhaPesquisa> buscarLinhasPesquisa(String termo)
@@ -58,20 +63,26 @@ public class LinhaPesquisaDAO {
 		ResultSet tab = stat.executeQuery();
 		List<LinhaPesquisa> retorno = new ArrayList<LinhaPesquisa>();
 		while (tab.next()) {
-			LinhaPesquisa linhaPesquisa = new LinhaPesquisa();
-			linhaPesquisa.setIdLinhaPesquisa(tab.getLong(1));
-			linhaPesquisa.setTitulo(tab.getString(2));
-			linhaPesquisa.setBreveDescricao(tab.getString(3));
-			linhaPesquisa.setDetalhadaDescricao(tab.getString(4));
-			linhaPesquisa.setFinanciadores(tab.getString(5));
-			linhaPesquisa.setLinksRelacionados(tab.getString(6));
-			preencherMembros(linhaPesquisa);
-			preencherPublicacoes(linhaPesquisa);
+			LinhaPesquisa linhaPesquisa = encapsularLinhaPesquisa(tab);
 			retorno.add(linhaPesquisa);
 		}
 		tab.close();
 		stat.close();
 		return retorno;
+	}
+
+	private LinhaPesquisa encapsularLinhaPesquisa(ResultSet tab)
+			throws SQLException {
+		LinhaPesquisa linhaPesquisa = new LinhaPesquisa();
+		linhaPesquisa.setIdLinhaPesquisa(tab.getLong(1));
+		linhaPesquisa.setTitulo(tab.getString(2));
+		linhaPesquisa.setBreveDescricao(tab.getString(3));
+		linhaPesquisa.setDetalhadaDescricao(tab.getString(4));
+		linhaPesquisa.setFinanciadores(tab.getString(5));
+		linhaPesquisa.setLinksRelacionados(tab.getString(6));
+		preencherMembros(linhaPesquisa);
+		preencherPublicacoes(linhaPesquisa);
+		return linhaPesquisa;
 	}
 
 	public void editarLinhaPesquisa(LinhaPesquisa linhaPesquisa)
