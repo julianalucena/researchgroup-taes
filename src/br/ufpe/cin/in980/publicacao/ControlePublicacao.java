@@ -20,12 +20,20 @@ public class ControlePublicacao {
 		this.publicacaoDAO.cadastrarPublicacao(publicacao);
 	}
 
-	public List<PublicacaoAOM> buscarPublicacoes(String termo) throws Exception {
+	public List<PublicacaoAOM> buscarPublicacoesAOM(String termo) throws Exception {
 		// if (termo.isEmpty()) {
 		// throw new Exception("Termo inv�lido!");
 		// }
 		//////////return this.publicacaoDAO.buscarPublicacoes(termo);
 		return this.publicacaoDAO.buscarPublicacoesAOM(termo);
+	}
+	
+	public List<Publicacao> buscarPublicacoes(String termo) throws Exception {
+		// if (termo.isEmpty()) {
+		// throw new Exception("Termo inv�lido!");
+		// }
+		//////////return this.publicacaoDAO.buscarPublicacoes(termo);
+		return this.publicacaoDAO.buscarPublicacoes(termo);
 	}
 
 	public Publicacao buscarPublicacao(Long idPublicacao) throws Exception {

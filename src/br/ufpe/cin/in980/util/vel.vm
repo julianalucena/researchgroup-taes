@@ -1,0 +1,5 @@
+#foreach ( $name in $nameList )
+if (item.getFieldName().equals("$name")) {
+	$name = item.getString();
+}
+#end

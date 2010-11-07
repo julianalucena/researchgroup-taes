@@ -26,7 +26,7 @@ public class BuscarPublicacaoServlet extends HttpServletComum {
 		Fachada fachada = Fachada.obterInstancia();
 		List<PublicacaoAOM> publicacoes;
 		try {
-			publicacoes = fachada.buscarPublicacoes(termo);
+			publicacoes = fachada.buscarPublicacoesAOM(termo);
 			HttpSession session = request.getSession(true);
 			session.setAttribute("publicacoes", publicacoes);
 			request.getRequestDispatcher("buscar_publicacao.jsp").forward(

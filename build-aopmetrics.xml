@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="aop-metrics" default="all">
+
+	<property name="dir.build" value="build" />
+	<property name="dir.classes" value="${dir.build}/classes" />
+
+	<property name="dir.dist" value="dist" />
+	<property name="dir.libraries" value="WebContent/WEB-INF/lib" />
+	<!-- alterar o diretorio em que suas libs estao-->
+	<property name="dir.src" value="src" />
+	<!-- alterar para o diretorio em que seu codigo fonte esta -->
+	<property name="dir.testworkdir" value="${dir.build}/testworkdir" />
+
+	<property name="version" value="0.2"/>
+
+	<path id="classpath.common">
+		<fileset dir="${dir.libraries}">
+			<include name="*.jar" />
+		</fileset>
+	</path>
+	<target name="all" depends="clean,run" description="Compiles, run tests and create distribution archives."/>
+
+	<target name="clean">
+		<delete dir="${dir.build}" />
+		<delete dir="${dir.dist}" />
+	</target>
+
+	<!-- inicio -->
+	
+	<target name="compile">
+		<taskdef 
+			      resource="org/aspectj/tools/ant/taskdefs/aspectjTaskdefs.properties">
+			<classpath>
+				<pathelement location="${dir.libraries}/aspectjtools-1.5.1.jar"/>
+				<!-- alterar para o diretorio em que aspectjtools-1.5.1.jar esta -->
+			</classpath>
+		</taskdef>
+
+		<mkdir dir="${dir.classes}" />
+		<echo  message="passou por aqui..."> - ${ant.version} </echo>
+		<iajc destdir="${dir.classes}"
+		    		classpathref="classpath.common"
+		    		source="1.5" >
+			<sourceroots>
+				<pathelement location="${dir.src}"/>
+			</sourceroots>
+		</iajc>
+
+	</target>
+	
+	<!-- fim -->
+
+	<target name="compile-files" depends="" description="Task responsible for compile both AOP and OOP files into bytecode">
+		<java classname="org.aspectj.tools.ajc.Main" fork="true">
+			<arg file="src/library/*.*"/>
+			<arg value="-d" />
+			<arg value="${dir.classes}" />
+			<classpath refid="classpath.common"/>
+		</java>
+	</target>
+
+	<target name="jar" depends="compile" description="Creates JAR.">
+		<jar destfile="${dir.build}/${ant.project.name}.jar">
+			<fileset dir="${dir.classes}">
+				<include name="**/*.class" />
+			</fileset>
+		</jar>
+	</target>
+
+	<target name="run" depends="jar" description="Computes metrics on the project.">
+		<taskdef name="aopmetrics" classname="org.tigris.aopmetrics.AopMetricsTask">
+			<classpath refid="classpath.common"/>
+			<classpath location="${dir.build}/${ant.project.name}.jar"/>
+		</taskdef>
+
+		<aopmetrics workdir="${dir.testworkdir}" sourcelevel="1.5" export="xml"
+				resultsfile="${dir.build}/aop-metrics-results_OO1.xml">
+			<fileset dir="${dir.src}" includes="**/*.aj"/>
+			<fileset dir="${dir.src}" includes="**/*.java"/>
+			<classpath refid="classpath.common"/>
+		</aopmetrics>
+	</target>
+
+</project>

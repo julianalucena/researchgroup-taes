@@ -86,8 +86,18 @@ public class Fachada {
 		}
 	}
 
-	public List<PublicacaoAOM> buscarPublicacoes(String termo) throws Exception {
+	public List<PublicacaoAOM> buscarPublicacoesAOM(String termo) throws Exception {
 		List<PublicacaoAOM> retorno = null;
+		if (termo != null) {
+			ControlePublicacao controlePublicacao = new ControlePublicacao(
+					this.conexao);
+			retorno = controlePublicacao.buscarPublicacoesAOM(termo);
+		}
+		return retorno;
+	}
+	
+	public List<Publicacao> buscarPublicacoes(String termo) throws Exception {
+		List<Publicacao> retorno = null;
 		if (termo != null) {
 			ControlePublicacao controlePublicacao = new ControlePublicacao(
 					this.conexao);
