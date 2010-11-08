@@ -1,5 +1,81 @@
-#foreach ( $name in $nameList )
-if (item.getFieldName().equals("$name")) {
-	$name = item.getString();
-}
+package br.ufpe.cin.in980.$nomeClasseMin;
+
+import java.io.IOException;
+#if ($hasParam == true)
+import java.util.List;
 #end
+
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import org.apache.commons.fileupload.FileItem;
+import org.apache.commons.fileupload.FileItemFactory;
+import org.apache.commons.fileupload.FileUploadException;
+import org.apache.commons.fileupload.disk.DiskFileItemFactory;
+import org.apache.commons.fileupload.servlet.ServletFileUpload;
+
+import br.ufpe.cin.in980.membro.ProfessorPesquisador.TipoVinculo;
+
+
+
+public class $nomeClasseAux {
+	
+	public $nomeClasse $nomeClasseMinAux(HttpServletRequest request,
+			HttpServletResponse response, #if ($hasParam == true) List<FileItem> items #end) throws ServletException, IOException {
+		
+		
+
+#foreach ( $attr in $attrs.keySet() )
+	#if ($attrs.get($attr) == "Long")		
+		$attrs.get($attr) $attr = new $attrs.get($attr)(01); 
+	#else
+		$attrs.get($attr) $attr = null;					
+	#end
+#end
+
+		for (FileItem item : items) {
+	#foreach ( $attr in $attrs.keySet() )	
+		#if ($attrs.get($attr) == "Long")		
+			if (item.getFieldName().equals("$name")) {
+				$name = new Long(item.getString());
+			}
+		#else
+			if (item.getFieldName().equals("$name")) {
+				$name = item.getString();
+			}					
+		#end
+	#end				
+			
+			if (!item.isFormField()) {
+				String nomeFoto = item.getName();
+				if (nomeFoto.length() > 0) {
+					if (nomeFoto.endsWith(".jpg")
+							|| nomeFoto.endsWith(".png")
+							|| nomeFoto.endsWith(".gif")) {
+						foto = item.get();
+					} else {
+						request.getRequestDispatcher("falha.jsp").forward(
+								request, response);
+					}
+				}
+			}
+		}
+
+		Membro membro = null;
+		if (tipo.equals("pesquisador")) {
+			membro = new ProfessorPesquisador(idMembro, nome, departamento,
+					universidade, email, telefone, website, cidade, pais, foto,
+					status, null, TipoVinculo.PESQUISADOR);
+		} else if (tipo.equals("professor")) {
+			membro = new ProfessorPesquisador(idMembro, nome, departamento, universidade,
+					email, telefone, website, cidade, pais, foto, status, null, TipoVinculo.PROFESSOR);
+		} else {
+			membro = new Estudante(idMembro, nome, departamento, universidade,
+					email, telefone, website, cidade, pais, foto, status, null,
+					nomeOrientador, nomeCoorientador, Estudante.TipoEstudante
+							.valueOf(tipoEstudante));
+		}
+		return membro;
+	}
+}
