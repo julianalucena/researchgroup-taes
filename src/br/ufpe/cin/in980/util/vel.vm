@@ -1,4 +1,4 @@
-package br.ufpe.cin.in980.$nomeClasseMin;
+package br.ufpe.cin.in980.$pacote;
 
 import java.io.IOException;
 #if ($hasParam == true)
@@ -19,10 +19,10 @@ import br.ufpe.cin.in980.membro.ProfessorPesquisador.TipoVinculo;
 
 
 
-public class $nomeClasseAux {
+public class $nomeClasse {
 	
-	public $nomeClasse $nomeClasseMinAux(HttpServletRequest request,
-			HttpServletResponse response, #if ($hasParam == true) List<FileItem> items #end) throws ServletException, IOException {
+	public $tipo $nomeClasseMin (HttpServletRequest request,
+			HttpServletResponse response #if ($hasParam == true) , List<FileItem> items #end) throws ServletException, IOException {
 		
 		
 
@@ -37,22 +37,20 @@ public class $nomeClasseAux {
 		for (FileItem item : items) {
 	#foreach ( $attr in $attrs.keySet() )	
 		#if ($attrs.get($attr) == "Long")		
-			if (item.getFieldName().equals("$name")) {
-				$name = new Long(item.getString());
+			if (item.getFieldName().equals("$attr")) {
+				$attr = new Long(item.getString());
 			}
-		#else
-			if (item.getFieldName().equals("$name")) {
-				$name = item.getString();
+		#elseif ($attrs.get($attr) == "String")
+			if (item.getFieldName().equals("$attr")) {
+				$attr = item.getString();
 			}					
 		#end
 	#end				
 			
 			if (!item.isFormField()) {
-				String nomeFoto = item.getName();
-				if (nomeFoto.length() > 0) {
-					if (nomeFoto.endsWith(".jpg")
-							|| nomeFoto.endsWith(".png")
-							|| nomeFoto.endsWith(".gif")) {
+				String media = item.getName();
+				if (media.length() > 0) {
+					if(#foreach ( $format in $formats ) #if ($format != $formats.get(0)) || #end media.endsWith("$format") #end) {
 						foto = item.get();
 					} else {
 						request.getRequestDispatcher("falha.jsp").forward(
@@ -64,16 +62,16 @@ public class $nomeClasseAux {
 
 		Membro membro = null;
 		if (tipo.equals("pesquisador")) {
-			membro = new ProfessorPesquisador(idMembro, nome, departamento,
+			membro = new ProfessorPesquisador(idmembro, nome, departamento,
 					universidade, email, telefone, website, cidade, pais, foto,
 					status, null, TipoVinculo.PESQUISADOR);
 		} else if (tipo.equals("professor")) {
-			membro = new ProfessorPesquisador(idMembro, nome, departamento, universidade,
+			membro = new ProfessorPesquisador(idmembro, nome, departamento, universidade,
 					email, telefone, website, cidade, pais, foto, status, null, TipoVinculo.PROFESSOR);
 		} else {
-			membro = new Estudante(idMembro, nome, departamento, universidade,
+			membro = new Estudante(idmembro, nome, departamento, universidade,
 					email, telefone, website, cidade, pais, foto, status, null,
-					nomeOrientador, nomeCoorientador, Estudante.TipoEstudante
+					nomeorientador, nomecoorientador, Estudante.TipoEstudante
 							.valueOf(tipoEstudante));
 		}
 		return membro;
