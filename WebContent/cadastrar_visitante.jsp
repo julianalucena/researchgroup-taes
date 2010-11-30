@@ -26,7 +26,7 @@
 					<li> <a href="pagina_grupo.jsp"><%= prop.getCaptions().getString("grupoKey") %></a> </li>
 					<%= AuxCompilacaoCondicional.adicionarMenu() %>
 					<%= AuxMenuProjetoPesquisa.adicionarMenu() %>
-					<%= AuxMenuVisitante.adicionarMenuSelecionado() %>
+					<%= AuxMenuVisitante.adicionarMenu() %>
 				</ul>
 			</div>
 		</div>

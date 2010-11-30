@@ -1,3 +1,11 @@
+create table Visitante (
+ id int(10) not null auto_increment
+, nome varchar(200) NOT NULL unique
+, chegada date NOT NULL
+, saida date NOT NULL 
+, PRIMARY KEY (id)
+);
+
 CREATE TABLE membro (
   idMembro int(10) NOT NULL auto_increment,
   nome varchar(200) NOT NULL unique,

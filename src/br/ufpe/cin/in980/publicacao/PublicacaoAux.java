@@ -13,7 +13,6 @@ import org.apache.commons.fileupload.FileUploadException;
 import org.apache.commons.fileupload.disk.DiskFileItemFactory;
 import org.apache.commons.fileupload.servlet.ServletFileUpload;
 
-//#ifdef projeto_pesquisa
 import br.ufpe.cin.in980.projetopesquisa.ProjetoPesquisa;
 import br.ufpe.cin.in980.publicacao.Monografia.TipoMonografia;
 
@@ -35,7 +34,7 @@ public class PublicacaoAux {
 		String escola = null;
 
 		// #ifdef projeto_pesquisa
-		Long idProjetoPesquisa = null;
+//@		Long idProjetoPesquisa = null;
 		// #endif
 
 		if (ServletFileUpload.isMultipartContent(request)) {
@@ -84,9 +83,9 @@ public class PublicacaoAux {
 				}
 
 				// #ifdef projeto_pesquisa
-				if (item.getFieldName().equals("idProjetoPesquisa")) {
-					idProjetoPesquisa = new Long(item.getString());
-				}
+//@				if (item.getFieldName().equals("idProjetoPesquisa")) {
+//@					idProjetoPesquisa = new Long(item.getString());
+//@				}
 				// #endif
 
 				if (!item.isFormField()) {
@@ -117,8 +116,8 @@ public class PublicacaoAux {
 					null, pdf, escola, mes, TipoMonografia.TESE_DOUTORADO);
 		}
 		// #ifdef projeto_pesquisa
-		publicacao.setProjetoPesquisa(new ProjetoPesquisa(idProjetoPesquisa,
-				"passa", "passa"));
+//@		publicacao.setProjetoPesquisa(new ProjetoPesquisa(idProjetoPesquisa,
+//@				"passa", "passa"));
 		// #endif
 
 		return publicacao;

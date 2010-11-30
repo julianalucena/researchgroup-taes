@@ -2,11 +2,15 @@
     pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <%@page import="java.util.List"%>
+<%@page import="java.util.Calendar"%>
+<%@page import="java.util.Locale"%>
+<%@page import="java.text.SimpleDateFormat"%>
 <%@page import="br.ufpe.cin.in980.visitante.Visitante"%>
 <%@page import="java.util.ArrayList"%>
 <%@page import="javax.swing.ImageIcon"%>
 <%@page import="br.ufpe.cin.in980.util.AuxCompilacaoCondicional"%>
-
+<%@page import="br.ufpe.cin.in980.visitante.AuxMenuVisitante"%><html>
+<%@page import="br.ufpe.cin.in980.fachada.Fachada"%><html>
 <%@page import="br.ufpe.cin.in980.projetopesquisa.AuxMenuProjetoPesquisa"%><html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
@@ -30,6 +34,7 @@
 					<li> <a href="pagina_grupo.jsp"><%= prop.getCaptions().getString("grupoKey") %></a> </li>
 					<%= AuxCompilacaoCondicional.adicionarMenu() %>
 					<%= AuxMenuProjetoPesquisa.adicionarMenu() %>
+					<%= AuxMenuVisitante.adicionarMenu() %>
 				</ul>
 			</div>
 		</div>
@@ -38,13 +43,14 @@
 				<div class="chamada-principal">
 					<% session.setAttribute("acao", "listar"); %>
 					<% 	
-						List<Visitante> visitantes = (ArrayList<Visitante>)session.getAttribute("visitantes");
+						Fachada fachada = Fachada.obterInstancia();
+						List<Visitante> visitantes = (ArrayList<Visitante>)fachada.listarVisitantes();
 						if (visitantes != null) { 
+						SimpleDateFormat df = new SimpleDateFormat( "dd/MM/yyyy" );
 					%>
 					<br>					
 					<table border="1">
-						<tr>
-							<td align="center" > id: </td>
+						<tr>							
 							<td align="center" > <%= prop.getCaptions().getString("nomeKey") %>: </td>
 							<td align="center" > <%= prop.getCaptions().getString("dataChegadaKey") %>: </td>
 							<td align="center" > <%= prop.getCaptions().getString("dataSaidaKey") %>: </td>							
@@ -54,8 +60,8 @@
 						%>
 						<tr>
 							<td align="center" > <%= visitante.getNome() %> </td>
-							<td align="center" > <%= visitante.getDataChegada() %> </td>
-							<td align="center" > <%= visitante.getDataSaida() %> </td>							
+							<td align="center" > <%= df.format(visitante.getDataChegada().getTime()) %> </td>
+							<td align="center" > <%= df.format(visitante.getDataSaida().getTime()) %> </td>							
 						</tr>
 						<% 
 							} 

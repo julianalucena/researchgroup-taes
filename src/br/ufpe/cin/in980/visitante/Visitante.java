@@ -26,7 +26,7 @@ public class Visitante {
 		this.nome = nome;
 	}
 
-	public Calendar getDataChegada() {
+	public Calendar getDataChegada() {		
 		return dataChegada;
 	}
 	public void setDataChegada(Calendar dataChegada) {

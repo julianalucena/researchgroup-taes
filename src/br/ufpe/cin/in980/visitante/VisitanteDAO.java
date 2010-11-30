@@ -41,8 +41,10 @@ public class VisitanteDAO {
 			Calendar cal = Calendar.getInstance();
 			cal.setTime(resultSelect.getDate(3));
 			v.setDataChegada(cal);
-			cal.setTime(resultSelect.getDate(4));
-			v.setDataSaida(cal);
+			
+			Calendar cal2 = Calendar.getInstance();
+			cal2.setTime(resultSelect.getDate(4));
+			v.setDataSaida(cal2);
 			
 			retorno.add(v);
 		}
