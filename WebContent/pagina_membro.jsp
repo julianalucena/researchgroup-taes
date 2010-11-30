@@ -11,7 +11,8 @@
 <!-- LINHAS DE PESQUISA / COMPILAÇÃO CONDICIONAL? -->
 
 <%@page import="br.ufpe.cin.in980.util.AuxCompilacaoCondicional"%>
-<%@page import="br.ufpe.cin.in980.projetopesquisa.AuxMenuProjetoPesquisa"%><html>
+<%@page import="br.ufpe.cin.in980.projetopesquisa.AuxMenuProjetoPesquisa"%>
+<%@page import="br.ufpe.cin.in980.visitante.AuxMenuVisitante"%><html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <%@ include file="layout/header.rsc" %>
@@ -41,6 +42,7 @@
 					<li> <a href="pagina_grupo.jsp"><%=prop.getCaptions().getString("grupoKey")%></a> </li>
 					<%=AuxCompilacaoCondicional.adicionarMenu()%>
 					<%= AuxMenuProjetoPesquisa.adicionarMenu() %>
+					<%= AuxMenuVisitante.adicionarMenu() %>
 				</ul>
 			</div>
 		</div>

@@ -9,7 +9,9 @@
 <%@page import="br.ufpe.cin.in980.publicacao.Publicacao"%>
 <%@page import="br.ufpe.cin.in980.util.AuxCompilacaoCondicional"%>
 
-<%@page import="br.ufpe.cin.in980.projetopesquisa.AuxMenuProjetoPesquisa"%><html>
+<%@page import="br.ufpe.cin.in980.projetopesquisa.AuxMenuProjetoPesquisa"%>
+<%@page import="br.ufpe.cin.in980.visitante.AuxMenuVisitante"%>
+<html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <%@ include file="layout/header.rsc" %>
@@ -34,6 +36,7 @@
 					<li> <a href="buscar_linhapesquisa.jsp"><%= prop.getCaptions().getString("buscarLinhaPesquisaKey") %></a> </li>
 					<li> <a href="linhas_pesquisa.jsp"><%= prop.getCaptions().getString("listarLinhasPesquisaKey") %></a> </li>
 					<%= AuxMenuProjetoPesquisa.adicionarMenu() %>
+					<%= AuxMenuVisitante.adicionarMenu() %>
 				</ul>
 			</div>
 		</div>
