@@ -35,6 +35,8 @@
 				<div class="chamada-principal">
 					<h2>Cadastrar Visitante</h2>
 					<form action="controlador_visitante.do" method="post" >
+					<% session.setAttribute("acao", "cadastrar"); %>
+						<input type="hidden" name="acao" value="cadastrar" >
 			 			<table>
 			 				<tr>
 			 					<td>Nome: </td>

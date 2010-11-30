@@ -12,7 +12,10 @@ public class AuxMenuVisitante {
 		MessageProperties prop = new MessageProperties();
 		retorno = "<li> <a href=\"cadastrar_visitante.jsp\">"
 				+ prop.getCaptions().getString("cadastrarVisitanteKey")
-				+ " </a> </li>";
+				+ " </a> </li>\n";
+		retorno = retorno + "<li> <a href=\"listar_visitantes.jsp\">"
+			+ prop.getCaptions().getString("listarVisitanteKey")
+			+ " </a> </li>";
 		// #endif
 		return retorno;
 	}

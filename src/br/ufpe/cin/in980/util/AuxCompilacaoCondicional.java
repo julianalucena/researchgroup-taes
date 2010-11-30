@@ -8,16 +8,16 @@ public class AuxCompilacaoCondicional {
 	public static String getAnalyticsScript(){
 		String retorno = "";
 		//#if use_analytics
-		retorno = "<script type=\"text/javascript\">\n" + 
-			"var gaJsHost = ((\"https:\" == document.location.protocol) ? \"https://ssl.\" : \"http://www.\");\n"+ 
-			"document.write(unescape(\"%3Cscript src='\" + gaJsHost + \"google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E\"));\n" + 
-			"</script>\n" + 
-			"<script type=\"text/javascript\">\n" + 
-			"try{\n" + 
-			"var pageTracker = _gat._getTracker(\"UA-xxxxxx-x\");\n" + 
-			"pageTracker._trackPageview();\n" + 
-			"} catch(err) {}\n" +  
-			"</script>\n";
+//@		retorno = "<script type=\"text/javascript\">\n" + 
+//@			"var gaJsHost = ((\"https:\" == document.location.protocol) ? \"https://ssl.\" : \"http://www.\");\n"+ 
+//@			"document.write(unescape(\"%3Cscript src='\" + gaJsHost + \"google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E\"));\n" + 
+//@			"</script>\n" + 
+//@			"<script type=\"text/javascript\">\n" + 
+//@			"try{\n" + 
+//@			"var pageTracker = _gat._getTracker(\"UA-xxxxxx-x\");\n" + 
+//@			"pageTracker._trackPageview();\n" + 
+//@			"} catch(err) {}\n" +  
+//@			"</script>\n";
 		//#endif
 		return retorno;
 	}

@@ -9,11 +9,8 @@ public privileged aspect VisitanteAspecto {
 
 	public void Fachada.cadastrarVisitante(Visitante v)	throws Exception {
 		if (v != null) {
-			//this.conexao.createConnection();
 			ControleVisitante controleVisitante = new ControleVisitante(this.conexao);
 			controleVisitante.cadastrar(v);
-			//this.conexao.commitTransaction();
-			//this.conexao.closeConnection();
 		}
 	}
 	
