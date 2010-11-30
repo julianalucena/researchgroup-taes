@@ -11,7 +11,7 @@ public class BDProperties {
 	Properties props;
 	
 	public BDProperties() {
-		File file = new File("/Users/julianalucena/Desktop/taes/workspace/researchgroup/src/bd.properties");      
+		File file = new File("/Users/julianalucena/cin/7-periodo/taes/workspace/researchgroup/src/bd.properties");      
 		props = new Properties();  
 		FileInputStream fis = null;  
 		try {  

@@ -4,7 +4,6 @@
   <welcome-file-list>
     <welcome-file>index.jsp</welcome-file>
   </welcome-file-list>
-
   <servlet>
     <description></description>
     <display-name>AdicionaisAjaxServlet</display-name>
@@ -184,5 +183,15 @@
   <servlet-mapping>
     <servlet-name>ControladorMembroServlet</servlet-name>
     <url-pattern>/controlador_membro.do</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>VisitanteServlet</display-name>
+    <servlet-name>VisitanteServlet</servlet-name>
+    <servlet-class>br.ufpe.cin.in980.visitante.VisitanteServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>VisitanteServlet</servlet-name>
+    <url-pattern>/controlador_visitante.do</url-pattern>
   </servlet-mapping>
 </web-app>
